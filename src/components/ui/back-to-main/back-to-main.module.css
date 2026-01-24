@@ -1,0 +1,7 @@
+.back-to-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding-block: 20px;
+}

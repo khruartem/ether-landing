@@ -1,0 +1,28 @@
+.menu {
+  padding-inline: 44px;
+  background-color: var(--light100);
+  border-radius: 100px;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  height: 60px;
+  align-items: center;
+}
+
+.menu__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.menu__list-item:hover {
+  border-bottom: 1px var(--navy) solid;
+}
+
+.menu__list-item:active {
+  border-bottom: 1px var(--nephritis100) solid;
+}

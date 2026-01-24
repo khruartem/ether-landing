@@ -21,6 +21,8 @@
 
 div#root {
   width: 100%;
+  padding-inline: 8.13vw;
+  padding-block-start: 20px;
 }
 
 *,

@@ -1,6 +1,8 @@
 import type { FC } from "react";
 
-import { EtherLogo, OTLogo } from "../../icons";
+import { EtherLogo } from "../../icons";
+import { Menu } from "../../menu";
+import { BackToMainUI } from "../back-to-main";
 
 import styles from "./header.module.css";
 
@@ -9,9 +11,9 @@ export const HeaderUI: FC = () => {
     <header className={styles.header}>
       <div className={styles["header-left"]}>
         <EtherLogo />
-        <Navigation />
+        <Menu />
       </div>
-      <OTLogo />
+      <BackToMainUI />
     </header>
   );
 };
