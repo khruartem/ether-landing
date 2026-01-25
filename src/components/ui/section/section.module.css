@@ -1,0 +1,11 @@
+.section {
+  padding-block-start: 5.21vw;
+  padding-block-end: 7.29vw;
+  background-color: transparent;
+  width: 100%;
+}
+
+.section_decorated {
+  background-color: var(--light60);
+  border-radius: 200px;
+}

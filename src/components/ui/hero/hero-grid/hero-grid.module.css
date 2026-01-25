@@ -1,0 +1,5 @@
+.hero__grid {
+  display: grid;
+  grid-template-columns: 384px 370px 372px 410px;
+  column-gap: 24px;
+}

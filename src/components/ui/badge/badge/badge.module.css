@@ -1,0 +1,10 @@
+.hero__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4px;
+  width: 100%;
+  border-radius: 32px;
+  padding: 24px 12px 12px 12px;
+  background-color: var(--light60);
+}

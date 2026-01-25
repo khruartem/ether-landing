@@ -1,0 +1,1 @@
+export { HeadingUI } from "./heading";

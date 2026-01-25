@@ -13,3 +13,13 @@ export type TNavItem = {
   label: string;
   to: string;
 };
+
+export type TBadgeTitle = {
+  text: string;
+  decorated?: boolean;
+};
+
+export type TBadgeItem = {
+  text: string;
+  active: boolean;
+};
