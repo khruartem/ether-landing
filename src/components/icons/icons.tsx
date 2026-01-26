@@ -36,3 +36,14 @@ export const OTLogo: FC = () => {
     </svg>
   );
 };
+
+export const Plus: FC = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+      <path
+        fill="#2ECC71"
+        d="M10.833 5a.833.833 0 1 0-1.666 0v4.167H5a.833.833 0 1 0 0 1.666h4.167V15a.833.833 0 1 0 1.666 0v-4.167H15a.833.833 0 0 0 0-1.666h-4.167V5Z"
+      />
+    </svg>
+  );
+};

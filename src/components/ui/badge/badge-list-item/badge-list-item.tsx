@@ -20,6 +20,7 @@ export const BadgeListItemUI: FC<TBadgeListItemUIProps> = ({
       onClick={onClick}
     >
       <TextUI
+        as={"span"}
         text={badge.text}
         typography={{
           font: "Unbounded",

@@ -6,11 +6,13 @@ import { BadgeListItemUI } from "../badge-list-item";
 import type { TBadgeListUIProps } from "./types";
 
 import styles from "./badge-list.module.css";
+import { AddBadgeUI } from "../add";
 
 export const BadgeListUI: FC<TBadgeListUIProps> = ({
   clue,
   badges,
   onBadgeClick,
+  addButton,
 }) => {
   return (
     <div className={styles.container}>
@@ -23,6 +25,7 @@ export const BadgeListUI: FC<TBadgeListUIProps> = ({
             onClick={() => onBadgeClick(index)}
           />
         ))}
+        {addButton && <AddBadgeUI />}
       </ul>
     </div>
   );

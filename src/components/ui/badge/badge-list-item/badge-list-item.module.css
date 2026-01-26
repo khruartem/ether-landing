@@ -10,6 +10,14 @@
   cursor: pointer;
 }
 
+.badge-list__item:hover {
+  background-color: var(--navy);
+}
+
+.badge-list__item:hover span {
+  color: var(--light100);
+}
+
 .badge-list__item_active {
   background-color: var(--navy);
 }

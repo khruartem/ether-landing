@@ -59,12 +59,24 @@ export const Activity: FC = () => {
     setCurrentBadges(updatedBadges);
   };
 
+  // const handleAdd = (text: string) => {
+  //   const badgeToAdd: TBadgeItem = {
+  //     text,
+  //     active: false,
+  //   };
+
+  //   const updatedBadges = currentBadges.map((badge) => badge);
+  //   updatedBadges.push(badgeToAdd);
+  //   setCurrentBadges(updatedBadges);
+  // };
+
   return (
     <BadgeUI title={title}>
       <BadgeListUI
         badges={currentBadges}
         clue={clue}
         onBadgeClick={handleBadgeClick}
+        addButton
       />
     </BadgeUI>
   );

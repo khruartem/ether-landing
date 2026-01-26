@@ -23,3 +23,13 @@ export type TBadgeItem = {
   text: string;
   active: boolean;
 };
+
+export type TBadge = {
+  type: "badge";
+  item: TBadgeItem;
+};
+
+export type TAdd = {
+  type: "add";
+  item: null;
+};

@@ -1,0 +1,11 @@
+.add {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border-radius: 20px;
+  padding: 8px 8px;
+  background-color: var(--light80);
+  /* cursor: pointer; */
+}
