@@ -4,6 +4,8 @@ import { BadgeUI } from "../../ui/badge/badge";
 import { BadgeListUI } from "../../ui/badge/badge-list";
 
 import type { TBadgeItem, TBadgeTitle } from "../../../utils/types";
+import { Calendar } from "../../badge/calendar";
+import { CalendarUI } from "../../ui/badge/calendar";
 
 export const Activity: FC = () => {
   const title: TBadgeTitle = {
@@ -72,12 +74,14 @@ export const Activity: FC = () => {
 
   return (
     <BadgeUI title={title}>
-      <BadgeListUI
+      {/* <BadgeListUI
         badges={currentBadges}
         clue={clue}
         onBadgeClick={handleBadgeClick}
         addButton
-      />
+      /> */}
+      <Calendar />
+      <CalendarUI />
     </BadgeUI>
   );
 };
