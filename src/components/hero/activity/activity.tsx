@@ -81,7 +81,6 @@ export const Activity: FC = () => {
         addButton
       /> */}
       <Calendar />
-      <CalendarUI />
     </BadgeUI>
   );
 };
