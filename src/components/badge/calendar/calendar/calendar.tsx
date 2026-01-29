@@ -1,7 +1,8 @@
 import type { FC } from "react";
-import { CalendarUI } from "../../ui/badge/calendar";
+import { CalendarUI } from "../../../ui/badge/calendar/calendar";
 
 export const Calendar: FC = () => {
+  const days: null[] = new Array(42).fill(null);
   const today = new Date();
 
   const firstDayOfWeek = (iMonth: number, iYear: number) => {
@@ -15,18 +16,5 @@ export const Calendar: FC = () => {
   const weekDay = firstDayOfWeek(today.getMonth(), today.getFullYear());
   const lastDay = daysInMonth(today.getMonth(), today.getFullYear());
 
-  // today.setDate(1);
-  // const weekDay = today.getDay();
-  // const startDate = today.toDateString();
-
-  // today.setDate(0);
-  // const lastDay = today.getDate();
-  // const finishDate = today.toDateString();
-
-  console.log(weekDay);
-  // console.log(startDate);
-  console.log(lastDay);
-  // console.log(finishDate);
-
-  return <CalendarUI weekDayIndex={weekDay} lastDate={lastDay} />;
+  return <CalendarUI days={days} weekDayIndex={weekDay} lastDate={lastDay} />;
 };

@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 4px;
+  gap: var(--gap);
   width: 100%;
+  height: min-content;
   border-radius: 32px;
   padding: 24px 12px 12px 12px;
   background-color: var(--light60);

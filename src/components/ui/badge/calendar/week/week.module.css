@@ -1,0 +1,19 @@
+.week {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  height: 20px;
+  width: 348px;
+}
+
+.week__day {
+  width: 36px;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--light20);
+  letter-spacing: 0.02em;
+}

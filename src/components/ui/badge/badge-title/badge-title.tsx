@@ -20,7 +20,9 @@ export const BadgeTitleUI: FC<TBadgeTitleUIProps> = ({ title }) => {
         lineHeight: "20px",
         color: Colors.Dark100,
       }}
-      className={clsx(title?.decorated && styles.text_decorated)}
+      className={clsx(
+        title?.decorated ? styles.text_decorated : styles.text_undecorated,
+      )}
     />
   );
 };

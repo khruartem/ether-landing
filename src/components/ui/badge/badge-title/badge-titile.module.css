@@ -3,3 +3,7 @@
   letter-spacing: 0;
   color: var(--nephritis100);
 }
+
+.text_undecorated {
+  padding-inline-start: 12px;
+}
