@@ -6,7 +6,6 @@ import { DayUI } from "../day";
 import type { TCalendarUIProps } from "./types";
 
 import styles from "./calendar.module.css";
-import clsx from "clsx";
 
 export const CalendarUI: FC<TCalendarUIProps> = ({
   days,
