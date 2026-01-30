@@ -5,3 +5,18 @@
   grid-template-rows: repeat(6, 36px);
   gap: 16px;
 }
+
+.current1 span {
+  background-color: var(--navy);
+  color: var(--light100);
+}
+
+.current2 span {
+  background-color: var(--navy);
+  color: var(--light100);
+}
+
+.current span {
+  background-color: var(--nephritis100);
+  color: var(--light100);
+}

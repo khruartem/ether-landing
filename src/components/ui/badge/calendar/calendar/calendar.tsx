@@ -6,11 +6,13 @@ import { DayUI } from "../day";
 import type { TCalendarUIProps } from "./types";
 
 import styles from "./calendar.module.css";
+import clsx from "clsx";
 
 export const CalendarUI: FC<TCalendarUIProps> = ({
   days,
   weekDayIndex,
   lastDate,
+  onClickDay,
 }) => {
   const renderDays = (item: null, index: number) => {
     if (weekDayIndex === 0) {
@@ -36,7 +38,11 @@ export const CalendarUI: FC<TCalendarUIProps> = ({
       <Week />
       <ul className={styles.calendar}>
         {days.map((item, index) => {
-          return <li key={index}>{renderDays(item, index)}</li>;
+          return (
+            <li key={index} onClick={(e) => onClickDay(e, styles)}>
+              {renderDays(item, index)}
+            </li>
+          );
         })}
       </ul>
     </>
