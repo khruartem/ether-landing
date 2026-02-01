@@ -1,10 +1,10 @@
-import type { ElementType } from "react";
+import type { ElementType, ReactNode } from "react";
 import type { TTypography } from "../../../utils/types";
 
 export type TTextUIProps = {
   as?: ElementType;
-  text: string;
+  children: ReactNode;
   typography: TTypography;
-  emphasized?: string;
+  // emphasized?: string;
   className?: string;
 };

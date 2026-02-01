@@ -21,7 +21,6 @@ export const BadgeListItemUI: FC<TBadgeListItemUIProps> = ({
     >
       <TextUI
         as={"span"}
-        text={badge.text}
         typography={{
           font: "Unbounded",
           weight: "400",
@@ -30,7 +29,9 @@ export const BadgeListItemUI: FC<TBadgeListItemUIProps> = ({
           color: badge.active ? Colors.Light100 : Colors.Nephritis100,
         }}
         className={styles.text_budge}
-      />
+      >
+        {badge.text}
+      </TextUI>
     </li>
   );
 };

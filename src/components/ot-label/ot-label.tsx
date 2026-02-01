@@ -16,5 +16,9 @@ export const OTLabel: FC = () => {
     color: Colors.Nephritis100,
   };
 
-  return <TextUI as={"span"} text={text} typography={typography} />;
+  return (
+    <TextUI as={"span"} typography={typography}>
+      {text}
+    </TextUI>
+  );
 };

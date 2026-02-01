@@ -9,7 +9,6 @@ import { Colors } from "../../../../utils/colors";
 export const BadgeClueUI: FC<TBadgeClueUIProps> = ({ text }) => {
   return (
     <TextUI
-      text={text}
       typography={{
         font: "Roboto",
         weight: "400",
@@ -17,6 +16,8 @@ export const BadgeClueUI: FC<TBadgeClueUIProps> = ({ text }) => {
         lineHeight: "20px",
         color: Colors.Dark80,
       }}
-    />
+    >
+      {text}
+    </TextUI>
   );
 };

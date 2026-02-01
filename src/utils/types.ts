@@ -33,3 +33,9 @@ export type TAdd = {
   type: "add";
   item: null;
 };
+
+export type TEmployee = {
+  firstname: string;
+  lasttname: string;
+  image: string;
+};

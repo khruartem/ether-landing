@@ -7,9 +7,9 @@ import clsx from "clsx";
 
 export const TextUI: FC<TTextUIProps> = ({
   as: Tag = "p",
-  text,
+  children,
   typography,
-  emphasized,
+  // emphasized,
   className,
 }) => {
   return (
@@ -26,7 +26,7 @@ export const TextUI: FC<TTextUIProps> = ({
         } as CSSProperties
       }
     >
-      {text.split(" ").map((word, index, array) => {
+      {/* {text.split(" ").map((word, index, array) => {
         return word === emphasized ? (
           <span className={styles.text_emphasized}>{word}</span>
         ) : index === array.length ? (
@@ -34,7 +34,8 @@ export const TextUI: FC<TTextUIProps> = ({
         ) : (
           `${word} `
         );
-      })}
+      })} */}
+      {children}
     </Tag>
   );
 };

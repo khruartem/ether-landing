@@ -12,7 +12,6 @@ import styles from "./badge-titile.module.css";
 export const BadgeTitleUI: FC<TBadgeTitleUIProps> = ({ title }) => {
   return (
     <TextUI
-      text={title.text}
       typography={{
         font: "Unbounded",
         weight: "500",
@@ -23,6 +22,8 @@ export const BadgeTitleUI: FC<TBadgeTitleUIProps> = ({ title }) => {
       className={clsx(
         title?.decorated ? styles.text_decorated : styles.text_undecorated,
       )}
-    />
+    >
+      {title.text}
+    </TextUI>
   );
 };
