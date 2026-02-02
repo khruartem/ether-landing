@@ -1,11 +1,14 @@
 import type { FC } from "react";
 import clsx from "clsx";
 
+import { TextUI } from "../../text";
+
 import type { TBadgeListItemUIProps } from "./types";
 
-import styles from "./badge-list-item.module.css";
-import { TextUI } from "../../text";
 import { Colors } from "../../../../utils/colors";
+import { Typography } from "../../../../utils/typography";
+
+import styles from "./badge-list-item.module.css";
 
 export const BadgeListItemUI: FC<TBadgeListItemUIProps> = ({
   badge,
@@ -21,13 +24,8 @@ export const BadgeListItemUI: FC<TBadgeListItemUIProps> = ({
     >
       <TextUI
         as={"span"}
-        typography={{
-          font: "Unbounded",
-          weight: "400",
-          size: "14px",
-          lineHeight: "20px",
-          color: badge.active ? Colors.Light100 : Colors.Nephritis100,
-        }}
+        typography={Typography.Title_400_14}
+        color={badge.active ? Colors.Light100 : Colors.Nephritis100}
         className={styles.text_budge}
       >
         {badge.text}

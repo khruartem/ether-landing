@@ -7,8 +7,10 @@ export const SmallTaskUI: FC<TSmallTaskUIProps> = ({
   date,
   time,
   employees,
+  onSuccess
 }) => {
-  <div>
-    <RadioButtonUI text={""} checked={false} />
+  <div onClick={onSuccess}>
+
+    <RadioButtonUI text={title} checked={false} />
   </div>;
 };

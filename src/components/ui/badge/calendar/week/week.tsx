@@ -1,4 +1,7 @@
 import type { FC } from "react";
+
+import { WeekDayUI } from "../week-day";
+
 import type { TWeekUIProps } from "./types";
 
 import styles from "./week.module.css";
@@ -9,7 +12,7 @@ export const WeekUI: FC<TWeekUIProps> = ({ days }) => {
       {days.map((day, index) => {
         return (
           <li key={index} className={styles.week__day}>
-            {day}
+            <WeekDayUI day={day} />
           </li>
         );
       })}

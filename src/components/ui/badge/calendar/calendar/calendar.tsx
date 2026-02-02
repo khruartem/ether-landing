@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
+import { CalendarDayUI } from "../calendar-day";
 import { Week } from "../../../../badge/calendar/week";
-import { DayUI } from "../day";
 
 import type { TCalendarUIProps } from "./types";
 
@@ -18,14 +18,14 @@ export const CalendarUI: FC<TCalendarUIProps> = ({
       return index < 6 ? (
         item
       ) : index - 5 <= lastDate ? (
-        <DayUI text={`${index - 5}`} />
+        <CalendarDayUI text={`${index - 5}`} />
       ) : (
         item
       );
     } else {
       return index >= weekDayIndex - 1 &&
         index <= lastDate + weekDayIndex - 2 ? (
-        <DayUI text={`${index - weekDayIndex + 2}`} />
+        <CalendarDayUI text={`${index - weekDayIndex + 2}`} />
       ) : (
         item
       );

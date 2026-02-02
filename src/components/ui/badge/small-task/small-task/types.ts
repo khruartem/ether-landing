@@ -5,4 +5,6 @@ export type TSmallTaskUIProps = {
   date: string;
   time: string;
   employees: TEmployee[];
+  successed: boolean;
+  onSuccess?: () => void;
 };

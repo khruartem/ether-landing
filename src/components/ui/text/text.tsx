@@ -9,7 +9,7 @@ export const TextUI: FC<TTextUIProps> = ({
   as: Tag = "p",
   children,
   typography,
-  // emphasized,
+  color,
   className,
 }) => {
   return (
@@ -22,7 +22,7 @@ export const TextUI: FC<TTextUIProps> = ({
           "--size": typography.size,
           "--line-height": typography.lineHeight,
           "--text-align": typography.textAlign ?? "left",
-          "--color": typography.color,
+          "--color": color,
         } as CSSProperties
       }
     >
