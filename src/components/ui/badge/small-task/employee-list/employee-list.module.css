@@ -1,0 +1,14 @@
+.employee-list {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: var(--light80);
+}
+
+.employee-list__text {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
