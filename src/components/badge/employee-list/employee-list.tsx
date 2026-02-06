@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 import type { TEmployeeListProps } from "./types";
-import { EmployeeListUI } from "../../../ui/badge/small-task/employee-list";
+import { EmployeeListUI } from "../../ui/badge/employee-list";
 
 export const EmployeeList: FC<TEmployeeListProps> = ({ employees }) => {
   const avatars: string[] = employees.map((employee) => {

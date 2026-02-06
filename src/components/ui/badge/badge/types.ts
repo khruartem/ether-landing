@@ -5,4 +5,5 @@ export type TBadgeUIProps = {
   title?: TBadgeTitle;
   gap?: number;
   children: ReactNode;
+  className?: string;
 };

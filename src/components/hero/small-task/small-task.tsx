@@ -1,11 +1,15 @@
 import { useState, type FC } from "react";
 
-import { SmallTaskUI } from "../../../ui/badge/small-task/small-task";
+import { SmallTaskUI } from "../../ui/hero/small-task";
 
-import type { TEmployee } from "../../../../utils/types";
+import type { TBadgeTitle, TEmployee } from "../../../utils/types";
 
 export const SmallTask: FC = () => {
   const [successed, setSuccessed] = useState(false);
+
+  const badgeTitle: TBadgeTitle = {
+    text: "Творческая задача",
+  };
 
   const handleComplete = (state: boolean) => {
     setSuccessed(state);
@@ -45,6 +49,7 @@ export const SmallTask: FC = () => {
 
   return (
     <SmallTaskUI
+      badgeTitle={badgeTitle}
       title="Раскадровки первого акта"
       date="02.01.2025"
       time="14:00"

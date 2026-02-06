@@ -28,3 +28,11 @@ export type TEmployee = {
   lastname: string;
   image: string;
 };
+
+export type TGalleryIcon = "music" | "video" | "image";
+
+export type TGalleryItem = {
+  icon: TGalleryIcon;
+  background?: string;
+  title?: string;
+};

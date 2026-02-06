@@ -1,3 +1,7 @@
+.hero__block_task {
+  gap: 12px;
+}
+
 .small-task {
   display: flex;
   flex-direction: column;

@@ -4,8 +4,6 @@ import { BadgeUI } from "../../ui/badge/badge";
 import { BadgeListUI } from "../../ui/badge/badge-list";
 
 import type { TBadgeItem, TBadgeTitle } from "../../../utils/types";
-import { RadioButtonUI } from "../../ui/radio-button";
-import { SmallTask } from "../../badge/small-task/small-task";
 
 export const Activity: FC = () => {
   const title: TBadgeTitle = {
@@ -74,13 +72,12 @@ export const Activity: FC = () => {
 
   return (
     <BadgeUI title={title}>
-      {/* <BadgeListUI
+      <BadgeListUI
         badges={currentBadges}
         clue={clue}
         onBadgeClick={handleBadgeClick}
         addButton
-      /> */}
-      <SmallTask />
+      />
     </BadgeUI>
   );
 };

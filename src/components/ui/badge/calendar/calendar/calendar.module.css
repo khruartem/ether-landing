@@ -6,6 +6,11 @@
   gap: 16px;
 }
 
+.calendar li:hover span {
+  background-color: var(--navy);
+  color: var(--light100);
+}
+
 .current1 span {
   background-color: var(--navy);
   color: var(--light100);

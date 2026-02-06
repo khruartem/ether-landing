@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import type { TEmployeeListUIProps } from "./types";
-import { TextUI } from "../../../text";
-import { Typography } from "../../../../../utils/typography";
-import { Colors } from "../../../../../utils/colors";
+import { TextUI } from "../../text";
+import { Typography } from "../../../../utils/typography";
+import { Colors } from "../../../../utils/colors";
 import { AvatarListUI } from "../avatar-list";
 
 import styles from "./employee-list.module.css";

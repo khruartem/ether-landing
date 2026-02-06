@@ -1,6 +1,7 @@
-import type { TEmployee } from "../../../../../utils/types";
+import type { TBadgeTitle, TEmployee } from "../../../../utils/types";
 
 export type TSmallTaskUIProps = {
+  badgeTitle?: TBadgeTitle;
   title: string;
   date: string;
   time: string;
