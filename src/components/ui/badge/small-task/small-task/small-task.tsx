@@ -1,16 +1,33 @@
 import type { FC } from "react";
-import { RadioButtonUI } from "../../radio-button";
+import clsx from "clsx";
+
+import { RadioButtonUI } from "../../../radio-button";
+import { DateTimeUI } from "../date-time";
+import { EmployeeList } from "../../../../badge/small-task/employee-list";
+
 import type { TSmallTaskUIProps } from "./types";
+
+import styles from "./small-task.module.css";
 
 export const SmallTaskUI: FC<TSmallTaskUIProps> = ({
   title,
   date,
   time,
   employees,
-  onSuccess
+  successed,
+  onСomplete,
 }) => {
-  <div onClick={onSuccess}>
-
-    <RadioButtonUI text={title} checked={false} />
-  </div>;
+  return (
+    <div
+      className={clsx(
+        styles["small-task"],
+        successed && styles["small-task_complete"],
+      )}
+      onClick={onСomplete}
+    >
+      <RadioButtonUI text={title} checked={successed} />
+      <DateTimeUI date={date} time={time} />
+      <EmployeeList employees={employees} />
+    </div>
+  );
 };

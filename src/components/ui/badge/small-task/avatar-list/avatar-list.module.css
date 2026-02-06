@@ -1,4 +1,9 @@
 .avatar-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 2rem);
+  grid-template-columns: repeat(auto-fit, 12px);
+}
+
+.avatar-list__item {
+  min-width: 24px;
+  min-height: 24px;
 }

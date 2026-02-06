@@ -1,13 +1,13 @@
 import { useState, type FC } from "react";
 
-import { SmallTaskUI } from "../../ui/badge/small-task/small-task";
+import { SmallTaskUI } from "../../../ui/badge/small-task/small-task";
 
-import type { TEmployee } from "../../../utils/types";
+import type { TEmployee } from "../../../../utils/types";
 
 export const SmallTask: FC = () => {
   const [successed, setSuccessed] = useState(false);
 
-  const handleSuccess = (state: boolean) => {
+  const handleComplete = (state: boolean) => {
     setSuccessed(state);
   };
 
@@ -50,7 +50,7 @@ export const SmallTask: FC = () => {
       time="14:00"
       employees={employees}
       successed={successed}
-      onSuccess={() => handleSuccess(!successed)}
+      onСomplete={() => handleComplete(!successed)}
     />
   );
 };

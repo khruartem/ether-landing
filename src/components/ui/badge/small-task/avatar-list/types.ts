@@ -1,3 +1,3 @@
 export type TAvatarListUIProps = {
-  images: string[];
+  avatars: string[];
 };

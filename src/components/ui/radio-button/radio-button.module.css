@@ -9,7 +9,6 @@
   line-height: 20px;
   color: var(--dark100);
   letter-spacing: 0.02em;
-  width: min-content;
 }
 
 .radio__circle {

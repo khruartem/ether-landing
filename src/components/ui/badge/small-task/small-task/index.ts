@@ -1,1 +1,1 @@
-export { SmallTaskUI } from ".";
+export { SmallTaskUI } from "./small-task";

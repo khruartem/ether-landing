@@ -4,13 +4,13 @@ import type { TEmployeeListProps } from "./types";
 import { EmployeeListUI } from "../../../ui/badge/small-task/employee-list";
 
 export const EmployeeList: FC<TEmployeeListProps> = ({ employees }) => {
-  const images: string[] = employees.map((employee) => {
+  const avatars: string[] = employees.map((employee) => {
     return employee.image;
   });
   const mainText: string = `${employees[0].firstname[0]}. ${employees[0].lastname}`;
-  const subText: string = `и еще ${employees.length}`;
+  const subText: string = `и еще ${employees.length - 1}`;
 
   return (
-    <EmployeeListUI images={images} mainText={mainText} subText={subText} />
+    <EmployeeListUI avatars={avatars} mainText={mainText} subText={subText} />
   );
 };

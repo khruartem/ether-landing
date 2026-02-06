@@ -1,0 +1,14 @@
+.small-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px;
+  background-color: transparent;
+  border-radius: 20px;
+  border: 1px solid var(--light30);
+}
+
+.small-task_complete {
+  border-color: var(--nephritis100);
+}
