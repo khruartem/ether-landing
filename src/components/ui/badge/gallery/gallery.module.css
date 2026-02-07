@@ -4,3 +4,19 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+
+.gallery li:nth-child(2) div::after {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.8;
+}
+
+.gallery li:nth-child(1) div {
+  border-color: var(--nephritis100);
+}

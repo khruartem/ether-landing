@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import { GalleryItemUI } from "../gallery-item";
+import { GalleryAddUI } from "../gallery-add";
 
 import type { TGalleryUIProps } from "./types";
 
@@ -16,6 +17,9 @@ export const GalleryUI: FC<TGalleryUIProps> = ({ items }) => {
           </li>
         );
       })}
+      <li key={items.length}>
+        <GalleryAddUI />
+      </li>
     </ul>
   );
 };

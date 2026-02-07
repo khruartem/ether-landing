@@ -1,1 +1,9 @@
-export { EtherLogo, OTLogo, Plus, Music, Video, Image } from "./icons";
+export {
+  EtherLogo,
+  OTLogo,
+  BadgePlus,
+  Music,
+  Video,
+  Image,
+  GalleryPlus,
+} from "./icons";

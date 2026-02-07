@@ -1,3 +1,5 @@
+import type { Colors } from "./colors";
+
 export type TNavItem = {
   label: string;
   to: string;
@@ -35,4 +37,5 @@ export type TGalleryItem = {
   icon: TGalleryIcon;
   background?: string;
   title?: string;
+  backhroundColor?: Colors;
 };
