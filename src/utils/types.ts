@@ -40,12 +40,9 @@ export type TGalleryItem = {
   backhroundColor?: Colors;
 };
 
-export type TTabIcon = "task" | "event";
-
-export type TTabState = "active" | "disabled";
+export type TTabIcon = "task" | "schedule";
 
 export type TTab = {
   icon: TTabIcon;
   text: string;
-  state: TTabState;
 };

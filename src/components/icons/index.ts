@@ -6,4 +6,6 @@ export {
   Video,
   Image,
   GalleryPlus,
+  Task,
+  Schedule,
 } from "./icons";
