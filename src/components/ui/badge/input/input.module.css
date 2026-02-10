@@ -1,0 +1,26 @@
+.label {
+  position: relative;
+}
+
+.input {
+  width: 356px;
+  height: 40px;
+  border: 1px solid var(--light30);
+  padding: 8px 12px;
+  color: var(--dark100);
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.input::placeholder {
+  color: var(--light20);
+}
+
+.input:focus {
+  outline: 0;
+}

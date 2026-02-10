@@ -9,6 +9,7 @@ import { SmallTask } from "../../../hero/small-task";
 import styles from "./hero.module.css";
 import { Portfolio } from "../../../hero/portfolio";
 import { TabBar } from "../../../badge/tab-bar";
+import { EventInput } from "../../../badge/event-input";
 
 export const HeroUI: FC = () => {
   return (
@@ -21,7 +22,10 @@ export const HeroUI: FC = () => {
         </div>
         <Portfolio />
         <Schedule />
-        <TabBar />
+        <div>
+          <TabBar />
+          <EventInput />
+        </div>
       </HeroGridUI>
     </SectionUI>
   );
