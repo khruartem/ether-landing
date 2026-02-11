@@ -9,11 +9,11 @@ export const DatePickerUI: FC = () => {
   const [selectedDate, setSelectedDate] = useState();
 
   return (
-    <>
-    <DatePicker id="date-picker" name="date-picker" className={styles["react-datepicker"]} />
-    <DatePicker showTimeSelect showTimeSelectOnly timeIntervals={15}
+    <div style={{display: "flex", flexDirection: "row", gap: "25px"}}>
+    <DatePicker id="date-picker" name="date-picker" />
+    <DatePicker id="time-picker" name="time-picker" showTimeSelect showTimeSelectOnly timeIntervals={15}
       timeCaption="Time"
       dateFormat="h:mm aa" />
-    </>
+    </div>
   )
 }
