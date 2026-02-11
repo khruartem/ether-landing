@@ -4,16 +4,16 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import styles from "./date-picker.module.css"
+import { CalendarUI } from "../calendar/calendar";
 
 export const DatePickerUI: FC = () => {
   const [selectedDate, setSelectedDate] = useState();
 
   return (
     <div style={{display: "flex", flexDirection: "row", gap: "25px"}}>
-    <DatePicker id="date-picker" name="date-picker" />
-    <DatePicker id="time-picker" name="time-picker" showTimeSelect showTimeSelectOnly timeIntervals={15}
-      timeCaption="Time"
-      dateFormat="h:mm aa" />
+    <CalendarUI days={[]} weekDayIndex={0} lastDate={0} onClickDay={function (e: React.MouseEvent<HTMLLIElement, MouseEvent>, styles: CSSModuleClasses): void {
+        throw new Error("Function not implemented.");
+      } } />
     </div>
   )
 }
