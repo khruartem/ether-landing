@@ -10,6 +10,7 @@ import styles from "./hero.module.css";
 import { Portfolio } from "../../../hero/portfolio";
 import { TabBar } from "../../../badge/tab-bar";
 import { EventInput } from "../../../badge/event-input";
+import { DatePickerUI } from "../../badge/date-picker/date-picker";
 
 export const HeroUI: FC = () => {
   return (
@@ -25,6 +26,7 @@ export const HeroUI: FC = () => {
         <div>
           <TabBar />
           <EventInput />
+          <DatePickerUI />
         </div>
       </HeroGridUI>
     </SectionUI>
