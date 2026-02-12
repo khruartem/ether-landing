@@ -11,6 +11,7 @@ import { Portfolio } from "../../../hero/portfolio";
 import { TabBar } from "../../../badge/tab-bar";
 import { EventInput } from "../../../badge/event-input";
 import { DatePickerUI } from "../../badge/date-picker/date-picker";
+import { Calendar } from "../../../badge/calendar/calendar copy";
 
 export const HeroUI: FC = () => {
   return (
@@ -26,7 +27,7 @@ export const HeroUI: FC = () => {
         <div>
           <TabBar />
           <EventInput />
-          <DatePickerUI />
+          <Calendar />
         </div>
       </HeroGridUI>
     </SectionUI>
