@@ -12,7 +12,7 @@ export const Calendar: FC = () => {
     iMonth: number,
     iYear: number,
   ) => {
-    const week: Week[] = ["пн", "вт", "ср", "чт", "пт", "сб"];
+    const week: Week[] = ["пн", "вт", "ср", "чт", "пт", "сб", "вск"];
 
     const dayCode = new Date(iYear, iMonth, 1).getDay();
     const dayName = Week[dayCode as keyof typeof Week];
@@ -28,6 +28,13 @@ export const Calendar: FC = () => {
     return days.map((day, index) => (day += index));
   };
 
+  const getDate = (date: Date, dd: string) => {
+    const mm = String(date.getMonth() + 1);
+    const yyyy = String(date.getFullYear());
+
+    return `${dd.padStart(2, "0")}.${mm.padStart(2, "0")}.${yyyy}`;
+  };
+
   const handleClickDay = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
     // styles: CSSModuleClasses,
@@ -40,6 +47,7 @@ export const Calendar: FC = () => {
 
   console.log(weekDay);
   console.log(days);
+  console.log(getDate(today, "20"));
 
   return (
     <ul>
