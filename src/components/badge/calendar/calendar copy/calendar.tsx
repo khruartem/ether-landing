@@ -1,9 +1,19 @@
-import type { FC } from "react";
-import { CalendarUI } from "../../../ui/badge/calendar/calendar";
+import { useState, type FC } from "react";
+import { CalendarUI } from "../../../ui/badge/calendar/calendar copy";
 import { Week } from "../../../../utils/week";
+import { Months } from "../../../../utils/months";
 
 export const Calendar: FC = () => {
   const today = new Date();
+  const cycleDuration = 30 * 24 * 60 * 60 * 1000; // Цикл: месяц в миллисекундах
+
+  const [currentDateValue, setCurrentDateValue] = useState("");
+  const [currentDate, setCurrentDate] = useState(() => {
+    const month = Months[today.getMonth() as keyof typeof Months];
+    const year = today.getFullYear();
+
+    return `${month}, ${year}`;
+  });
 
   const getWeekDay: (
     iMonth: number,
@@ -28,18 +38,29 @@ export const Calendar: FC = () => {
     return days.map((day, index) => (day += index));
   };
 
-  const getDate = (date: Date, dd: string) => {
-    const mm = String(date.getMonth() + 1);
+  const getDate = (date: Date, calendarDay: string) => {
+    const dd = calendarDay.padStart(2, "0");
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
     const yyyy = String(date.getFullYear());
 
-    return `${dd.padStart(2, "0")}.${mm.padStart(2, "0")}.${yyyy}`;
+    return `${dd}.${mm}.${yyyy}`;
   };
 
   const handleClickDay = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
-    // styles: CSSModuleClasses,
+    styles: CSSModuleClasses,
   ) => {
-    console.log(e.currentTarget.textContent);
+    const calendarDate = getDate(today, e.currentTarget.textContent);
+    setCurrentDateValue(calendarDate);
+
+    e.currentTarget.classList.add(styles.current);
+  };
+
+  const handleChangeDate = (date: Date) => {
+    const month = Months[date.getMonth() as keyof typeof Months];
+    const year = date.getFullYear();
+
+    setCurrentDate(`${month}, ${year}`);
   };
 
   const weekDay = getWeekDay(today.getMonth(), today.getFullYear());
@@ -50,10 +71,9 @@ export const Calendar: FC = () => {
   console.log(getDate(today, "20"));
 
   return (
-    <ul>
-      <li key={0} onClick={(e) => handleClickDay(e)}>
-        {"CALENDAAAAAAAAAAAAAAAAAR"}
-      </li>
-    </ul>
+    <CalendarUI
+      currentDate={currentDate}
+      onChangeDateRight={() => handleChangeDate(currentDate)}
+    />
   );
 };
