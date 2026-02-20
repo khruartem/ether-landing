@@ -6,22 +6,38 @@
   gap: 16px;
 }
 
-.calendar li:hover span {
+.calendar-day {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--light80);
+  font-family: "Unbounded";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--nephritis100);
+}
+
+.calendar-day:hover {
   background-color: var(--navy);
   color: var(--light100);
 }
 
-.current1 span {
+.current1 {
   background-color: var(--navy);
   color: var(--light100);
 }
 
-.current2 span {
+.current2 {
   background-color: var(--navy);
   color: var(--light100);
 }
 
-.current span {
+.current {
   background-color: var(--nephritis100);
   color: var(--light100);
 }

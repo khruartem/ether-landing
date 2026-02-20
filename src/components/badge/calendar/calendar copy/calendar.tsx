@@ -4,16 +4,10 @@ import { Week } from "../../../../utils/week";
 import { Months } from "../../../../utils/months";
 
 export const Calendar: FC = () => {
-  const today = new Date();
-  const cycleDuration = 30 * 24 * 60 * 60 * 1000; // Цикл: месяц в миллисекундах
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentInputValue, setCurrentInputValue] = useState("");
 
-  const [currentDateValue, setCurrentDateValue] = useState("");
-  const [currentDate, setCurrentDate] = useState(() => {
-    const month = Months[today.getMonth() as keyof typeof Months];
-    const year = today.getFullYear();
-
-    return `${month}, ${year}`;
-  });
+  const cycleDuration = 30 * 24 * 60 * 60 * 1000;
 
   const getWeekDay: (
     iMonth: number,
@@ -46,34 +40,60 @@ export const Calendar: FC = () => {
     return `${dd}.${mm}.${yyyy}`;
   };
 
+  const getMonthAndYear = (date: Date) => {
+    const month = Months[date.getMonth() as keyof typeof Months];
+    const year = date.getFullYear();
+
+    return `${month}, ${year}`;
+  };
+
   const handleClickDay = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
     styles: CSSModuleClasses,
   ) => {
-    const calendarDate = getDate(today, e.currentTarget.textContent);
-    setCurrentDateValue(calendarDate);
+    const calendar = e.currentTarget.closest("ul");
+    const days = calendar?.querySelectorAll("li");
+    days?.forEach((day) => {
+      if (day.classList.contains(styles.current)) {
+        day.classList.remove(styles.current);
+      }
+    });
+
+    const calendarDate = getDate(currentDate, e.currentTarget.textContent);
+    setCurrentInputValue(calendarDate);
 
     e.currentTarget.classList.add(styles.current);
   };
 
-  const handleChangeDate = (date: Date) => {
-    const month = Months[date.getMonth() as keyof typeof Months];
-    const year = date.getFullYear();
+  const handleChangeDate = (date: Date, direction: "right" | "left") => {
+    const newDateMs =
+      direction === "left" ? +date - cycleDuration : +date + cycleDuration;
+    const newDate = new Date(newDateMs);
 
-    setCurrentDate(`${month}, ${year}`);
+    setCurrentDate(newDate);
   };
 
-  const weekDay = getWeekDay(today.getMonth(), today.getFullYear());
-  const days = getDays(today.getMonth(), today.getFullYear());
+  const currentWeekDay = getWeekDay(
+    currentDate.getMonth(),
+    currentDate.getFullYear(),
+  );
+  const daysArray = getDays(currentDate.getMonth(), currentDate.getFullYear());
+  const voidDaysArray: null[] = new Array(currentWeekDay.dayIndex).fill(null);
+  const dateLabel = getMonthAndYear(currentDate);
 
-  console.log(weekDay);
-  console.log(days);
-  console.log(getDate(today, "20"));
+  // console.log(currentWeekDay);
+  // console.log(daysArray);
 
   return (
     <CalendarUI
-      currentDate={currentDate}
-      onChangeDateRight={() => handleChangeDate(currentDate)}
+      dateLabel={dateLabel}
+      inputValue={currentInputValue}
+      currentWeekDay={currentWeekDay}
+      daysArray={daysArray}
+      voidDaysArray={voidDaysArray}
+      onClickDay={handleClickDay}
+      onClickRight={() => handleChangeDate(currentDate, "right")}
+      onClickLeft={() => handleChangeDate(currentDate, "left")}
     />
   );
 };
