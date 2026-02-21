@@ -1,4 +1,5 @@
 import type { Colors } from "./colors";
+import type { Week } from "./week";
 
 export type TNavItem = {
   label: string;
@@ -45,4 +46,9 @@ export type TTabIcon = "task" | "schedule";
 export type TTab = {
   icon: TTabIcon;
   text: string;
+};
+
+export type TWeek = {
+  currentDayIndex: number;
+  weekArray: Week[];
 };

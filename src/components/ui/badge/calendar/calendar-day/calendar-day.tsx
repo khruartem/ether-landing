@@ -9,15 +9,16 @@ import { Typography } from "../../../../../utils/typography";
 
 import styles from "./calendar-day.module.css";
 
-export const CalendarDayUI: FC<TCalendarDayUIProps> = ({ text }) => {
+export const CalendarDayUI: FC<TCalendarDayUIProps> = ({ day, onClickDay }) => {
   return (
     <TextUI
-      as={"span"}
+      as={"li"}
       typography={Typography.Title_500_14}
       color={Colors.Nephritis100}
-      className={styles["calendar-day"]}
+      className={day ? styles.calendar__day : undefined}
+      onClick={(e) => onClickDay(e, styles)}
     >
-      {text}
+      {day}
     </TextUI>
   );
 };

@@ -2,6 +2,7 @@ import { useState, type FC } from "react";
 import { CalendarUI } from "../../../ui/badge/calendar/calendar copy";
 import { Week } from "../../../../utils/week";
 import { Months } from "../../../../utils/months";
+import type { TWeek } from "../../../../utils/types";
 
 export const Calendar: FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -9,27 +10,28 @@ export const Calendar: FC = () => {
 
   const cycleDuration = 30 * 24 * 60 * 60 * 1000;
 
-  const getWeekDay: (
-    iMonth: number,
-    iYear: number,
-  ) => { dayIndex: number; dayName: Week } = (
+  const getWeek: (iMonth: number, iYear: number) => TWeek = (
     iMonth: number,
     iYear: number,
   ) => {
-    const week: Week[] = ["пн", "вт", "ср", "чт", "пт", "сб", "вск"];
+    const weekArray: Week[] = ["пн", "вт", "ср", "чт", "пт", "сб", "вск"];
 
-    const dayCode = new Date(iYear, iMonth, 1).getDay();
-    const dayName = Week[dayCode as keyof typeof Week];
-    const dayIndex = week.findIndex((day) => day === dayName);
+    const currentDayCode = new Date(iYear, iMonth, 1).getDay();
+    const currentDayName = Week[currentDayCode as keyof typeof Week];
+    const currentDayIndex = weekArray.findIndex(
+      (day) => day === currentDayName,
+    );
 
-    return { dayIndex, dayName };
+    return { currentDayIndex, weekArray };
   };
 
-  const getDays = (iMonth: number, iYear: number) => {
+  const getDays = (iWeekDay: number, iMonth: number, iYear: number) => {
     const length = 32 - new Date(iYear, iMonth, 32).getDate();
-    const days: number[] = new Array(length).fill(1);
+    const daysArray: number[] = new Array(length + iWeekDay).fill(1);
 
-    return days.map((day, index) => (day += index));
+    return daysArray.map((day, index) =>
+      index < iWeekDay ? (day -= 1) : (day += index - iWeekDay),
+    );
   };
 
   const getDate = (date: Date, calendarDay: string) => {
@@ -73,27 +75,26 @@ export const Calendar: FC = () => {
     setCurrentDate(newDate);
   };
 
-  const currentWeekDay = getWeekDay(
+  const week = getWeek(currentDate.getMonth(), currentDate.getFullYear());
+  const daysArray = getDays(
+    week.currentDayIndex,
     currentDate.getMonth(),
     currentDate.getFullYear(),
   );
-  const daysArray = getDays(currentDate.getMonth(), currentDate.getFullYear());
-  const voidDaysArray: null[] = new Array(currentWeekDay.dayIndex).fill(null);
   const dateLabel = getMonthAndYear(currentDate);
 
-  // console.log(currentWeekDay);
+  // console.log(week);
   // console.log(daysArray);
 
   return (
     <CalendarUI
-      dateLabel={dateLabel}
-      inputValue={currentInputValue}
-      currentWeekDay={currentWeekDay}
-      daysArray={daysArray}
-      voidDaysArray={voidDaysArray}
-      onClickDay={handleClickDay}
-      onClickRight={() => handleChangeDate(currentDate, "right")}
-      onClickLeft={() => handleChangeDate(currentDate, "left")}
+      top={{
+        dateLabel,
+        onClickRight: () => handleChangeDate(currentDate, "right"),
+        onClickLeft: () => handleChangeDate(currentDate, "left"),
+      }}
+      week={week.weekArray}
+      days={{ daysArray, onClickDay: handleClickDay }}
     />
   );
 };

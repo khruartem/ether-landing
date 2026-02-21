@@ -6,15 +6,11 @@ import type { TWeekUIProps } from "./types";
 
 import styles from "./week.module.css";
 
-export const WeekUI: FC<TWeekUIProps> = ({ days }) => {
+export const WeekUI: FC<TWeekUIProps> = ({ week }) => {
   return (
-    <ul className={styles.week}>
-      {days.map((day, index) => {
-        return (
-          <li key={index} className={styles.week__day}>
-            <WeekDayUI day={day} />
-          </li>
-        );
+    <ul className={styles.calendar__week}>
+      {week.map((day, index) => {
+        return <WeekDayUI key={index} day={day} />;
       })}
     </ul>
   );

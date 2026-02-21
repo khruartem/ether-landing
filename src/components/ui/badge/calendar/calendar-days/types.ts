@@ -1,5 +1,5 @@
-export type TCalendarDayUIProps = {
-  day: number | null;
+export type TCalendarDaysUIProps = {
+  days: number[];
   onClickDay: (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>,
     styles: CSSModuleClasses,

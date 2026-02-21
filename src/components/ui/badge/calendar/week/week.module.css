@@ -1,15 +1,7 @@
-.week {
+.calendar__week {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  width: 348px;
+  width: 100%;
   height: 20px;
-}
-
-.week__day {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 100%;
 }

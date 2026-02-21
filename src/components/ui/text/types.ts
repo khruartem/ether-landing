@@ -8,4 +8,5 @@ export type TTextUIProps = {
   typography: TTypography;
   color: Colors;
   className?: string;
+  onClick?: React.MouseEventHandler<HTMLLIElement>;
 };

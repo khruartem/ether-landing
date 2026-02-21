@@ -34,7 +34,7 @@ export const CalendarUI: FC<TCalendarUIProps> = ({
 
   return (
     <>
-      <Week />
+      {/* <Week /> */}
       <ul className={styles.calendar}>
         {days.map((item, index) => {
           return (

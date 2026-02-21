@@ -1,4 +1,4 @@
-.calendar-day {
+.calendar__day {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,4 +7,24 @@
   height: 100%;
   border-radius: 50%;
   background-color: var(--light80);
+}
+
+.calendar__day:hover {
+  background-color: var(--navy);
+  color: var(--light100);
+}
+
+.current1 {
+  background-color: var(--navy);
+  color: var(--light100);
+}
+
+.current2 {
+  background-color: var(--navy);
+  color: var(--light100);
+}
+
+.current {
+  background-color: var(--nephritis100);
+  color: var(--light100);
 }
