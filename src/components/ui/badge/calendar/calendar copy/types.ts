@@ -1,17 +1,8 @@
+import type { TCalendarDays, TCalendarTop } from "../../../../../utils/types";
 import type { Week } from "../../../../../utils/week";
 
 export type TCalendarUIProps = {
-  top?: {
-    dateLabel: string;
-    onClickRight: () => void;
-    onClickLeft: () => void;
-  };
+  top?: TCalendarTop;
   week: Week[];
-  days: {
-    daysArray: number[];
-    onClickDay: (
-      e: React.MouseEvent<HTMLLIElement, MouseEvent>,
-      styles: CSSModuleClasses,
-    ) => void;
-  };
+  days: TCalendarDays;
 };

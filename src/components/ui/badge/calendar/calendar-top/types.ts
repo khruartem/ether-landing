@@ -1,5 +1,5 @@
+import type { TCalendarTop } from "../../../../../utils/types";
+
 export type TCalendarTopUIProps = {
-  dateLabel: string;
-  onClickLeft: () => void;
-  onClickRight: () => void;
+  top: TCalendarTop;
 };

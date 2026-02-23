@@ -52,3 +52,20 @@ export type TWeek = {
   currentDayIndex: number;
   weekArray: Week[];
 };
+
+export type TCalendarTop = {
+  dateLabel: string;
+  onClickRight: () => void;
+  onClickLeft: () => void;
+};
+
+export type TCalendarDays = {
+  daysArray: number[];
+  currentDay?: number;
+  onClickDay: (e: React.MouseEvent) => void;
+};
+
+export type TCalendarRange = {
+  start: number | null;
+  end: number | null;
+};

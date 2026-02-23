@@ -9,19 +9,11 @@ import type { TCalendarUIProps } from "./types";
 import styles from "./calendar.module.css";
 
 export const CalendarUI: FC<TCalendarUIProps> = ({ top, week, days }) => {
-  const { daysArray, onClickDay } = days;
-
   return (
     <div className={styles.calendar}>
-      {top && (
-        <CalendarTopUI
-          dateLabel={top.dateLabel}
-          onClickLeft={top.onClickLeft}
-          onClickRight={top.onClickRight}
-        />
-      )}
+      {top && <CalendarTopUI top={top} />}
       <WeekUI week={week} />
-      <CalendarDaysUI days={daysArray} onClickDay={onClickDay} />
+      <CalendarDaysUI days={days} />
     </div>
   );
 };

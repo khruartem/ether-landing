@@ -7,23 +7,19 @@ import leftSVG from "../../../../../assets/icons/chevron-down.svg";
 
 import styles from "./calendar-top.module.css";
 
-export const CalendarTopUI: FC<TCalendarTopUIProps> = ({
-  dateLabel,
-  onClickLeft,
-  onClickRight,
-}) => {
+export const CalendarTopUI: FC<TCalendarTopUIProps> = ({ top }) => {
   return (
     <div className={styles.calendar__top}>
       <img
         src={leftSVG}
         className={styles.calendar__button}
-        onClick={onClickLeft}
+        onClick={top.onClickLeft}
       />
-      <span>{dateLabel}</span>
+      <span>{top.dateLabel}</span>
       <img
         src={rightSVG}
         className={styles.calendar__button}
-        onClick={onClickRight}
+        onClick={top.onClickRight}
       />
     </div>
   );

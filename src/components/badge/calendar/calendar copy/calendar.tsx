@@ -6,7 +6,7 @@ import type { TWeek } from "../../../../utils/types";
 
 export const Calendar: FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [currentInputValue, setCurrentInputValue] = useState("");
+  const [currentDay, setCurrentDay] = useState<number | undefined>(undefined);
 
   const cycleDuration = 30 * 24 * 60 * 60 * 1000;
 
@@ -49,22 +49,8 @@ export const Calendar: FC = () => {
     return `${month}, ${year}`;
   };
 
-  const handleClickDay = (
-    e: React.MouseEvent<HTMLLIElement, MouseEvent>,
-    styles: CSSModuleClasses,
-  ) => {
-    const calendar = e.currentTarget.closest("ul");
-    const days = calendar?.querySelectorAll("li");
-    days?.forEach((day) => {
-      if (day.classList.contains(styles.current)) {
-        day.classList.remove(styles.current);
-      }
-    });
-
-    const calendarDate = getDate(currentDate, e.currentTarget.textContent);
-    setCurrentInputValue(calendarDate);
-
-    e.currentTarget.classList.add(styles.current);
+  const handleClickDay = (day: number) => {
+    setCurrentDay(day);
   };
 
   const handleChangeDate = (date: Date, direction: "right" | "left") => {
@@ -73,6 +59,7 @@ export const Calendar: FC = () => {
     const newDate = new Date(newDateMs);
 
     setCurrentDate(newDate);
+    setCurrentDay(undefined);
   };
 
   const week = getWeek(currentDate.getMonth(), currentDate.getFullYear());
@@ -84,7 +71,7 @@ export const Calendar: FC = () => {
   const dateLabel = getMonthAndYear(currentDate);
 
   // console.log(week);
-  // console.log(daysArray);
+  // console.log(selectedRange);
 
   return (
     <CalendarUI
@@ -94,7 +81,14 @@ export const Calendar: FC = () => {
         onClickLeft: () => handleChangeDate(currentDate, "left"),
       }}
       week={week.weekArray}
-      days={{ daysArray, onClickDay: handleClickDay }}
+      days={{
+        daysArray,
+        currentDay: currentDay,
+        onClickDay: (e) => {
+          const day = e.currentTarget.textContent;
+          handleClickDay(+day);
+        },
+      }}
     />
   );
 };
