@@ -1,4 +1,4 @@
-import { useState, type FC } from "react";
+import { useState, type FC, type SyntheticEvent } from "react";
 import { CalendarUI } from "../../../ui/badge/calendar/calendar copy";
 import { Week } from "../../../../utils/week";
 import { Months } from "../../../../utils/months";
@@ -50,7 +50,7 @@ export const Calendar: FC = () => {
   };
 
   const handleClickDay = (day: number) => {
-    setCurrentDay(day);
+    setCurrentDay(day === currentDay ? undefined : day);
   };
 
   const handleChangeDate = (date: Date, direction: "right" | "left") => {
@@ -60,6 +60,37 @@ export const Calendar: FC = () => {
 
     setCurrentDate(newDate);
     setCurrentDay(undefined);
+  };
+
+  const handlerMouseEnterDay = (e: SyntheticEvent) => {
+    const hoveredDayValue = +e.currentTarget.textContent;
+    if (hoveredDayValue === currentDay) return;
+
+    const hoveredDay = e.currentTarget;
+    const rangeLength = Math.abs(Number(currentDay) - hoveredDayValue);
+
+    let proxyElement = hoveredDay;
+    for (let i = 0; i < rangeLength; i++) {
+      if (Number(currentDay) > +hoveredDayValue) {
+        const nextDay = proxyElement.nextElementSibling as EventTarget &
+          HTMLLIElement;
+
+        if (nextDay && hoveredDayValue !== 0) {
+          nextDay.classList.toggle("calendar__day_range");
+          proxyElement = nextDay;
+        }
+      }
+
+      if (Number(currentDay) < +hoveredDayValue) {
+        const previousDay = proxyElement.previousElementSibling as EventTarget &
+          HTMLLIElement;
+
+        if (previousDay && hoveredDayValue !== 0) {
+          previousDay.classList.toggle("calendar__day_range");
+          proxyElement = previousDay;
+        }
+      }
+    }
   };
 
   const week = getWeek(currentDate.getMonth(), currentDate.getFullYear());
@@ -87,7 +118,10 @@ export const Calendar: FC = () => {
         onClickDay: (e) => {
           const day = e.currentTarget.textContent;
           handleClickDay(+day);
+          handlerMouseEnterDay(e);
         },
+        onMouseEnterDay: handlerMouseEnterDay,
+        onMouseLeaveDay: handlerMouseEnterDay,
       }}
     />
   );

@@ -14,6 +14,11 @@
   color: var(--light100);
 }
 
+.calendar__day_range {
+  background-color: var(--navy);
+  color: var(--light100);
+}
+
 .current1 {
   background-color: var(--navy);
   color: var(--light100);
@@ -27,24 +32,4 @@
 .current {
   background-color: var(--nephritis100);
   color: var(--light100);
-}
-
-.calendar__day:hover ~ .calendar__day:not(.current) {
-  background-color: var(--navy);
-  color: var(--light100);
-}
-
-.calendar__day:hover ~ .current ~ .calendar__day {
-  background-color: var(--light80);
-  color: var(--nephritis100);
-}
-
-.current ~ .calendar__day {
-  background-color: var(--navy);
-  color: var(--light100);
-}
-
-.calendar__day:hover ~ .calendar__day {
-  background-color: var(--light80) !important;
-  color: var(--nephritis100) !important;
 }

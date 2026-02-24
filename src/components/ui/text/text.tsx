@@ -12,6 +12,8 @@ export const TextUI: FC<TTextUIProps> = ({
   color,
   className,
   onClick,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   return (
     <Tag
@@ -27,6 +29,8 @@ export const TextUI: FC<TTextUIProps> = ({
         } as CSSProperties
       }
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {/* {text.split(" ").map((word, index, array) => {
         return word === emphasized ? (

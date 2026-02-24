@@ -8,30 +8,26 @@ import type { TCalendarDayUIProps } from "./types";
 import { Colors } from "../../../../../utils/colors";
 import { Typography } from "../../../../../utils/typography";
 
-import styles from "./calendar-day.module.css";
+import "./calendar-day.css";
 
 export const CalendarDayUI: FC<TCalendarDayUIProps> = ({
   day,
   current,
   onClickDay,
+  onMouseEnterDay,
+  onMouseLeaveDay
 }) => {
   return (
     <TextUI
       as={"li"}
       typography={Typography.Title_500_14}
       color={Colors.Nephritis100}
-      className={clsx(day && styles.calendar__day, current && styles.current)}
+      className={clsx(day && "calendar__day", current && "current")}
       onClick={onClickDay}
+      onMouseEnter={onMouseEnterDay}
+      onMouseLeave={onMouseLeaveDay}
     >
       {day}
     </TextUI>
-    // <li
-    //   className={clsx(day && [styles.calendar__day, stylesAbove.calendar__day], current && [styles.current, stylesAbove.current])}
-    //   onClick={onClickDay}
-    //   // onMouseEnter={(e) => e.currentTarget.classList.add(stylesAbove.calendar__day)}
-    //   // onMouseLeave={(e) => e.currentTarget.classList.remove(stylesAbove.calendar__day)}
-    // >
-    //   {day}
-    // </li>
   );
 };

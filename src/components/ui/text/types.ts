@@ -9,4 +9,6 @@ export type TTextUIProps = {
   color: Colors;
   className?: string;
   onClick?: React.MouseEventHandler;
+  onMouseEnter?: React.MouseEventHandler;
+  onMouseLeave?: React.MouseEventHandler;
 };

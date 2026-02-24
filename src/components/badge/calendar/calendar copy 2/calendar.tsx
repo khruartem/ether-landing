@@ -23,6 +23,8 @@ export const Calendar: FC = () => {
       });
       return;
     }
+
+    setSelectedRange({ start: null, end: null });
   };
 
   return (

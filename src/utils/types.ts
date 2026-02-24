@@ -63,6 +63,8 @@ export type TCalendarDays = {
   daysArray: number[];
   currentDay?: number;
   onClickDay: (e: React.MouseEvent) => void;
+  onMouseEnterDay?: (e: React.MouseEvent) => void;
+  onMouseLeaveDay?: (e: React.MouseEvent) => void;
 };
 
 export type TCalendarRange = {
