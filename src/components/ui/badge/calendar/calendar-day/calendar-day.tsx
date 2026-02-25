@@ -13,6 +13,7 @@ import "./calendar-day.css";
 export const CalendarDayUI: FC<TCalendarDayUIProps> = ({
   day,
   current,
+  emphasised,
   onClickDay,
   onMouseEnterDay,
   onMouseLeaveDay
@@ -22,7 +23,7 @@ export const CalendarDayUI: FC<TCalendarDayUIProps> = ({
       as={"li"}
       typography={Typography.Title_500_14}
       color={Colors.Nephritis100}
-      className={clsx(day && "calendar__day", current && "current")}
+      className={clsx(day && "calendar__day", current && "current", emphasised && "calendar__day_range")}
       onClick={onClickDay}
       onMouseEnter={onMouseEnterDay}
       onMouseLeave={onMouseLeaveDay}

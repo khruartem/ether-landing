@@ -61,6 +61,7 @@ export type TCalendarTop = {
 
 export type TCalendarDays = {
   daysArray: number[];
+  emphasisedDays?: boolean;
   currentDay?: number;
   onClickDay: (e: React.MouseEvent) => void;
   onMouseEnterDay?: (e: React.MouseEvent) => void;

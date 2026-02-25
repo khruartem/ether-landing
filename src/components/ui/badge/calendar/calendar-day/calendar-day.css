@@ -7,29 +7,30 @@
   height: 100%;
   border-radius: 50%;
   background-color: var(--light80);
+  cursor: pointer;
 }
 
 .calendar__day:hover {
-  background-color: var(--navy);
-  color: var(--light100);
+  background-color: var(--light80);
+  color: var(--nephritis120);
 }
 
 .calendar__day_range {
-  background-color: var(--navy);
   color: var(--light100);
+  background-color: var(--nephritis100);
 }
 
 .current1 {
-  background-color: var(--navy);
   color: var(--light100);
+  background-color: var(--navy);
 }
 
 .current2 {
-  background-color: var(--navy);
   color: var(--light100);
+  background-color: var(--navy);
 }
 
 .current {
-  background-color: var(--nephritis100);
   color: var(--light100);
+  background-color: var(--navy);
 }

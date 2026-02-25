@@ -1,6 +1,6 @@
 .calendar__days {
   display: grid;
-  width: 348px;
+  width: 100%;
   grid-template-columns: repeat(7, 36px);
   grid-template-rows: repeat(6, 36px);
   gap: 16px;

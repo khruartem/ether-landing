@@ -7,13 +7,14 @@ import { CalendarDaysUI } from "../calendar-days";
 import type { TCalendarUIProps } from "./types";
 
 import styles from "./calendar.module.css";
+import { BadgeUI } from "../../badge";
 
 export const CalendarUI: FC<TCalendarUIProps> = ({ top, week, days }) => {
   return (
-    <div className={styles.calendar}>
+    <>
       {top && <CalendarTopUI top={top} />}
       <WeekUI week={week} />
       <CalendarDaysUI days={days} />
-    </div>
+    </>
   );
 };

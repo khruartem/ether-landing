@@ -3,6 +3,7 @@ import { CalendarUI } from "../../../ui/badge/calendar/calendar copy";
 import { Week } from "../../../../utils/week";
 import { Months } from "../../../../utils/months";
 import type { TWeek } from "../../../../utils/types";
+import { BadgeUI } from "../../../ui/badge/badge";
 
 export const Calendar: FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -105,24 +106,26 @@ export const Calendar: FC = () => {
   // console.log(selectedRange);
 
   return (
-    <CalendarUI
-      top={{
-        dateLabel,
-        onClickRight: () => handleChangeDate(currentDate, "right"),
-        onClickLeft: () => handleChangeDate(currentDate, "left"),
-      }}
-      week={week.weekArray}
-      days={{
-        daysArray,
-        currentDay: currentDay,
-        onClickDay: (e) => {
-          const day = e.currentTarget.textContent;
-          handleClickDay(+day);
-          handlerMouseEnterDay(e);
-        },
-        onMouseEnterDay: handlerMouseEnterDay,
-        onMouseLeaveDay: handlerMouseEnterDay,
-      }}
-    />
+    <BadgeUI>
+      <CalendarUI
+        top={{
+          dateLabel,
+          onClickRight: () => handleChangeDate(currentDate, "right"),
+          onClickLeft: () => handleChangeDate(currentDate, "left"),
+        }}
+        week={week.weekArray}
+        days={{
+          daysArray,
+          currentDay: currentDay,
+          onClickDay: (e) => {
+            const day = e.currentTarget.textContent;
+            handleClickDay(+day);
+            handlerMouseEnterDay(e);
+          },
+          onMouseEnterDay: handlerMouseEnterDay,
+          onMouseLeaveDay: handlerMouseEnterDay,
+        }}
+      />
+    </BadgeUI>
   );
 };

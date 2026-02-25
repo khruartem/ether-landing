@@ -9,6 +9,7 @@ import styles from "./calendar-days.module.css";
 export const CalendarDaysUI: FC<TCalendarDaysUIProps> = ({ days }) => {
   const {
     daysArray,
+    emphasisedDays,
     currentDay,
     onClickDay,
     onMouseEnterDay,
@@ -23,6 +24,11 @@ export const CalendarDaysUI: FC<TCalendarDaysUIProps> = ({ days }) => {
             key={index}
             day={day ? day : null}
             current={currentDay === day}
+            emphasised={
+              emphasisedDays && currentDay && day && day < currentDay
+                ? true
+                : false
+            }
             onClickDay={onClickDay}
             onMouseEnterDay={onMouseEnterDay}
             onMouseLeaveDay={onMouseLeaveDay}
