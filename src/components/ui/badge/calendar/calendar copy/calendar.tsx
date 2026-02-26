@@ -6,9 +6,6 @@ import { CalendarDaysUI } from "../calendar-days";
 
 import type { TCalendarUIProps } from "./types";
 
-import styles from "./calendar.module.css";
-import { BadgeUI } from "../../badge";
-
 export const CalendarUI: FC<TCalendarUIProps> = ({ top, week, days }) => {
   return (
     <>

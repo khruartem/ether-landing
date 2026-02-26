@@ -1,9 +1,9 @@
 import { useState, type FC, type SyntheticEvent } from "react";
 
-import { CalendarUI } from "../../../ui/badge/calendar/calendar copy";
+import { CalendarUI } from "../../ui/badge/calendar/calendar copy";
 
-import { Week } from "../../../../utils/week";
-import type { TWeek } from "../../../../utils/types";
+import { Week } from "../../../utils/week";
+import type { TWeek } from "../../../utils/types";
 
 export const Calendar: FC = () => {
   const currentDate = new Date();

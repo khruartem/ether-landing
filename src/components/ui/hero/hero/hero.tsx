@@ -11,7 +11,7 @@ import { Portfolio } from "../../../hero/portfolio";
 import { TabBar } from "../../../badge/tab-bar";
 import { EventInput } from "../../../badge/event-input";
 import { DatePickerUI } from "../../badge/date-picker/date-picker";
-import { Calendar } from "../../../badge/calendar/calendar copy";
+import { Calendar } from "../../../badge/calendar";
 
 export const HeroUI: FC = () => {
   return (
