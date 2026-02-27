@@ -6,8 +6,10 @@ export const EventInput: FC = () => {
   const [value, setValue] = useState<string>("");
 
   const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {
+    console.log(evt)
     const input = evt.target;
     const value = input.value;
+    console.log(value)
     setValue(value);
   };
 
@@ -18,7 +20,7 @@ export const EventInput: FC = () => {
       type="text"
       placeholder="Новое мероприятие"
       value={value}
-      onChange={handleChange}
+      onChange={(evt) => handleChange(evt)}
     />
   );
 };

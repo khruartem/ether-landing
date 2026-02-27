@@ -1,5 +1,6 @@
+import type { InputMaskProps } from "@react-input/mask";
 import type { InputHTMLAttributes } from "react";
 
-export interface TInputUIProps extends InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
-}
+export type TInputUIProps = InputMaskProps & InputHTMLAttributes<HTMLInputElement> & {
+  withMask?: boolean;
+};
