@@ -1,0 +1,47 @@
+.hero__block_date-picker {
+  width: 372px;
+  position: absolute;
+  left: 19px;
+  bottom: -385px;
+}
+
+.hero__block_date-picker>div {
+  margin-block-end: 10px;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.date-time>label {
+  position: relative;
+}
+
+.date-time input {
+  padding-inline-start: 40px;
+}
+
+.date-time>label::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 12px;
+  top: 10px;
+}
+
+.date-time>label:first-child::before {
+  content: url("../../../../assets/icons/calendar.svg");
+}
+
+.date-time>label:nth-child(2)::before {
+  content: url("../../../../assets/icons/time.svg");
+}
+
+.date-time__input {
+  max-width: 176px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}

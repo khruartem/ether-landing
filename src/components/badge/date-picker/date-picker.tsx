@@ -1,18 +1,48 @@
 import { useState, type ChangeEvent, type FC } from "react";
-import { InputUI } from "../../ui/badge/input";
-import { CalendarUI } from "../../ui/badge/calendar/calendar copy";
-import type { TWeek } from "../../../utils/types";
-import { Week } from "../../../utils/week";
-import { Months } from "../../../utils/months";
+
+import { BadgeTitleUI } from "../../ui/badge/badge-title";
+import { DatePickerUI } from "../../ui/badge/date-picker";
+
+import { useCalendarWeeks } from "../../../hooks/calendar/useCalendarWeeks";
+import { useCalendarDays } from "../../../hooks/calendar/useCalendarDays";
+import { useCalendarMonthAndYear } from "../../../hooks/calendar/useCalendarMonthAndYear";
 
 export const DatePicker: FC = () => {
   const [currentInputValue, setCurrentInputValue] = useState<string>("");
   const [currentDate, setCurrentDate] = useState(new Date());
   const [currentDay, setCurrentDay] = useState<number | undefined>(undefined);
   const [calendarShow, setCalendarShow] = useState<boolean>(false);
-  const cycleDuration = 30 * 24 * 60 * 60 * 1000;
 
-  const getDate = (dateString: string) => {
+  const cycleDuration = 30 * 24 * 60 * 60 * 1000;
+  const week = useCalendarWeeks(
+    currentDate.getMonth(),
+    currentDate.getFullYear(),
+  );
+  const daysArray = useCalendarDays(
+    week.currentDayIndex,
+    currentDate.getMonth(),
+    currentDate.getFullYear(),
+  );
+  const dateLabel = useCalendarMonthAndYear(currentDate);
+  const calendar = {
+    isShown: calendarShow,
+    top: {
+      dateLabel,
+      onClickRight: () => handleChangeDate(currentDate, "right"),
+      onClickLeft: () => handleChangeDate(currentDate, "left"),
+    },
+    week: week.weekArray,
+    days: {
+      daysArray,
+      currentDay: currentDay,
+      onClickDay: (e: React.MouseEvent<Element, MouseEvent>) => {
+        const day = e.currentTarget.textContent;
+        handleClickDay(day);
+      },
+    },
+  };
+
+  const getCalendarDate = (dateString: string) => {
     const dateArray = dateString.split(".");
 
     const date = new Date(
@@ -27,42 +57,12 @@ export const DatePicker: FC = () => {
     }
   };
 
-  const getWeek: (iMonth: number, iYear: number) => TWeek = (
-    iMonth: number,
-    iYear: number,
-  ) => {
-    const weekArray: Week[] = ["пн", "вт", "ср", "чт", "пт", "сб", "вск"];
-
-    const currentDayCode = new Date(iYear, iMonth, 1).getDay();
-    const currentDayName = Week[currentDayCode as keyof typeof Week];
-    const currentDayIndex = weekArray.findIndex(
-      (day) => day === currentDayName,
-    );
-
-    return { currentDayIndex, weekArray };
-  };
-
-  const getDays = (iWeekDay: number, iMonth: number, iYear: number) => {
-    const length = 32 - new Date(iYear, iMonth, 32).getDate();
-    const daysArray: number[] = new Array(length + iWeekDay).fill(1);
-
-    return daysArray.map((day, index) =>
-      index < iWeekDay ? (day -= 1) : (day += index - iWeekDay),
-    );
-  };
-
-  const getMonthAndYear = (date: Date) => {
-    const month = Months[date.getMonth() as keyof typeof Months];
-    const year = date.getFullYear();
-
-    return `${month}, ${year}`;
-  };
-
   const handleChangeInputValue = (e: ChangeEvent<HTMLInputElement>) => {
     const input = e.target;
     const dateValue = input.value;
 
     setCurrentInputValue(dateValue);
+    getCalendarDate(dateValue);
   };
 
   const handleClickDay = (day: string) => {
@@ -84,55 +84,23 @@ export const DatePicker: FC = () => {
     setCurrentInputValue("");
   };
 
-  const handleInputClick = () => {
+  const handleClickInput = () => {
     setCalendarShow(!calendarShow);
   };
 
-  const week = getWeek(currentDate.getMonth(), currentDate.getFullYear());
-  const daysArray = getDays(
-    week.currentDayIndex,
-    currentDate.getMonth(),
-    currentDate.getFullYear(),
-  );
-  const dateLabel = getMonthAndYear(currentDate);
-
   return (
     <>
-      <InputUI
-        withMask
-        id="date-picker"
-        name="date-picker"
-        type="text"
-        placeholder="Дата мероприятия"
-        value={currentInputValue}
-        mask="dd.mm.yyyy"
-        replacement={{ d: /\d/, m: /\d/, y: /\d/ }}
-        showMask
-        onChange={(e) => {
-          handleChangeInputValue(e);
-          console.log(e.target.value);
-          getDate(e.target.value);
+      <BadgeTitleUI
+        title={{
+          text: "Дата и время проведения",
         }}
-        onClick={handleInputClick}
       />
-      {calendarShow && (
-        <CalendarUI
-          top={{
-            dateLabel,
-            onClickRight: () => handleChangeDate(currentDate, "right"),
-            onClickLeft: () => handleChangeDate(currentDate, "left"),
-          }}
-          week={week.weekArray}
-          days={{
-            daysArray,
-            currentDay: currentDay,
-            onClickDay: (e) => {
-              const day = e.currentTarget.textContent;
-              handleClickDay(day);
-            },
-          }}
-        />
-      )}
+      <DatePickerUI
+        currentInputValue={currentInputValue}
+        onChangeInputValue={handleChangeInputValue}
+        onClickInput={handleClickInput}
+        calendar={calendar}
+      />
     </>
   );
 };

@@ -1,0 +1,7 @@
+.hero__block_event {
+  position: relative;
+}
+
+.hero__block_event > label {
+  margin-block-end: 32px;
+}

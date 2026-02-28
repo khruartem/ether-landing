@@ -1,16 +1,16 @@
 import type { FC } from "react";
+
 import { SectionUI } from "../../section";
 import { HeadingUI } from "../../heading";
 import { HeroGridUI } from "../hero-grid";
 import { Activity } from "../../../hero/activity";
 import { Schedule } from "../../../hero/schedule";
 import { SmallTask } from "../../../hero/small-task";
-
-import styles from "./hero.module.css";
 import { Portfolio } from "../../../hero/portfolio";
 import { TabBar } from "../../../badge/tab-bar";
-import { EventInput } from "../../../badge/event-input";
-import { DatePicker } from "../../../badge/date-picker";
+import { EventUI } from "../event";
+
+import styles from "./hero.module.css";
 
 export const HeroUI: FC = () => {
   return (
@@ -23,10 +23,9 @@ export const HeroUI: FC = () => {
         </div>
         <Portfolio />
         <Schedule />
-        <div>
+        <div className={styles.container}>
           <TabBar />
-          <EventInput />
-          <DatePicker />
+          <EventUI />
         </div>
       </HeroGridUI>
     </SectionUI>

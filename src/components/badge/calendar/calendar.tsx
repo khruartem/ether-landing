@@ -1,39 +1,15 @@
 import { useState, type FC, type SyntheticEvent } from "react";
 
-import { CalendarUI } from "../../ui/badge/calendar/calendar copy";
+import { CalendarUI } from "../../ui/badge/calendar/calendar";
 
-import { Week } from "../../../utils/week";
-import type { TWeek } from "../../../utils/types";
+import { useCalendarWeeks } from "../../../hooks/calendar/useCalendarWeeks";
+import { useCalendarDays } from "../../../hooks/calendar/useCalendarDays";
 
 export const Calendar: FC = () => {
   const currentDate = new Date();
   const [currentDay, setCurrentDay] = useState<number | undefined>(
     currentDate.getDate(),
   );
-
-  const getWeek: (iMonth: number, iYear: number) => TWeek = (
-    iMonth: number,
-    iYear: number,
-  ) => {
-    const weekArray: Week[] = ["пн", "вт", "ср", "чт", "пт", "сб", "вск"];
-
-    const currentDayCode = new Date(iYear, iMonth, 1).getDay();
-    const currentDayName = Week[currentDayCode as keyof typeof Week];
-    const currentDayIndex = weekArray.findIndex(
-      (day) => day === currentDayName,
-    );
-
-    return { currentDayIndex, weekArray };
-  };
-
-  const getDays = (iWeekDay: number, iMonth: number, iYear: number) => {
-    const length = 32 - new Date(iYear, iMonth, 32).getDate();
-    const daysArray: number[] = new Array(length + iWeekDay).fill(1);
-
-    return daysArray.map((day, index) =>
-      index < iWeekDay ? (day -= 1) : (day += index - iWeekDay),
-    );
-  };
 
   const handleClickDay = (day: number) => {
     setCurrentDay(day === currentDay ? undefined : day);
@@ -70,8 +46,11 @@ export const Calendar: FC = () => {
     }
   };
 
-  const week = getWeek(currentDate.getMonth(), currentDate.getFullYear());
-  const daysArray = getDays(
+  const week = useCalendarWeeks(
+    currentDate.getMonth(),
+    currentDate.getFullYear(),
+  );
+  const daysArray = useCalendarDays(
     week.currentDayIndex,
     currentDate.getMonth(),
     currentDate.getFullYear(),
