@@ -4,11 +4,22 @@ import { CalendarUI } from "../../ui/badge/calendar/calendar";
 
 import { useCalendarWeeks } from "../../../hooks/calendar/useCalendarWeeks";
 import { useCalendarDays } from "../../../hooks/calendar/useCalendarDays";
+import { useCalendarMonthAndYear } from "../../../hooks/calendar/useCalendarMonthAndYear";
 
 export const Calendar: FC = () => {
-  const currentDate = new Date();
-  const [currentDay, setCurrentDay] = useState<number | undefined>(
-    currentDate.getDate(),
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDay, setCurrentDay] = useState<number | undefined>(currentDate.getDate());
+
+  const cycleDuration = 30 * 24 * 60 * 60 * 1000;
+  const dateLabel = useCalendarMonthAndYear(currentDate);
+  const week = useCalendarWeeks(
+    currentDate.getMonth(),
+    currentDate.getFullYear(),
+  );
+  const daysArray = useCalendarDays(
+    week.currentDayIndex,
+    currentDate.getMonth(),
+    currentDate.getFullYear(),
   );
 
   const handleClickDay = (day: number) => {
@@ -46,18 +57,22 @@ export const Calendar: FC = () => {
     }
   };
 
-  const week = useCalendarWeeks(
-    currentDate.getMonth(),
-    currentDate.getFullYear(),
-  );
-  const daysArray = useCalendarDays(
-    week.currentDayIndex,
-    currentDate.getMonth(),
-    currentDate.getFullYear(),
-  );
+  const handleChangeDate = (date: Date, direction: "right" | "left") => {
+    const newDateMs =
+      direction === "left" ? +date - cycleDuration : +date + cycleDuration;
+    const newDate = new Date(newDateMs);
+
+    setCurrentDate(newDate);
+    setCurrentDay(undefined);
+  };
 
   return (
     <CalendarUI
+      top={{
+        dateLabel,
+        onClickRight: () => handleChangeDate(currentDate, "right"),
+        onClickLeft: () => handleChangeDate(currentDate, "left"),
+      }}
       week={week.weekArray}
       days={{
         daysArray,

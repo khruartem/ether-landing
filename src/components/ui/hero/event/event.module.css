@@ -2,6 +2,6 @@
   position: relative;
 }
 
-.hero__block_event > label {
-  margin-block-end: 32px;
+.hero__block_event label {
+  margin-block-end: 28px;
 }
