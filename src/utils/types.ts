@@ -54,7 +54,7 @@ export type TWeek = {
 };
 
 export type TCalendarTop = {
-  dateLabel: string;
+  monthWithYear: string;
   onClickRight: () => void;
   onClickLeft: () => void;
 };

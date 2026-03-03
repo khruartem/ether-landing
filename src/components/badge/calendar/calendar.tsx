@@ -2,25 +2,19 @@ import { useState, type FC, type SyntheticEvent } from "react";
 
 import { CalendarUI } from "../../ui/badge/calendar/calendar";
 
-import { useCalendarWeeks } from "../../../hooks/calendar/useCalendarWeeks";
-import { useCalendarDays } from "../../../hooks/calendar/useCalendarDays";
-import { useCalendarMonthAndYear } from "../../../hooks/calendar/useCalendarMonthAndYear";
+import { CalendarModel } from "../../../utils/calendarData";
 
 export const Calendar: FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [currentDay, setCurrentDay] = useState<number | undefined>(currentDate.getDate());
+  const [currentDay, setCurrentDay] = useState<number | undefined>(
+    currentDate.getDate(),
+  );
 
-  const cycleDuration = 30 * 24 * 60 * 60 * 1000;
-  const dateLabel = useCalendarMonthAndYear(currentDate);
-  const week = useCalendarWeeks(
-    currentDate.getMonth(),
-    currentDate.getFullYear(),
-  );
-  const daysArray = useCalendarDays(
-    week.currentDayIndex,
-    currentDate.getMonth(),
-    currentDate.getFullYear(),
-  );
+  const calendar = new CalendarModel(currentDate);
+  const cycleDuration = calendar.monthCycle;
+  const monthWithYear = calendar.getMonthWithYear();
+  const week = calendar.getWeeks();
+  const daysArray = calendar.getDays();
 
   const handleClickDay = (day: number) => {
     setCurrentDay(day === currentDay ? undefined : day);
@@ -58,18 +52,23 @@ export const Calendar: FC = () => {
   };
 
   const handleChangeDate = (date: Date, direction: "right" | "left") => {
+    const today = new Date();
+
     const newDateMs =
       direction === "left" ? +date - cycleDuration : +date + cycleDuration;
     const newDate = new Date(newDateMs);
+    const isCurrentMonth =
+      newDate.getMonth() === today.getMonth() &&
+      newDate.getFullYear() === today.getFullYear();
 
     setCurrentDate(newDate);
-    setCurrentDay(undefined);
+    setCurrentDay(isCurrentMonth ? today.getDate() : undefined);
   };
 
   return (
     <CalendarUI
       top={{
-        dateLabel,
+        monthWithYear,
         onClickRight: () => handleChangeDate(currentDate, "right"),
         onClickLeft: () => handleChangeDate(currentDate, "left"),
       }}

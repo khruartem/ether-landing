@@ -15,7 +15,7 @@ export const CalendarTopUI: FC<TCalendarTopUIProps> = ({ top }) => {
         className={styles.calendar__button}
         onClick={top.onClickLeft}
       />
-      <span>{top.dateLabel}</span>
+      <span>{top.monthWithYear}</span>
       <img
         src={rightSVG}
         className={styles.calendar__button}

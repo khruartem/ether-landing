@@ -2,7 +2,6 @@ import { Months } from "./months";
 import { Week } from "./week";
 
 interface ICalendar {
-  date: Date;
   monthCycle: number;
   getMonthWithYear(): string;
   getWeeks(): {
@@ -13,22 +12,14 @@ interface ICalendar {
 }
 
 export class CalendarModel implements ICalendar {
-  protected _date: Date;
+  protected date: Date;
 
   constructor(date: Date) {
-    this._date = date;
-  }
-
-  get date() {
-    return this._date;
+    this.date = date;
   }
 
   get monthCycle() {
     return 30 * 24 * 60 * 60 * 1000;
-  }
-
-  set date(date: Date) {
-    this._date = date;
   }
 
   getMonthWithYear() {
