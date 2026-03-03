@@ -1,8 +1,8 @@
 .header {
-  /* position: sticky; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 8.13vw;
   padding-block-start: 20px;
   background-color: transparent;
 

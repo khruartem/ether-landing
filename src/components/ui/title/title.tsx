@@ -19,8 +19,10 @@ export const TitleUI: FC<TTitleUIProps> = ({
           <span className={styles.text_emphasized}>{word}</span>
         ) : index === array.length ? (
           word
-        ) : (
+        ) : index === 0 ? (
           `${word} `
+        ) : (
+          ` ${word} `
         );
       })}
     </TextUI>

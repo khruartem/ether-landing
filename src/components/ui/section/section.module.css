@@ -9,3 +9,7 @@
   background-color: var(--light60);
   border-radius: 200px;
 }
+
+.section_paddinged {
+  padding-inline: 8.13vw;
+}

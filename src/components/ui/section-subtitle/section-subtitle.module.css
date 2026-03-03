@@ -1,0 +1,9 @@
+.section-subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 80px;
+  width: 243px;
+}

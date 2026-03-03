@@ -72,3 +72,9 @@ export type TCalendarRange = {
   start: number | null;
   end: number | null;
 };
+
+export type TSectionSubtitle = {
+  text: string;
+  icon: string;
+  backgroundColor: Colors;
+};

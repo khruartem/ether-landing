@@ -8,6 +8,7 @@ import styles from "./section.module.css";
 export const SectionUI: FC<TSectionUIProps> = ({
   id,
   decorated,
+  paddinged = true,
   className,
   children,
 }) => {
@@ -17,6 +18,7 @@ export const SectionUI: FC<TSectionUIProps> = ({
       className={clsx(
         styles.section,
         decorated && styles.section_decorated,
+        paddinged && styles.section_paddinged,
         className && className,
       )}
     >
