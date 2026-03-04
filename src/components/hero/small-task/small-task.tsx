@@ -1,18 +1,12 @@
-import { useState, type FC } from "react";
+import { type FC } from "react";
 
 import { SmallTaskUI } from "../../ui/hero/small-task";
 
 import type { TBadgeTitle, TEmployee } from "../../../utils/types";
 
 export const SmallTask: FC = () => {
-  const [successed, setSuccessed] = useState(false);
-
   const badgeTitle: TBadgeTitle = {
     text: "Творческая задача",
-  };
-
-  const handleComplete = (state: boolean) => {
-    setSuccessed(state);
   };
 
   const employees: TEmployee[] = [
@@ -54,8 +48,6 @@ export const SmallTask: FC = () => {
       date="02.01.2025"
       time="14:00"
       employees={employees}
-      successed={successed}
-      onСomplete={() => handleComplete(!successed)}
     />
   );
 };

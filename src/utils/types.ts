@@ -6,26 +6,6 @@ export type TNavItem = {
   to: string;
 };
 
-export type TBadgeTitle = {
-  text: string;
-  decorated?: boolean;
-};
-
-export type TBadgeItem = {
-  text: string;
-  active: boolean;
-};
-
-export type TBadge = {
-  type: "badge";
-  item: TBadgeItem;
-};
-
-export type TAdd = {
-  type: "add";
-  item: null;
-};
-
 export type TEmployee = {
   firstname: string;
   lastname: string;
@@ -41,10 +21,8 @@ export type TGalleryItem = {
   backhroundColor?: Colors;
 };
 
-export type TTabIcon = "task" | "schedule";
-
 export type TTab = {
-  icon: TTabIcon;
+  icon: string;
   text: string;
 };
 
@@ -53,28 +31,24 @@ export type TWeek = {
   weekArray: Week[];
 };
 
-export type TCalendarTop = {
-  monthWithYear: string;
-  onClickRight: () => void;
-  onClickLeft: () => void;
-};
-
 export type TCalendarDays = {
   daysArray: number[];
-  emphasisedDays?: boolean;
-  currentDay?: number;
-  onClickDay: (e: React.MouseEvent) => void;
-  onMouseEnterDay?: (e: React.MouseEvent) => void;
-  onMouseLeaveDay?: (e: React.MouseEvent) => void;
-};
-
-export type TCalendarRange = {
-  start: number | null;
-  end: number | null;
+  currentDay: number;
 };
 
 export type TSectionSubtitle = {
   text: string;
   icon: string;
   backgroundColor: Colors;
+};
+
+export type TBadgeTitle = {
+  text: string;
+  decorated?: boolean;
+};
+
+export type TBadgeItem = {
+  text: string;
+  active: boolean;
+  decorated: boolean;
 };

@@ -1,20 +1,13 @@
 import type { FC } from "react";
 
-import { CalendarDayUI } from "../calendar-day/calendar-day";
+import { CalendarDayUI } from "../calendar-day";
 
 import type { TCalendarDaysUIProps } from "./types";
 
 import styles from "./calendar-days.module.css";
 
 export const CalendarDaysUI: FC<TCalendarDaysUIProps> = ({ days }) => {
-  const {
-    daysArray,
-    emphasisedDays,
-    currentDay,
-    onClickDay,
-    onMouseEnterDay,
-    onMouseLeaveDay,
-  } = days;
+  const { daysArray, currentDay } = days;
 
   return (
     <ul className={styles.calendar__days}>
@@ -24,14 +17,7 @@ export const CalendarDaysUI: FC<TCalendarDaysUIProps> = ({ days }) => {
             key={index}
             day={day ? day : null}
             current={currentDay === day}
-            emphasised={
-              emphasisedDays && currentDay && day && day < currentDay
-                ? true
-                : false
-            }
-            onClickDay={onClickDay}
-            onMouseEnterDay={onMouseEnterDay}
-            onMouseLeaveDay={onMouseLeaveDay}
+            emphasised={day && day < currentDay ? true : false}
           />
         );
       })}

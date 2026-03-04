@@ -10,11 +10,6 @@
   cursor: pointer;
 }
 
-.calendar__day:hover {
-  background-color: var(--light80);
-  color: var(--nephritis120);
-}
-
 .calendar__day_range {
   color: var(--light100);
   background-color: var(--nephritis100);

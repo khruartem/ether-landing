@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import clsx from "clsx";
 
 import { RadioButtonUI } from "../../radio-button";
 import { DateTimeUI } from "../../badge/date-time";
@@ -16,19 +15,11 @@ export const SmallTaskUI: FC<TSmallTaskUIProps> = ({
   date,
   time,
   employees,
-  successed,
-  onСomplete,
 }) => {
   return (
-    <BadgeUI title={badgeTitle} className={styles.hero__block_task}>
-      <div
-        className={clsx(
-          styles["small-task"],
-          successed && styles["small-task_complete"],
-        )}
-        onClick={onСomplete}
-      >
-        <RadioButtonUI text={title} checked={successed} />
+    <BadgeUI title={badgeTitle} gap={12}>
+      <div className={styles["small-task"]}>
+        <RadioButtonUI text={title} checked={false} />
         <DateTimeUI date={date} time={time} />
         <EmployeeList employees={employees} />
       </div>

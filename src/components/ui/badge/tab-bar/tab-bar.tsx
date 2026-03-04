@@ -6,21 +6,13 @@ import type { TTabBarUIProps } from "./types";
 
 import styles from "./tab-bar.module.css";
 
-export const TabBarUI: FC<TTabBarUIProps> = ({
-  tabs,
-  currentTab,
-  onTabClick,
-}) => {
+export const TabBarUI: FC<TTabBarUIProps> = ({ tabs, current }) => {
   return (
     <ul className={styles["tab-bar"]}>
       {tabs.map((tab, index) => {
         return (
           <li key={index}>
-            <TabUI
-              tab={tab}
-              onClick={() => onTabClick(tab)}
-              current={currentTab.text === tab.text}
-            />
+            <TabUI tab={tab} current={current.text === tab.text} />
           </li>
         );
       })}

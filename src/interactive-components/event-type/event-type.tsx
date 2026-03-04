@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-import { BadgeTitleUI } from "../../ui/badge/badge-title";
-import { BadgeListUI } from "../../ui/badge/badge-list";
+import { BadgeTitleUI } from "../../components/ui/badge/badge-title";
+import { BadgeListUI } from "../ui/badge-list";
 
-import type { TBadgeItem, TBadgeTitle } from "../../../utils/types";
+import type { TBadgeItem } from "../types";
+import type { TBadgeTitle } from "../../utils/types";
 
 export const EventType = () => {
   const title: TBadgeTitle = {

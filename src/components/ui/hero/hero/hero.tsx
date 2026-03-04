@@ -4,11 +4,11 @@ import { SectionUI } from "../../section";
 import { SectionTitleUI } from "../../section-title";
 import { HeroGridUI } from "../hero-grid";
 import { Activity } from "../../../hero/activity";
-import { Schedule } from "../../../hero/schedule";
 import { SmallTask } from "../../../hero/small-task";
+import { Schedule } from "../../../hero/schedule";
 import { Portfolio } from "../../../hero/portfolio";
-import { TabBar } from "../../../badge/tab-bar";
-import { EventUI } from "../event";
+import { TabBar } from "../../../../interactive-components/tab-bar";
+import { EventUI } from "../../../../interactive-components/ui/event";
 
 import { Typography } from "../../../../utils/typography";
 

@@ -7,19 +7,23 @@
   border-radius: 20px;
   padding: 8px 12px;
   background-color: var(--light80);
-  cursor: pointer;
-}
-
-.badge-list__item:hover {
-  background-color: var(--navy);
-}
-
-.badge-list__item:hover span {
-  color: var(--light100);
 }
 
 .badge-list__item_active {
   background-color: var(--navy);
+}
+
+.badge-list__item_decorated {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-list__item_decorated::after {
+  content: url("../../../../assets/icons/close.svg");
+  width: 20px;
+  height: 20px;
 }
 
 .text_budge {

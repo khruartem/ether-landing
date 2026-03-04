@@ -1,4 +1,4 @@
-import { useState, type FC } from "react";
+import { type FC } from "react";
 
 import { BadgeUI } from "../../ui/badge/badge";
 import { BadgeListUI } from "../../ui/badge/badge-list";
@@ -15,69 +15,50 @@ export const Activity: FC = () => {
     {
       text: "Актер",
       active: false,
+      decorated: false,
     },
     {
       text: "Режиссер",
       active: true,
+      decorated: false,
     },
     {
       text: "Поэт",
       active: false,
+      decorated: false,
     },
     {
       text: "Писатель",
       active: false,
+      decorated: false,
     },
     {
       text: "Сценарист",
       active: false,
+      decorated: false,
     },
     {
       text: "Художник",
       active: false,
+      decorated: false,
     },
     {
       text: "Дизайнер",
       active: false,
+      decorated: false,
     },
     {
       text: "Продюссер",
       active: false,
+      decorated: false,
     },
   ];
 
-  const [currentBadges, setCurrentBadges] = useState<TBadgeItem[]>(badges);
-
   const clue = "Укажите одну или несколько";
-
-  const handleBadgeClick = (index: number) => {
-    const updatedBadges = currentBadges.map((badge, currentIndex) => {
-      if (currentIndex === index) badge.active = !badge.active;
-      return badge;
-    });
-
-    setCurrentBadges(updatedBadges);
-  };
-
-  // const handleAdd = (text: string) => {
-  //   const badgeToAdd: TBadgeItem = {
-  //     text,
-  //     active: false,
-  //   };
-
-  //   const updatedBadges = currentBadges.map((badge) => badge);
-  //   updatedBadges.push(badgeToAdd);
-  //   setCurrentBadges(updatedBadges);
-  // };
 
   return (
     <BadgeUI title={title}>
-      <BadgeListUI
-        badges={currentBadges}
-        clue={clue}
-        onBadgeClick={handleBadgeClick}
-        addButton
-      />
+      <BadgeListUI badges={badges} clue={clue} />
     </BadgeUI>
   );
 };

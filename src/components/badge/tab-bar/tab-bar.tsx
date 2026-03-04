@@ -1,28 +1,23 @@
-import { useState, type FC } from "react";
+import { type FC } from "react";
 
 import { TabBarUI } from "../../ui/badge/tab-bar";
 
 import type { TTab } from "../../../utils/types";
 
+import taskSVG from "../../../assets/icons/task.svg";
+import scheduleSVG from "../../../assets/icons/schedule.svg";
+
 export const TabBar: FC = () => {
   const tabs: TTab[] = [
     {
-      icon: "task",
+      icon: taskSVG,
       text: "Задачи",
     },
     {
-      icon: "schedule",
+      icon: scheduleSVG,
       text: "События",
     },
   ];
 
-  const [currentTab, setCurrentTab] = useState<TTab>(tabs[0]);
-
-  const handleTabClick = (tab: TTab) => {
-    setCurrentTab(tab);
-  };
-
-  return (
-    <TabBarUI tabs={tabs} currentTab={currentTab} onTabClick={handleTabClick} />
-  );
+  return <TabBarUI tabs={tabs} current={tabs[0]} />;
 };

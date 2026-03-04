@@ -11,14 +11,11 @@ import { Typography } from "../../../../utils/typography";
 
 import styles from "./tab.module.css";
 
-export const TabUI: FC<TTabUIProps> = ({ tab, current, onClick }) => {
+export const TabUI: FC<TTabUIProps> = ({ tab, current }) => {
   const currentColor = current ? Colors.Navy : Colors.Dark80;
 
   return (
-    <div
-      className={clsx(styles.tab, current && styles.tab_current)}
-      onClick={onClick}
-    >
+    <div className={clsx(styles.tab, current && styles.tab_current)}>
       <TextUI typography={Typography.Title_400_14} color={currentColor}>
         {tab.text}
       </TextUI>

@@ -1,7 +1,7 @@
 import { useState, type ChangeEvent, type FC } from "react";
 
-import { InputUI } from "../../ui/badge/input";
-import { BadgeTitleUI } from "../../ui/badge/badge-title";
+import { InputUI } from "../ui/input";
+import { BadgeTitleUI } from "../../components/ui/badge/badge-title";
 
 export const EventInput: FC = () => {
   const [value, setValue] = useState<string>("");

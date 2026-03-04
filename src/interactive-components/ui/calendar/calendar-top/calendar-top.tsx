@@ -2,8 +2,8 @@ import type { FC } from "react";
 
 import type { TCalendarTopUIProps } from "./types";
 
-import rightSVG from "../../../../../assets/icons/chevron-up.svg";
-import leftSVG from "../../../../../assets/icons/chevron-down.svg";
+import rightSVG from "../../../../assets/icons/chevron-up.svg";
+import leftSVG from "../../../../assets/icons/chevron-down.svg";
 
 import styles from "./calendar-top.module.css";
 

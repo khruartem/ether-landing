@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import clsx from "clsx";
 
-import { InputUI } from "../input";
+import { InputUI } from "../../../../interactive-components/ui/input";
 
 import styles from "./date-picker.module.css";
 

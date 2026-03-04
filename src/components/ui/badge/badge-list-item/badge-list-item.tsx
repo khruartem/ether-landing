@@ -5,30 +5,29 @@ import { TextUI } from "../../text";
 
 import type { TBadgeListItemUIProps } from "./types";
 
-import { Colors } from "../../../../utils/colors";
 import { Typography } from "../../../../utils/typography";
+import { Colors } from "../../../../utils/colors";
 
 import styles from "./badge-list-item.module.css";
 
-export const BadgeListItemUI: FC<TBadgeListItemUIProps> = ({
-  badge,
-  onClick,
-}) => {
+export const BadgeListItemUI: FC<TBadgeListItemUIProps> = ({ badge }) => {
+  const { text, active, decorated } = badge;
+
   return (
     <li
       className={clsx(
         styles["badge-list__item"],
-        badge.active && styles["badge-list__item_active"],
+        active && styles["badge-list__item_active"],
+        decorated && styles["badge-list__item_decorated"],
       )}
-      onClick={onClick}
     >
       <TextUI
         as={"span"}
         typography={Typography.Title_400_14}
-        color={badge.active ? Colors.Light100 : Colors.Nephritis100}
+        color={active ? Colors.Light100 : Colors.Nephritis100}
         className={styles.text_budge}
       >
-        {badge.text}
+        {text}
       </TextUI>
     </li>
   );
