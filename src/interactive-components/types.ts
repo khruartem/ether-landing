@@ -27,3 +27,10 @@ export type TCalendarDays = {
   onMouseEnterDay?: (e: React.MouseEvent) => void;
   onMouseLeaveDay?: (e: React.MouseEvent) => void;
 };
+
+export type TTabIcon = "task" | "schedule";
+
+export type TTab = {
+  icon: TTabIcon;
+  text: string;
+};
