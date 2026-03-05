@@ -1,0 +1,15 @@
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 205px;
+  padding-block: 10px;
+  background-color: transparent;
+}
+
+.tab_current {
+  border-radius: 20px;
+  background-color: var(--light100);
+}

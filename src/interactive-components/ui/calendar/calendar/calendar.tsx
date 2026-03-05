@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 import { CalendarTopUI } from "../calendar-top";
-import { WeekUI } from "../../../../components/ui/badge/calendar/week";
+import { WeekUI } from "../../../../components/ui/week";
 import { CalendarDaysUI } from "../calendar-days";
 
 import type { TCalendarUIProps } from "./types";

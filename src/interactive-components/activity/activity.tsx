@@ -1,6 +1,6 @@
 import { useState, type FC } from "react";
 
-import { BadgeUI } from "../../components/ui/badge/badge";
+import { BadgeUI } from "../../components/ui/badge";
 import { BadgeListUI } from "../ui/badge-list";
 
 import type { TBadgeItem } from "../types";

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
+import { BadgeUI } from "../../../components/ui/badge";
 import { EventInput } from "../../event-input";
-import { BadgeUI } from "../../../components/ui/badge/badge";
 import { DatePicker } from "../../date-picker";
 import { EventType } from "../../event-type";
 

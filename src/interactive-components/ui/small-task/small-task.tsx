@@ -1,10 +1,10 @@
 import type { FC } from "react";
 import clsx from "clsx";
 
-import { BadgeUI } from "../../../components/ui/badge/badge";
+import { BadgeUI } from "../../../components/ui/badge";
 import { RadioButtonUI } from "../../../components/ui/radio-button";
-import { DateTimeUI } from "../../../components/ui/badge/date-time";
-import { EmployeeList } from "../../../components/badge/employee-list";
+import { DateTimeUI } from "../../../components/ui/date-time";
+import { EmployeeList } from "../../../components/employee-list";
 
 import type { TSmallTaskUIProps } from "./types";
 

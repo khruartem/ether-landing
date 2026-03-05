@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { BadgeTitleUI } from "../../components/ui/badge/badge-title";
 import { BadgeListUI } from "../ui/badge-list";
+import { BadgeTitleUI } from "../../components/ui/badge-title";
 
 import type { TBadgeItem } from "../types";
 import type { TBadgeTitle } from "../../utils/types";

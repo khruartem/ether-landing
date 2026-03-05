@@ -1,12 +1,12 @@
 import type { FC } from "react";
 
-import { BadgeClueUI } from "../../../components/ui/badge/badge-clue";
+import { BadgeClueUI } from "../../../components/ui/badge-clue";
 import { BadgeListItemUI } from "../badge-list-item";
+import { AddBadgeUI } from "../../../components/ui/badge-add";
 
 import type { TBadgeListUIProps } from "./types";
 
 import styles from "./badge-list.module.css";
-import { AddBadgeUI } from "../../../components/ui/badge/badge-add";
 
 export const BadgeListUI: FC<TBadgeListUIProps> = ({
   clue,

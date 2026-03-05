@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
 import { Page } from "../components/page";
-import { HeroUI } from "../components/ui/hero/hero";
+import { HeroUI } from "../components/ui/hero_qq";
 import { AboutUI } from "../components/ui/about";
 
 export const Main: FC = () => {
