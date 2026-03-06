@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { BadgePlus } from "../../../icons";
+import { BadgePlus } from "../../icons";
 
 import styles from "./add.module.css";
 

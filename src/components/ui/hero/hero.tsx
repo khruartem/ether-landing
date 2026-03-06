@@ -8,7 +8,7 @@ import { SmallTask } from "../../small-task";
 import { Schedule } from "../../schedule";
 import { Portfolio } from "../../portfolio";
 import { TabBar } from "../../tab-bar";
-import { EventUI } from "../event";
+import { Event } from "../../event";
 
 import { Typography } from "../../../utils/typography";
 
@@ -32,7 +32,7 @@ export const HeroUI: FC = () => {
         <Schedule />
         <div className={styles.container}>
           <TabBar />
-          <EventUI />
+          <Event />
         </div>
       </HeroGridUI>
     </SectionUI>

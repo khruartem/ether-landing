@@ -1,12 +1,12 @@
 import type { FC } from "react";
 import clsx from "clsx";
 
-import { TextUI } from "../../text";
+import { TextUI } from "../text";
 
 import type { TBadgeTitleUIProps } from "./types";
 
-import { Colors } from "../../../../utils/colors";
-import { Typography } from "../../../../utils/typography";
+import { Typography } from "../../../utils/typography";
+import { Colors } from "../../../utils/colors";
 
 import styles from "./badge-titile.module.css";
 

@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { GalleryPlus } from "../../../icons";
+import { GalleryPlus } from "../../icons";
 
 import styles from "./gallery-add.module.css";
 

@@ -21,7 +21,7 @@
 }
 
 .badge-list__item_decorated::after {
-  content: url("../../../../assets/icons/close.svg");
+  content: url("../../../assets/icons/close.svg");
   width: 20px;
   height: 20px;
 }

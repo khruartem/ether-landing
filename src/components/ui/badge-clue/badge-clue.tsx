@@ -1,11 +1,11 @@
 import type { FC } from "react";
 
-import { TextUI } from "../../text";
+import { TextUI } from "../text";
 
 import type { TBadgeClueUIProps } from "./types";
 
-import { Colors } from "../../../../utils/colors";
-import { Typography } from "../../../../utils/typography";
+import { Typography } from "../../../utils/typography";
+import { Colors } from "../../../utils/colors";
 
 export const BadgeClueUI: FC<TBadgeClueUIProps> = ({ text }) => {
   return (

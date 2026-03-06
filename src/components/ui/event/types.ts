@@ -1,7 +1,11 @@
-import type { TBadgeTitle } from "../../../utils/types";
+import type {
+  TEventBadges,
+  TEventDate,
+  TEventName,
+} from "../../../utils/types";
 
 export type TEventUIProps = {
-  name: TBadgeTitle;
-  date: TBadgeTitle;
-  time: TBadgeTitle;
+  name: TEventName;
+  date: TEventDate;
+  badges: TEventBadges;
 };

@@ -21,8 +21,10 @@ export type TGalleryItem = {
   backhroundColor?: Colors;
 };
 
+export type TTabIcon = "task" | "schedule";
+
 export type TTab = {
-  icon: string;
+  icon: TTabIcon;
   text: string;
 };
 
@@ -51,4 +53,21 @@ export type TBadgeItem = {
   text: string;
   active: boolean;
   decorated: boolean;
+};
+
+export type TEventName = {
+  title: TBadgeTitle;
+  placeholder: string;
+};
+
+export type TEventDate = {
+  title: TBadgeTitle;
+  datePlaceholder: string;
+  timePlaceholder: string;
+};
+
+export type TEventBadges = {
+  title: TBadgeTitle;
+  list: TBadgeItem[];
+  clue: string;
 };

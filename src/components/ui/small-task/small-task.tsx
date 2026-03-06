@@ -1,5 +1,6 @@
 import type { FC } from "react";
 
+import { BadgeUI } from "../badge";
 import { RadioButtonUI } from "../radio-button";
 import { DateTimeUI } from "../date-time";
 import { EmployeeList } from "../../employee-list";
@@ -7,7 +8,6 @@ import { EmployeeList } from "../../employee-list";
 import type { TSmallTaskUIProps } from "./types";
 
 import styles from "./small-task.module.css";
-import { BadgeUI } from "../../badge/badge_qq";
 
 export const SmallTaskUI: FC<TSmallTaskUIProps> = ({
   badgeTitle,

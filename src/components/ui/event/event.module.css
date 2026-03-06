@@ -1,7 +1,34 @@
 .hero__block_event {
-  position: relative;
+  padding-inline-end: 42px;
 }
 
-.hero__block_event label {
-  margin-block-end: 28px;
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.date-time__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-time__input_date::before {
+  content: url("../../../assets/icons/calendar.svg");
+  width: 20px;
+  height: 20px;
+}
+
+.date-time__input_time::before {
+  content: url("../../../assets/icons/time.svg");
+  width: 20px;
+  height: 20px;
 }

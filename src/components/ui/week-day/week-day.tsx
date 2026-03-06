@@ -1,11 +1,11 @@
 import type { FC } from "react";
 
-import { TextUI } from "../../../text";
+import { TextUI } from "../text";
 
 import type { TWeekDayUIProps } from "./types";
 
-import { Colors } from "../../../../../utils/colors";
-import { Typography } from "../../../../../utils/typography";
+import { Colors } from "../../../utils/colors";
+import { Typography } from "../../../utils/typography";
 
 import styles from "./week-day.module.css";
 

@@ -1,6 +1,6 @@
 import { type FC } from "react";
 
-import { BadgeUI } from "../../ui/badge/badge_qq";
+import { BadgeUI } from "../ui/badge";
 import { Calendar } from "../calendar";
 
 import type { TBadgeTitle } from "../../utils/types";
