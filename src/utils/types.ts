@@ -71,3 +71,9 @@ export type TEventBadges = {
   list: TBadgeItem[];
   clue: string;
 };
+
+export type TAboutCard = {
+  icon: string;
+  title: string;
+  text: string;
+};

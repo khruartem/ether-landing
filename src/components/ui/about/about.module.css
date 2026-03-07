@@ -1,0 +1,10 @@
+.section_about {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  min-height: 1768px;
+  background-image: url("../../../assets/iphone_mockup.png");
+  background-repeat: no-repeat;
+  background-position: 50% 101%;
+  background-size: contain;
+}
