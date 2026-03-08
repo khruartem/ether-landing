@@ -5,5 +5,5 @@
   gap: 12px;
   padding: 16px 24px;
   border-radius: 80px;
-  width: 243px;
+  width: fit-content;
 }

@@ -1,0 +1,1 @@
+export { AdvantagesUI } from "./advantages";
