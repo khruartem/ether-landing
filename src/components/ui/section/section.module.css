@@ -1,4 +1,6 @@
 .section {
+  display: flex;
+  flex-direction: column;
   padding-block-start: 5.21vw;
   padding-block-end: 7.29vw;
   background-color: transparent;

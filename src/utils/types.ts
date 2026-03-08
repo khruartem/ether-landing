@@ -1,4 +1,5 @@
 import type { Colors } from "./colors";
+import type { Typography } from "./typography";
 import type { Week } from "./week";
 
 export type TNavItem = {
@@ -76,4 +77,24 @@ export type TAboutCard = {
   icon: string;
   title: string;
   text: string;
+};
+
+export type TSection = {
+  id?: string;
+  decorated?: boolean;
+  paddinged?: boolean;
+  className?: string;
+};
+
+export type TSectionTitle = {
+  text: string[];
+  subtitle?: TSectionSubtitle;
+  emphasized?: string;
+  typography: Typography;
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span";
+};
+
+export type TContentSection = {
+  sectionProps: TSection;
+  titleProps: TSectionTitle;
 };
