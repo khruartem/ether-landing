@@ -16,9 +16,16 @@ import dataSVG from "../../assets/icons/data.svg";
 import { AdvantagesProvider } from "./advantages-provider";
 
 export const Advantages: FC = () => {
-  const [currentTab, setCurrentTab] = useState<TAdvantagesTab>("artists");
+  const [currentTab, setCurrentTab] = useState<TAdvantagesTab>({
+    text: "Творцы и объединения",
+    value: "artists",
+  });
 
-  const tabs: TAdvantagesTab[] = ["artists", "events", "schedule"];
+  const tabs: TAdvantagesTab[] = [
+    { text: "Творцы и объединения", value: "artists" },
+    { text: "Мероприятия и задачи", value: "events" },
+    { text: "Графики и события", value: "schedule" },
+  ];
 
   const handleTabChange = (tab: TAdvantagesTab) => {
     setCurrentTab(tab);
@@ -27,7 +34,7 @@ export const Advantages: FC = () => {
   const advantagesContextValue: TAdvantagesContextValue = {
     tabs,
     currentTab,
-    onTabChange: handleTabChange,
+    handleTabChange,
   };
 
   const sectionProps: TSection = {

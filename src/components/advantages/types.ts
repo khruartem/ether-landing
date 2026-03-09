@@ -4,7 +4,7 @@ import type { TAdvantagesTab } from "../../utils/types";
 export type TAdvantagesContextValue = {
   tabs: TAdvantagesTab[];
   currentTab: TAdvantagesTab;
-  onTabChange: (tab: TAdvantagesTab) => void;
+  handleTabChange: (tab: TAdvantagesTab) => void;
 };
 
 export type TAdvantagesProviderProps = {

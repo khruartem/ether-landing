@@ -1,0 +1,20 @@
+.advantages__tab {
+  padding: 32px 60px;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.advantages__tab span {
+  cursor: pointer;
+}
+
+.advantages__tab_current {
+  background-color: var(--nephritis100);
+  border-radius: 100px;
+  cursor: unset;
+}
+
+.advantages__tab_current span {
+  cursor: default;
+}

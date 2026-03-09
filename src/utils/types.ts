@@ -99,4 +99,7 @@ export type TContentSection = {
   titleProps: TSectionTitle;
 };
 
-export type TAdvantagesTab = "artists" | "events" | "schedule";
+export type TAdvantagesTab = {
+  text: string;
+  value: "artists" | "events" | "schedule";
+};

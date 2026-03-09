@@ -3,8 +3,8 @@ import type { TAdvantagesContextValue } from "./types";
 
 const initialValue: TAdvantagesContextValue = {
   tabs: [],
-  currentTab: "artists",
-  onTabChange: (tab) => {
+  currentTab: { text: "Творцы и объединения", value: "artists" },
+  handleTabChange: (tab) => {
     console.log(tab);
   },
 };
