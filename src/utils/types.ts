@@ -98,3 +98,5 @@ export type TContentSection = {
   sectionProps: TSection;
   titleProps: TSectionTitle;
 };
+
+export type TAdvantagesTab = "artists" | "events" | "schedule";
