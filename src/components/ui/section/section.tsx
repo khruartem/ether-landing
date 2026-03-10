@@ -9,12 +9,14 @@ export const SectionUI: FC<TSectionUIProps> = ({
   id,
   decorated,
   paddinged = true,
+  gap,
   className,
   children,
 }) => {
   return (
     <section
       id={id}
+      style={{ gap: gap }}
       className={clsx(
         styles.section,
         decorated && styles.section_decorated,

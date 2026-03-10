@@ -1,7 +1,7 @@
-import type { TAdvantagesTab } from "../../../utils/types";
+import type { AdvantagesItems } from "../../../utils/advantagesItems";
 
 export type TAdvantagesTabsUIProps = {
-  tabs: TAdvantagesTab[];
-  currentTab: TAdvantagesTab;
-  onTabChange: (tab: TAdvantagesTab) => void;
+  tabs: AdvantagesItems[];
+  currentTab: AdvantagesItems;
+  onTabChange: (tab: AdvantagesItems) => void;
 };

@@ -16,8 +16,8 @@ export const AdvantagesTabsUI: FC<TAdvantagesTabsUIProps> = ({
       {tabs.map((tab, index) => (
         <AdvantagesTabUI
           key={index}
-          tab={tab.text}
-          current={currentTab.value === tab.value}
+          tab={tab}
+          current={currentTab === tab}
           onChange={() => onTabChange(tab)}
         />
       ))}

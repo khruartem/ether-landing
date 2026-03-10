@@ -1,3 +1,4 @@
+import type { AdvantagesItems } from "./advantagesItems";
 import type { Colors } from "./colors";
 import type { Typography } from "./typography";
 import type { Week } from "./week";
@@ -81,6 +82,7 @@ export type TAboutCard = {
 
 export type TSection = {
   id?: string;
+  gap?: number;
   decorated?: boolean;
   paddinged?: boolean;
   className?: string;
@@ -99,7 +101,9 @@ export type TContentSection = {
   titleProps: TSectionTitle;
 };
 
-export type TAdvantagesTab = {
+export type TAdvantagesItem = {
+  type: AdvantagesItems;
+  title: string;
   text: string;
-  value: "artists" | "events" | "schedule";
+  image: string | string[];
 };

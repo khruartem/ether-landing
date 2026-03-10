@@ -1,19 +1,26 @@
 import type { FC } from "react";
 
-import { ContentSectionUI } from "../content-section";
+import { SectionUI } from "../section";
+import { SectionTitleUI } from "../section-title";
 import { AdvantagesTabs } from "../../advantages-tabs";
+import { AdvantagesItemsList } from "../../advantages-items-list";
 
 import type { TAdvantagesUIProps } from "./types";
+
+import styles from "./advantages.module.css";
 
 export const AdvantagesUI: FC<TAdvantagesUIProps> = ({
   contentSectionProps,
 }) => {
+  const { sectionProps, titleProps } = contentSectionProps;
+
   return (
-    <ContentSectionUI {...contentSectionProps}>
-      <AdvantagesTabs />
-      {/* <AdvantagesArtistsBlock />
-      <AdvantagesEventsBlock />
-      <AdvantagesScheduleBlock /> */}
-    </ContentSectionUI>
+    <SectionUI {...sectionProps}>
+      <div className={styles.container}>
+        <SectionTitleUI {...titleProps} />
+        <AdvantagesTabs />
+      </div>
+      <AdvantagesItemsList />
+    </SectionUI>
   );
 };
