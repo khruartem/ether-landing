@@ -26,7 +26,6 @@ const Typography = {
     weight: "500",
     size: "28px",
     lineHeight: "40px",
-    textAlign: "center",
   },
   Title_500_20: {
     font: "Unbounded",

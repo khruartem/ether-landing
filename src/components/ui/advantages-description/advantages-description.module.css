@@ -1,0 +1,21 @@
+.advantages__description {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-block: 98px;
+}
+
+.advantages__description_left {
+  padding-inline: 136px 100px;
+}
+
+.advantages__description_right {
+  padding-inline: 100px 136px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-block-end: 52px;
+}

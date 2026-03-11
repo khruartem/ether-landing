@@ -1,0 +1,9 @@
+.advantages__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 480px;
+}
+
+.advantages__item img {
+  max-height: 480px;
+}

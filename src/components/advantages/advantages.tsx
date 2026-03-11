@@ -5,7 +5,11 @@ import { AdvantagesUI } from "../ui/advantages";
 
 import type { TAdvantagesContextValue } from "./types";
 
-import type { TAdvantagesItem, TSection, TSectionTitle } from "../../utils/types";
+import type {
+  TAdvantagesItem,
+  TSection,
+  TSectionTitle,
+} from "../../utils/types";
 
 import { Colors } from "../../utils/colors";
 import { Typography } from "../../utils/typography";
@@ -50,13 +54,13 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.artists,
       title: "Портфолио и галереи",
       text: "Делитесь своими работами: загружайте графику, если вы художник, видеозаписи своих спектаклей и фильмов, или музыку собственного сочинения. Это доступно как творцам, так и объединениям.",
-      image: AdvantagesImage3,
+      image: [AdvantagesImage3],
     },
     {
       type: AdvantagesItems.artists,
       title: "Возможности безграничны",
       text: "Творцы могут создавать собственные объединения и вступать в уже существующие. Помимо ваших талантов мир увидит, кто является главой и какую роль он играет в организации мероприятий.",
-      image: AdvantagesImage4,
+      image: [AdvantagesImage4],
     },
     {
       type: AdvantagesItems.events,
@@ -68,31 +72,31 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.events,
       title: "Творческие задачи",
       text: "Глава объединения назначает ответственных творцов, не забывая вносить свой вклад. Артисты выйдут на сцену, музыканты напишут саундтрек, а дизайнер разработает уникальный стиль.",
-      image: AdvantagesImage7,
+      image: [AdvantagesImage7],
     },
     {
       type: AdvantagesItems.events,
       title: "Файлы и комментарии",
       text: "Прикрепляйте к задачам договора на аренду площадки и пожелания к дизайну плакатов вашего мероприятия. Обсуждать детали можно тут же без лишнего шума в миллионах сторонних чатов.",
-      image: AdvantagesImage8,
+      image: [AdvantagesImage8],
     },
     {
       type: AdvantagesItems.schedule,
       title: "С уважением к личному",
       text: "При назначении репетиций и встреч необходимо учитывать занятость каждого творца, поэтому Эфир предлагает возможность указать свободное время в графике на каждый месяц.",
-      image: AdvantagesImage9,
+      image: [AdvantagesImage9],
     },
     {
       type: AdvantagesItems.schedule,
       title: "Не отвлекайтесь от дел",
       text: "Десятки ссылок имеют свойство раздражать людей с творческим складом ума и характера. Глава один раз утверждает график и распределяет даты и время событий, чтобы никто не упустил важное.",
-      image: AdvantagesImage10,
+      image: [AdvantagesImage10],
     },
     {
       type: AdvantagesItems.schedule,
       title: "Ничего не потеряется",
       text: "Задачи и события расположены прямо в шапке мероприятия, чтобы без проблем на ходу соотносить важные даты. Никаких лишних кликов и поисков по массивам визуального шума.",
-      image: AdvantagesImage11,
+      image: [AdvantagesImage11],
     },
   ];
 
@@ -100,7 +104,7 @@ export const Advantages: FC = () => {
     tabs,
     currentTab,
     handleTabChange,
-    advantagesItems
+    advantagesItems,
   };
 
   const sectionProps: TSection = {

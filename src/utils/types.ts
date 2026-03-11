@@ -105,5 +105,5 @@ export type TAdvantagesItem = {
   type: AdvantagesItems;
   title: string;
   text: string;
-  image: string | string[];
+  image: string[];
 };
