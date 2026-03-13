@@ -101,9 +101,15 @@ export type TContentSection = {
   titleProps: TSectionTitle;
 };
 
+export type TAdvantagesImage = {
+  transformDefault: { transform: string};
+  transformOnMount: { transform: string};
+  src: string;
+}
+
 export type TAdvantagesItem = {
   type: AdvantagesItems;
   title: string;
   text: string;
-  image: string[];
+  images: TAdvantagesImage[];
 };

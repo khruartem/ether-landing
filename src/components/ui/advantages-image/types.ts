@@ -1,3 +1,4 @@
 export type TAdvantagesImageUIProps = {
-  images: string[];
+  src: string;
+  transform: { transform: string };
 };

@@ -7,3 +7,16 @@
 .advantages__item img {
   max-height: 480px;
 }
+
+.advantages__images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--light30);
+  border-radius: 80px;
+  overflow: hidden;
+}
+
+.advantages__images img {
+  transition: transform 5s ease-out;
+}
