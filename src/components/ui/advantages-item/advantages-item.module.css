@@ -16,7 +16,3 @@
   border-radius: 80px;
   overflow: hidden;
 }
-
-.advantages__images img {
-  transition: transform 5s ease-out;
-}

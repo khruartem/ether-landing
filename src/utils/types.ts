@@ -101,11 +101,16 @@ export type TContentSection = {
   titleProps: TSectionTitle;
 };
 
+export type TAdvantagesTransform = {
+  transform: string;
+  transformOrigin?: string;
+};
+
 export type TAdvantagesImage = {
-  transformDefault: { transform: string};
-  transformOnMount: { transform: string};
+  transformDefault: TAdvantagesTransform;
+  transformOnMount: TAdvantagesTransform;
   src: string;
-}
+};
 
 export type TAdvantagesItem = {
   type: AdvantagesItems;

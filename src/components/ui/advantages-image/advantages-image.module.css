@@ -1,0 +1,4 @@
+.advantages__image {
+  transition: transform 5s ease-out;
+  /* transform-origin: bottom; */
+}

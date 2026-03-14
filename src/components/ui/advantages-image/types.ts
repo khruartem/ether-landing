@@ -1,4 +1,6 @@
+import type { TAdvantagesTransform } from "../../../utils/types";
+
 export type TAdvantagesImageUIProps = {
   src: string;
-  transform: { transform: string };
+  transform: TAdvantagesTransform;
 };

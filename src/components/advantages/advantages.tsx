@@ -67,8 +67,13 @@ export const Advantages: FC = () => {
       text: "Делитесь своими работами: загружайте графику, если вы художник, видеозаписи своих спектаклей и фильмов, или музыку собственного сочинения. Это доступно как творцам, так и объединениям.",
       images: [
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(0)" },
+          transformDefault: {
+            transform: "scale(0.3) translateY(100%)",
+          },
+          transformOnMount: {
+            transform: "scale(1) translateY(0)",
+            transformOrigin: "bottom",
+          },
           src: AdvantagesImage3,
         },
       ],
