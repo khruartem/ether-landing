@@ -84,8 +84,13 @@ export const Advantages: FC = () => {
       text: "Творцы могут создавать собственные объединения и вступать в уже существующие. Помимо ваших талантов мир увидит, кто является главой и какую роль он играет в организации мероприятий.",
       images: [
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(0)" },
+          transformDefault: {
+            transform: "scale(0.3) translate(100%, 100%)",
+          },
+          transformOnMount: {
+            transform: "scale(1) translate(0, 0)",
+            transformOrigin: "right",
+          },
           src: AdvantagesImage4,
         },
       ],
