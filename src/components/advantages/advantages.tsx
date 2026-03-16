@@ -101,13 +101,25 @@ export const Advantages: FC = () => {
       text: "Эфир позволит вам поставить спектакль, провести мастер-класс или конкурс и организовать съемки фильма. Собирайте творцов в объединения, или помогите единомышленникам воплотить идею.",
       images: [
         {
-          transformDefault: { transform: "translateY(-100%)" },
-          transformOnMount: { transform: "translateY(-10%)" },
+          transformDefault: {
+            transform: "translate(30%, -100%)",
+            maxHeight: "452px",
+          },
+          transformOnMount: {
+            transform: "translate(30%, 0)",
+            maxHeight: "452px",
+          },
           src: AdvantagesImage5,
         },
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(10%)" },
+          transformDefault: {
+            transform: "translate(-24%, 173%)",
+            maxHeight: "275px",
+          },
+          transformOnMount: {
+            transform: "translate(-24%, 75%)",
+            maxHeight: "275px",
+          },
           src: AdvantagesImage6,
         },
       ],
@@ -118,8 +130,13 @@ export const Advantages: FC = () => {
       text: "Глава объединения назначает ответственных творцов, не забывая вносить свой вклад. Артисты выйдут на сцену, музыканты напишут саундтрек, а дизайнер разработает уникальный стиль.",
       images: [
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(0)" },
+          transformDefault: {
+            transform: "scale(0.3) translateY(100%)",
+          },
+          transformOnMount: {
+            transform: "scale(1) translateY(0)",
+            transformOrigin: "bottom",
+          },
           src: AdvantagesImage7,
         },
       ],
@@ -130,8 +147,13 @@ export const Advantages: FC = () => {
       text: "Прикрепляйте к задачам договора на аренду площадки и пожелания к дизайну плакатов вашего мероприятия. Обсуждать детали можно тут же без лишнего шума в миллионах сторонних чатов.",
       images: [
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(0)" },
+          transformDefault: {
+            transform: "scale(0.3) translateY(170%)",
+          },
+          transformOnMount: {
+            transform: "scale(1) translateY(0)",
+            transformOrigin: "left",
+          },
           src: AdvantagesImage8,
         },
       ],

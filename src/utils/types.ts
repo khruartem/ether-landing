@@ -104,6 +104,7 @@ export type TContentSection = {
 export type TAdvantagesTransform = {
   transform: string;
   transformOrigin?: string;
+  maxHeight?: string;
 };
 
 export type TAdvantagesImage = {
