@@ -164,8 +164,8 @@ export const Advantages: FC = () => {
       text: "При назначении репетиций и встреч необходимо учитывать занятость каждого творца, поэтому Эфир предлагает возможность указать свободное время в графике на каждый месяц.",
       images: [
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(0)" },
+          transformDefault: { transform: "translateX(100%)" },
+          transformOnMount: { transform: "translateX(0)" },
           src: AdvantagesImage9,
         },
       ],
@@ -176,8 +176,13 @@ export const Advantages: FC = () => {
       text: "Десятки ссылок имеют свойство раздражать людей с творческим складом ума и характера. Глава один раз утверждает график и распределяет даты и время событий, чтобы никто не упустил важное.",
       images: [
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(0)" },
+          transformDefault: {
+            transform: "scale(0.3) translateY(100%)",
+          },
+          transformOnMount: {
+            transform: "scale(1) translateY(0)",
+            transformOrigin: "bottom",
+          },
           src: AdvantagesImage10,
         },
       ],
@@ -188,8 +193,13 @@ export const Advantages: FC = () => {
       text: "Задачи и события расположены прямо в шапке мероприятия, чтобы без проблем на ходу соотносить важные даты. Никаких лишних кликов и поисков по массивам визуального шума.",
       images: [
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(0)" },
+          transformDefault: {
+            transform: "scale(0.3) translate(100%, 100%)",
+          },
+          transformOnMount: {
+            transform: "scale(1) translate(0, 0)",
+            transformOrigin: "right",
+          },
           src: AdvantagesImage11,
         },
       ],
