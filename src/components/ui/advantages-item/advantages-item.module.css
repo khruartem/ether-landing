@@ -15,4 +15,5 @@
   background-color: var(--light30);
   border-radius: 80px;
   overflow: hidden;
+  position: relative;
 }

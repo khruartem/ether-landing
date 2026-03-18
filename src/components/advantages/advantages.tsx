@@ -48,15 +48,27 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.artists,
       title: "Личная информация",
       text: "Заполняйте краткие автобиографии, указывайте компетенции и расскажите миру о своих талантах в роли творца. Объединения в свою очередь предоставят вам сторонников и общие интересы.",
+      // images: [
+      //   {
+      //     transformDefault: { transform: "translateY(-100%)" },
+      //     transformOnMount: { transform: "translateY(-10%)" },
+      //     src: AdvantagesImage1,
+      //   },
+      //   {
+      //     transformDefault: { transform: "translateY(100%)" },
+      //     transformOnMount: { transform: "translateY(10%)" },
+      //     src: AdvantagesImage2,
+      //   },
+      // ],
       images: [
         {
-          transformDefault: { transform: "translateY(-100%)" },
-          transformOnMount: { transform: "translateY(-10%)" },
+          transformDefault: { inset: "-100% 16%" },
+          transformOnMount: { inset: "-100% 16%", transform: "translateY(108%)", maxHeight: "443.27px" },
           src: AdvantagesImage1,
         },
         {
-          transformDefault: { transform: "translateY(100%)" },
-          transformOnMount: { transform: "translateY(10%)" },
+          transformDefault: { inset: "100% 50%" },
+          transformOnMount: { inset: "100% 50%", transform: "translateY(-100%)", maxHeight: "422.27px" },
           src: AdvantagesImage2,
         },
       ],

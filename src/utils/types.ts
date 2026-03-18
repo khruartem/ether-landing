@@ -102,7 +102,8 @@ export type TContentSection = {
 };
 
 export type TAdvantagesTransform = {
-  transform: string;
+  transform?: string;
+  inset?: string;
   transformOrigin?: string;
   maxHeight?: string;
 };
