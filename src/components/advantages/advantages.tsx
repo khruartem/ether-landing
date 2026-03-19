@@ -63,12 +63,20 @@ export const Advantages: FC = () => {
       images: [
         {
           transformDefault: { inset: "-100% 16%" },
-          transformOnMount: { inset: "-100% 16%", transform: "translateY(108%)", maxHeight: "443.27px" },
+          transformOnMount: {
+            inset: "-100% 16%",
+            transform: "translateY(108%)",
+            maxHeight: "443.27px",
+          },
           src: AdvantagesImage1,
         },
         {
           transformDefault: { inset: "100% 50%" },
-          transformOnMount: { inset: "100% 50%", transform: "translateY(-100%)", maxHeight: "422.27px" },
+          transformOnMount: {
+            inset: "100% 50%",
+            transform: "translateY(-100%)",
+            maxHeight: "422.27px",
+          },
           src: AdvantagesImage2,
         },
       ],
@@ -77,13 +85,27 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.artists,
       title: "Портфолио и галереи",
       text: "Делитесь своими работами: загружайте графику, если вы художник, видеозаписи своих спектаклей и фильмов, или музыку собственного сочинения. Это доступно как творцам, так и объединениям.",
+      // images: [
+      //   {
+      //     transformDefault: {
+      //       transform: "scale(0.3) translateY(100%)",
+      //     },
+      //     transformOnMount: {
+      //       transform: "scale(1) translateY(0)",
+      //       transformOrigin: "bottom",
+      //     },
+      //     src: AdvantagesImage3,
+      //   },
+      // ],
       images: [
         {
           transformDefault: {
-            transform: "scale(0.3) translateY(100%)",
+            inset: "63% 4%",
+            transform: "scale(0.3)",
           },
           transformOnMount: {
-            transform: "scale(1) translateY(0)",
+            inset: "80% 4%",
+            transform: "scale(1) translateY(-80%)",
             transformOrigin: "bottom",
           },
           src: AdvantagesImage3,
