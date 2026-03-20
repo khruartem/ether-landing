@@ -100,7 +100,7 @@ export const Advantages: FC = () => {
       images: [
         {
           transformDefault: {
-            inset: "63% 4%",
+            inset: "60% 4%",
             transform: "scale(0.3)",
           },
           transformOnMount: {
@@ -116,13 +116,27 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.artists,
       title: "Возможности безграничны",
       text: "Творцы могут создавать собственные объединения и вступать в уже существующие. Помимо ваших талантов мир увидит, кто является главой и какую роль он играет в организации мероприятий.",
+      // images: [
+      //   {
+      //     transformDefault: {
+      //       transform: "scale(0.3) translate(100%, 100%)",
+      //     },
+      //     transformOnMount: {
+      //       transform: "scale(1) translate(0, 0)",
+      //       transformOrigin: "right",
+      //     },
+      //     src: AdvantagesImage4,
+      //   },
+      // ],
       images: [
         {
           transformDefault: {
-            transform: "scale(0.3) translate(100%, 100%)",
+            inset: "0 65%",
+            transform: "scale(0.3)",
           },
           transformOnMount: {
-            transform: "scale(1) translate(0, 0)",
+            inset: "0 65%",
+            transform: "scale(1) translateX(-65%)",
             transformOrigin: "right",
           },
           src: AdvantagesImage4,
@@ -133,25 +147,51 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.events,
       title: "Реализуйте мечту",
       text: "Эфир позволит вам поставить спектакль, провести мастер-класс или конкурс и организовать съемки фильма. Собирайте творцов в объединения, или помогите единомышленникам воплотить идею.",
+      // images: [
+      //   {
+      //     transformDefault: {
+      //       transform: "translate(30%, -100%)",
+      //       maxHeight: "452px",
+      //     },
+      //     transformOnMount: {
+      //       transform: "translate(30%, 0)",
+      //       maxHeight: "452px",
+      //     },
+      //     src: AdvantagesImage5,
+      //   },
+      //   {
+      //     transformDefault: {
+      //       transform: "translate(-24%, 173%)",
+      //       maxHeight: "275px",
+      //     },
+      //     transformOnMount: {
+      //       transform: "translate(-24%, 75%)",
+      //       maxHeight: "275px",
+      //     },
+      //     src: AdvantagesImage6,
+      //   },
+      // ],
       images: [
         {
           transformDefault: {
-            transform: "translate(30%, -100%)",
+            inset: "-94% 16%",
             maxHeight: "452px",
           },
           transformOnMount: {
-            transform: "translate(30%, 0)",
+            inset: "-94% 16%",
+            transform: "translateY(100%)",
             maxHeight: "452px",
           },
           src: AdvantagesImage5,
         },
         {
           transformDefault: {
-            transform: "translate(-24%, 173%)",
+            inset: "100% 40%",
             maxHeight: "275px",
           },
           transformOnMount: {
-            transform: "translate(-24%, 75%)",
+            inset: "100% 40%",
+            transform: "translateY(-100%)",
             maxHeight: "275px",
           },
           src: AdvantagesImage6,
