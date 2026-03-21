@@ -106,7 +106,7 @@ export const Advantages: FC = () => {
           transformOnMount: {
             inset: "80% 4%",
             transform: "scale(1) translateY(-80%)",
-            transformOrigin: "bottom",
+            // transformOrigin: "bottom",
           },
           src: AdvantagesImage3,
         },
@@ -131,13 +131,13 @@ export const Advantages: FC = () => {
       images: [
         {
           transformDefault: {
-            inset: "0 65%",
+            inset: "62% 65%",
             transform: "scale(0.3)",
           },
           transformOnMount: {
-            inset: "0 65%",
-            transform: "scale(1) translateX(-65%)",
-            transformOrigin: "right",
+            inset: "62% 65%",
+            transform: "scale(1) translate(-65%, -62%)",
+            // transformOrigin: "right",
           },
           src: AdvantagesImage4,
         },
@@ -202,14 +202,28 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.events,
       title: "Творческие задачи",
       text: "Глава объединения назначает ответственных творцов, не забывая вносить свой вклад. Артисты выйдут на сцену, музыканты напишут саундтрек, а дизайнер разработает уникальный стиль.",
+      // images: [
+      //   {
+      //     transformDefault: {
+      //       transform: "scale(0.3) translateY(100%)",
+      //     },
+      //     transformOnMount: {
+      //       transform: "scale(1) translateY(0)",
+      //       transformOrigin: "bottom",
+      //     },
+      //     src: AdvantagesImage7,
+      //   },
+      // ],
       images: [
         {
           transformDefault: {
-            transform: "scale(0.3) translateY(100%)",
+            inset: "60% 0",
+            transform: "scale(0.3)",
           },
           transformOnMount: {
-            transform: "scale(1) translateY(0)",
-            transformOrigin: "bottom",
+            inset: "80% 0",
+            transform: "scale(1) translateY(-80%)",
+            // transformOrigin: "bottom",
           },
           src: AdvantagesImage7,
         },
@@ -219,13 +233,27 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.events,
       title: "Файлы и комментарии",
       text: "Прикрепляйте к задачам договора на аренду площадки и пожелания к дизайну плакатов вашего мероприятия. Обсуждать детали можно тут же без лишнего шума в миллионах сторонних чатов.",
+      // images: [
+      //   {
+      //     transformDefault: {
+      //       transform: "scale(0.3) translateY(170%)",
+      //     },
+      //     transformOnMount: {
+      //       transform: "scale(1) translateY(0)",
+      //       transformOrigin: "left",
+      //     },
+      //     src: AdvantagesImage8,
+      //   },
+      // ],
       images: [
         {
           transformDefault: {
-            transform: "scale(0.3) translateY(170%)",
+            inset: "63% -15%",
+            transform: "scale(0.3)",
           },
           transformOnMount: {
-            transform: "scale(1) translateY(0)",
+            inset: "63% -15%",
+            transform: "scale(1) translate(15%, -63%)",
             transformOrigin: "left",
           },
           src: AdvantagesImage8,
