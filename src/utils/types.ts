@@ -109,8 +109,10 @@ export type TAdvantagesTransform = {
 };
 
 export type TAdvantagesImage = {
-  transformDefault: TAdvantagesTransform;
+  transformDefault?: TAdvantagesTransform;
   transformOnMount: TAdvantagesTransform;
+  position: string;
+  maxHeight?: string;
   src: string;
 };
 

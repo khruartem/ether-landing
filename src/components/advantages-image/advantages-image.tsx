@@ -1,21 +1,35 @@
 import { useEffect, useState, type FC } from "react";
-import type { TAdvantagesImageProps } from "./types";
-import { AdvantagesImageUI } from "../ui/advantages-image";
-import { useInView } from "react-intersection-observer";
 
-export const AdvantagesImage: FC<TAdvantagesImageProps> = ({ image }) => {
-  const [transform, setTransform] = useState(image.transformDefault);
-  const [ref, inView] = useInView({ triggerOnce: true });
+import { AdvantagesImageUI } from "../ui/advantages-image";
+
+import type { TAdvantagesImageProps } from "./types";
+
+import type { TAdvantagesTransform } from "../../utils/types";
+
+export const AdvantagesImage: FC<TAdvantagesImageProps> = ({
+  image,
+  inView,
+}) => {
+  const [transform, setTransform] = useState<TAdvantagesTransform | undefined>(
+    image.transformDefault,
+  );
 
   useEffect(() => {
-    const changeStyle = () => {
-      setTransform(image.transformOnMount);
+    const changeStyle = (transformOnMount: TAdvantagesTransform) => {
+      setTransform(transformOnMount);
     };
 
     if (inView) {
-      changeStyle();
+      changeStyle(image.transformOnMount);
     }
   }, [image.transformOnMount, inView]);
 
-  return <AdvantagesImageUI src={image.src} transform={transform} ref={ref} />;
+  return (
+    <AdvantagesImageUI
+      src={image.src}
+      transform={transform}
+      position={image.position}
+      maxHeight={image?.maxHeight}
+    />
+  );
 };

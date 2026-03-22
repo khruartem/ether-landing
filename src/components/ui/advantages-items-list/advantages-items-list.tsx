@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { AdvantagesItemUI } from "../advantages-item";
+import { AdvantagesItem } from "../../advantages-item";
 
 import type { TAdvantagesItemsListUIProps } from "./types";
 
@@ -12,7 +12,7 @@ export const AdvantagesItemsListUI: FC<TAdvantagesItemsListUIProps> = ({
   return (
     <ul className={styles.advantages__list}>
       {items.map((item, index) => (
-        <AdvantagesItemUI
+        <AdvantagesItem
           key={index}
           item={item}
           descriptionPosition={index % 2 === 0 ? "left" : "right"}

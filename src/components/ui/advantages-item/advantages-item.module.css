@@ -4,10 +4,6 @@
   max-height: 480px;
 }
 
-.advantages__item img {
-  max-height: 480px;
-}
-
 .advantages__images {
   display: flex;
   flex-direction: row;

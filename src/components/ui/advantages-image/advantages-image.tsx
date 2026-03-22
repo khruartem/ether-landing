@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, type CSSProperties } from "react";
 
 import type { TAdvantagesImageUIProps } from "./types";
 
@@ -7,13 +7,19 @@ import styles from "./advantages-image.module.css";
 export const AdvantagesImageUI = forwardRef<
   HTMLImageElement,
   TAdvantagesImageUIProps
->(({ src, transform }, ref) => {
+>(({ src, transform, position, maxHeight = "480px" }, ref) => {
   return (
     <img
       src={src}
       alt="Изображение секции Подробности и возможности"
       className={styles.advantages__image}
-      style={transform}
+      style={
+        {
+          ...transform,
+          "--inset": position,
+          "--max-height": maxHeight,
+        } as CSSProperties
+      }
       ref={ref}
     />
   );

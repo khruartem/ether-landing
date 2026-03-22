@@ -1,4 +1,6 @@
 .advantages__image {
   transition: transform 1.5s ease-out;
   position: absolute;
+  inset: var(--inset);
+  max-height: var(--max-height);
 }

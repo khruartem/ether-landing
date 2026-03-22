@@ -2,5 +2,7 @@ import type { TAdvantagesTransform } from "../../../utils/types";
 
 export type TAdvantagesImageUIProps = {
   src: string;
-  transform: TAdvantagesTransform;
+  transform?: TAdvantagesTransform;
+  position: string;
+  maxHeight?: string;
 };

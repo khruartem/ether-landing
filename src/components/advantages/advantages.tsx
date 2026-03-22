@@ -48,34 +48,20 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.artists,
       title: "Личная информация",
       text: "Заполняйте краткие автобиографии, указывайте компетенции и расскажите миру о своих талантах в роли творца. Объединения в свою очередь предоставят вам сторонников и общие интересы.",
-      // images: [
-      //   {
-      //     transformDefault: { transform: "translateY(-100%)" },
-      //     transformOnMount: { transform: "translateY(-10%)" },
-      //     src: AdvantagesImage1,
-      //   },
-      //   {
-      //     transformDefault: { transform: "translateY(100%)" },
-      //     transformOnMount: { transform: "translateY(10%)" },
-      //     src: AdvantagesImage2,
-      //   },
-      // ],
       images: [
         {
-          transformDefault: { inset: "-100% 16%" },
+          position: "-100% 16%",
+          maxHeight: "443.27px",
           transformOnMount: {
-            inset: "-100% 16%",
             transform: "translateY(108%)",
-            maxHeight: "443.27px",
           },
           src: AdvantagesImage1,
         },
         {
-          transformDefault: { inset: "100% 50%" },
+          position: "100% 50%",
+          maxHeight: "422.27px",
           transformOnMount: {
-            inset: "100% 50%",
             transform: "translateY(-100%)",
-            maxHeight: "422.27px",
           },
           src: AdvantagesImage2,
         },
@@ -85,28 +71,14 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.artists,
       title: "Портфолио и галереи",
       text: "Делитесь своими работами: загружайте графику, если вы художник, видеозаписи своих спектаклей и фильмов, или музыку собственного сочинения. Это доступно как творцам, так и объединениям.",
-      // images: [
-      //   {
-      //     transformDefault: {
-      //       transform: "scale(0.3) translateY(100%)",
-      //     },
-      //     transformOnMount: {
-      //       transform: "scale(1) translateY(0)",
-      //       transformOrigin: "bottom",
-      //     },
-      //     src: AdvantagesImage3,
-      //   },
-      // ],
       images: [
         {
           transformDefault: {
-            inset: "60% 4%",
             transform: "scale(0.3)",
           },
+          position: "60% 4%",
           transformOnMount: {
-            inset: "80% 4%",
-            transform: "scale(1) translateY(-80%)",
-            // transformOrigin: "bottom",
+            transform: "scale(1) translateY(-60%)",
           },
           src: AdvantagesImage3,
         },
@@ -116,28 +88,14 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.artists,
       title: "Возможности безграничны",
       text: "Творцы могут создавать собственные объединения и вступать в уже существующие. Помимо ваших талантов мир увидит, кто является главой и какую роль он играет в организации мероприятий.",
-      // images: [
-      //   {
-      //     transformDefault: {
-      //       transform: "scale(0.3) translate(100%, 100%)",
-      //     },
-      //     transformOnMount: {
-      //       transform: "scale(1) translate(0, 0)",
-      //       transformOrigin: "right",
-      //     },
-      //     src: AdvantagesImage4,
-      //   },
-      // ],
       images: [
         {
           transformDefault: {
-            inset: "62% 65%",
             transform: "scale(0.3)",
           },
+          position: "62% 65%",
           transformOnMount: {
-            inset: "62% 65%",
             transform: "scale(1) translate(-65%, -62%)",
-            // transformOrigin: "right",
           },
           src: AdvantagesImage4,
         },
@@ -147,52 +105,20 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.events,
       title: "Реализуйте мечту",
       text: "Эфир позволит вам поставить спектакль, провести мастер-класс или конкурс и организовать съемки фильма. Собирайте творцов в объединения, или помогите единомышленникам воплотить идею.",
-      // images: [
-      //   {
-      //     transformDefault: {
-      //       transform: "translate(30%, -100%)",
-      //       maxHeight: "452px",
-      //     },
-      //     transformOnMount: {
-      //       transform: "translate(30%, 0)",
-      //       maxHeight: "452px",
-      //     },
-      //     src: AdvantagesImage5,
-      //   },
-      //   {
-      //     transformDefault: {
-      //       transform: "translate(-24%, 173%)",
-      //       maxHeight: "275px",
-      //     },
-      //     transformOnMount: {
-      //       transform: "translate(-24%, 75%)",
-      //       maxHeight: "275px",
-      //     },
-      //     src: AdvantagesImage6,
-      //   },
-      // ],
       images: [
         {
-          transformDefault: {
-            inset: "-94% 16%",
-            maxHeight: "452px",
-          },
+          position: "-94% 16%",
+          maxHeight: "452px",
           transformOnMount: {
-            inset: "-94% 16%",
             transform: "translateY(100%)",
-            maxHeight: "452px",
           },
           src: AdvantagesImage5,
         },
         {
-          transformDefault: {
-            inset: "100% 40%",
-            maxHeight: "275px",
-          },
+          position: "100% 40%",
+          maxHeight: "275px",
           transformOnMount: {
-            inset: "100% 40%",
             transform: "translateY(-100%)",
-            maxHeight: "275px",
           },
           src: AdvantagesImage6,
         },
@@ -202,28 +128,14 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.events,
       title: "Творческие задачи",
       text: "Глава объединения назначает ответственных творцов, не забывая вносить свой вклад. Артисты выйдут на сцену, музыканты напишут саундтрек, а дизайнер разработает уникальный стиль.",
-      // images: [
-      //   {
-      //     transformDefault: {
-      //       transform: "scale(0.3) translateY(100%)",
-      //     },
-      //     transformOnMount: {
-      //       transform: "scale(1) translateY(0)",
-      //       transformOrigin: "bottom",
-      //     },
-      //     src: AdvantagesImage7,
-      //   },
-      // ],
       images: [
         {
           transformDefault: {
-            inset: "60% 0",
             transform: "scale(0.3)",
           },
+          position: "60% 0",
           transformOnMount: {
-            inset: "80% 0",
-            transform: "scale(1) translateY(-80%)",
-            // transformOrigin: "bottom",
+            transform: "scale(1) translateY(-60%)",
           },
           src: AdvantagesImage7,
         },
@@ -233,26 +145,13 @@ export const Advantages: FC = () => {
       type: AdvantagesItems.events,
       title: "Файлы и комментарии",
       text: "Прикрепляйте к задачам договора на аренду площадки и пожелания к дизайну плакатов вашего мероприятия. Обсуждать детали можно тут же без лишнего шума в миллионах сторонних чатов.",
-      // images: [
-      //   {
-      //     transformDefault: {
-      //       transform: "scale(0.3) translateY(170%)",
-      //     },
-      //     transformOnMount: {
-      //       transform: "scale(1) translateY(0)",
-      //       transformOrigin: "left",
-      //     },
-      //     src: AdvantagesImage8,
-      //   },
-      // ],
       images: [
         {
           transformDefault: {
-            inset: "63% -15%",
             transform: "scale(0.3)",
           },
+          position: "63% -15%",
           transformOnMount: {
-            inset: "63% -15%",
             transform: "scale(1) translate(15%, -63%)",
             transformOrigin: "left",
           },
@@ -266,8 +165,10 @@ export const Advantages: FC = () => {
       text: "При назначении репетиций и встреч необходимо учитывать занятость каждого творца, поэтому Эфир предлагает возможность указать свободное время в графике на каждый месяц.",
       images: [
         {
-          transformDefault: { transform: "translateX(100%)" },
-          transformOnMount: { transform: "translateX(0)" },
+          position: "0px 90%",
+          transformOnMount: {
+            transform: "translateX(-90%)",
+          },
           src: AdvantagesImage9,
         },
       ],
@@ -279,11 +180,11 @@ export const Advantages: FC = () => {
       images: [
         {
           transformDefault: {
-            transform: "scale(0.3) translateY(100%)",
+            transform: "scale(0.3)",
           },
+          position: "60% 4%",
           transformOnMount: {
-            transform: "scale(1) translateY(0)",
-            transformOrigin: "bottom",
+            transform: "scale(1) translateY(-60%)",
           },
           src: AdvantagesImage10,
         },
@@ -296,11 +197,11 @@ export const Advantages: FC = () => {
       images: [
         {
           transformDefault: {
-            transform: "scale(0.3) translate(100%, 100%)",
+            transform: "scale(0.3)",
           },
+          position: "62% 65%",
           transformOnMount: {
-            transform: "scale(1) translate(0, 0)",
-            transformOrigin: "right",
+            transform: "scale(1) translate(-65%, -62%)",
           },
           src: AdvantagesImage11,
         },
