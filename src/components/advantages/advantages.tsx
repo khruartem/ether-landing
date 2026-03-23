@@ -32,6 +32,9 @@ export const Advantages: FC = () => {
   const [currentTab, setCurrentTab] = useState<AdvantagesItems>(
     AdvantagesItems.artists,
   );
+   const [shownSection, setShownSection] = useState<AdvantagesItems>(
+    AdvantagesItems.artists,
+  );
 
   const tabs: AdvantagesItems[] = [
     AdvantagesItems.artists,
@@ -42,6 +45,10 @@ export const Advantages: FC = () => {
   const handleTabChange = (tab: AdvantagesItems) => {
     setCurrentTab(tab);
   };
+
+  const handleSetShownSection = (section: AdvantagesItems) => {
+    setShownSection(section);
+  }
 
   const advantagesItems: TAdvantagesItem[] = [
     {
@@ -212,13 +219,15 @@ export const Advantages: FC = () => {
   const advantagesContextValue: TAdvantagesContextValue = {
     tabs,
     currentTab,
+    shownSection,
     handleTabChange,
+    handleSetShownSection,
     advantagesItems,
   };
 
   const sectionProps: TSection = {
     id: "advantages",
-    gap: 120,
+    gap: 20,
   };
 
   const titleProps: TSectionTitle = {

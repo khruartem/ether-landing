@@ -15,11 +15,9 @@ export const AdvantagesUI: FC<TAdvantagesUIProps> = ({
   const { sectionProps, titleProps } = contentSectionProps;
 
   return (
-    <SectionUI {...sectionProps}>
-      <div className={styles.container}>
-        <SectionTitleUI {...titleProps} />
-        <AdvantagesTabs />
-      </div>
+    <SectionUI {...sectionProps} className={styles.section_advantages}>
+      <SectionTitleUI {...titleProps} />
+      <AdvantagesTabs />
       <AdvantagesItemsList />
     </SectionUI>
   );

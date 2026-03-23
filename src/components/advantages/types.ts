@@ -5,8 +5,10 @@ import type { TAdvantagesItem } from "../../utils/types";
 export type TAdvantagesContextValue = {
   tabs: AdvantagesItems[];
   currentTab: AdvantagesItems;
+  shownSection: AdvantagesItems;
   advantagesItems: TAdvantagesItem[];
   handleTabChange: (tab: AdvantagesItems) => void;
+  handleSetShownSection: (section: AdvantagesItems) => void;
 };
 
 export type TAdvantagesProviderProps = {
