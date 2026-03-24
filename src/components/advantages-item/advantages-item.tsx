@@ -11,15 +11,16 @@ export const AdvantagesItem: FC<TAdvantagesItemProps> = ({
   descriptionPosition,
 }) => {
   const [ref, inView] = useInView({ threshold: 0.5 });
-  const { currentTab, handleTabChange } = useAdvantagesContext();
+  // const { currentTab, handleTabChange, shownSection, handleSetShownSection } = useAdvantagesContext();
 
-  useEffect(() => {
-    if (inView && currentTab !== item.type) {
-      handleTabChange(item.type);
-    }
+  // useEffect(() => {
+    // if (inView && currentTab !== item.type) {
+    //   handleTabChange(item.type);
+    //   handleSetShownSection()
+    // }
     // if (inView) console.log(inView, currentTab, item.type);
     // else console.log("pisya");
-  }, [inView]);
+  // }, [inView]);
 
   return (
     <AdvantagesItemUI

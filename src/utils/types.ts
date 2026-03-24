@@ -116,9 +116,16 @@ export type TAdvantagesImage = {
   src: string;
 };
 
+export type TAdvantagesGroupId = keyof typeof AdvantagesItems;
+
 export type TAdvantagesItem = {
   type: AdvantagesItems;
   title: string;
   text: string;
   images: TAdvantagesImage[];
+};
+
+export type TAdvantagesGroup = {
+  id: TAdvantagesGroupId;
+  items: TAdvantagesItem[];
 };

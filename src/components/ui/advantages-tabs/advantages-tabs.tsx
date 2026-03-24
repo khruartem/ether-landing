@@ -18,7 +18,7 @@ export const AdvantagesTabsUI: FC<TAdvantagesTabsUIProps> = ({
           key={index}
           tab={tab}
           current={currentTab === tab}
-          onChange={() => onTabChange(tab)}
+          onChange={(e) => onTabChange(tab, e)}
         />
       ))}
     </ul>

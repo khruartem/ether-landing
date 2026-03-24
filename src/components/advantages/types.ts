@@ -1,14 +1,12 @@
 import type { ReactNode } from "react";
 import type { AdvantagesItems } from "../../utils/advantagesItems";
-import type { TAdvantagesItem } from "../../utils/types";
+import type { TAdvantagesGroup } from "../../utils/types";
 
 export type TAdvantagesContextValue = {
   tabs: AdvantagesItems[];
   currentTab: AdvantagesItems;
-  shownSection: AdvantagesItems;
-  advantagesItems: TAdvantagesItem[];
+  advantagesGroups: TAdvantagesGroup[];
   handleTabChange: (tab: AdvantagesItems) => void;
-  handleSetShownSection: (section: AdvantagesItems) => void;
 };
 
 export type TAdvantagesProviderProps = {

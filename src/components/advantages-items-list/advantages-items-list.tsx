@@ -1,11 +1,17 @@
-import type { FC } from "react";
+import { useEffect, type FC } from "react";
 
 import { AdvantagesItemsListUI } from "../ui/advantages-items-list";
 
 import { useAdvantagesContext } from "../../hooks/useAdvantagesContext";
+import { useInView } from "react-intersection-observer";
 
 export const AdvantagesItemsList: FC = () => {
-  const { advantagesItems } = useAdvantagesContext();
+  const { advantagesGroups } = useAdvantagesContext();
+  // const {ref, inView} = useInView({threshold: 0});
 
-  return <AdvantagesItemsListUI items={advantagesItems} />;
+  // useEffect(() => {
+  //   if (inView && currentTab !== )
+  // })
+
+  return <AdvantagesItemsListUI groups={advantagesGroups} />;
 };

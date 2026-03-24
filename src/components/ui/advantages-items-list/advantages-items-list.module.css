@@ -1,6 +1,9 @@
+.advantages__groups {
+  padding-block-start: 100px;
+}
+
 .advantages__list {
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding-block-start: 100px;
 }

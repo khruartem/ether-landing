@@ -1,5 +1,5 @@
-import type { TAdvantagesItem } from "../../../utils/types";
+import type { TAdvantagesGroup } from "../../../utils/types";
 
 export type TAdvantagesItemsListUIProps = {
-  items: TAdvantagesItem[];
+  groups: TAdvantagesGroup[];
 };
