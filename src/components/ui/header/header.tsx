@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { EtherLogo } from "../../icons";
+import { Logo } from "../../logo";
 import { Menu } from "../../menu";
 import { BackToMainUI } from "../back-to-main";
 
@@ -10,7 +10,7 @@ export const HeaderUI: FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles["header-left"]}>
-        <EtherLogo />
+        <Logo />
         <Menu />
       </div>
       <BackToMainUI />

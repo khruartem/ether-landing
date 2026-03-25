@@ -1,7 +1,9 @@
 import type { FC } from "react";
-import { Colors } from "../../utils/colors";
-import type { TGalleryIconProps, TTabIconProps } from "./types";
 import clsx from "clsx";
+
+import type { TGalleryIconProps, TTabIconProps } from "./types";
+
+import { Colors } from "../../utils/colors";
 
 export const EtherLogo: FC = () => {
   return (
