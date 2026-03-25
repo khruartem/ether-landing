@@ -42,6 +42,7 @@ export const SectionTitleUI: FC<TSectionTitleUIProps> = ({
           text={text[0]}
           typography={typography}
           color={Colors.Navy}
+          emphasized={emphasized}
         />
       )}
     </div>
