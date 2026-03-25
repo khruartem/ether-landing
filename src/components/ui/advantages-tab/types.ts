@@ -1,5 +1,7 @@
+import type { SyntheticEvent } from "react";
+
 export type TAdvantagesTabUIProps = {
   tab: string;
   current: boolean;
-  onChange: () => void;
+  onChange: (e: SyntheticEvent) => void;
 };

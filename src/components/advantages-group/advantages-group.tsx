@@ -13,21 +13,17 @@ export const AdvantagesGroup: FC<TAdvantagesGroupProps> = ({
   group,
   children,
 }) => {
-  const [ref, inView, entry] = useInView({ threshold: 0.3 });
+  const [ref, inView] = useInView({ threshold: 0.3 });
   const { currentTab, handleTabChange } = useAdvantagesContext();
 
   const { id } = group;
 
   useEffect(() => {
-    // if (inView && currentTab !== AdvantagesItems[id]) {
-    //   handleTabChange(AdvantagesItems[id]);
-    // } else {
-    //   entry?.target.scrollIntoView();
-    // }
     if (inView && currentTab !== AdvantagesItems[id]) {
       handleTabChange(AdvantagesItems[id]);
     }
-    // else entry?.target.scrollIntoView();
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
   return <AdvantagesGroupUI group={group} children={children} ref={ref} />;

@@ -39,16 +39,32 @@ export const Advantages: FC = () => {
     AdvantagesItems.schedule,
   ];
 
-  const handleTabChange = (tab: AdvantagesItems, e?: SyntheticEvent) => {
-    setCurrentTab(tab);
-
+  const scrollIntoGroupView = (e?: SyntheticEvent) => {
     if (e) {
+      const clickedTab = e.currentTarget.textContent;
       const section = e.currentTarget?.closest("section");
       const el = section?.querySelector(
-        `#${Object.keys(AdvantagesItems).find((key) => AdvantagesItems[key as keyof typeof AdvantagesItems] === e.currentTarget.textContent)}`,
+        `#${Object.keys(AdvantagesItems).find(
+          (key) =>
+            AdvantagesItems[key as keyof typeof AdvantagesItems] === clickedTab,
+        )}`,
       );
-      el?.scrollIntoView();
+      el?.scrollIntoView({
+        behavior:
+          (currentTab === "Творцы и объединения" ||
+            currentTab === "Графики и события") &&
+          (clickedTab === "Графики и события" ||
+            clickedTab === "Творцы и объединения")
+            ? "instant"
+            : "smooth",
+        block: "start",
+      });
     }
+  };
+
+  const handleTabChange = (tab: AdvantagesItems, e?: SyntheticEvent) => {
+    setCurrentTab(tab);
+    scrollIntoGroupView(e);
   };
 
   const advantagesGroups: TAdvantagesGroup[] = [
