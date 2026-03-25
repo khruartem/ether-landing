@@ -1,0 +1,1 @@
+export { FAQUI } from "./faq";
