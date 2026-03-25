@@ -6,9 +6,9 @@ import type { TNavItem } from "../../utils/types";
 
 export const Menu: FC = () => {
   const navItems: TNavItem[] = [
-    { label: "О продукте", to: "about" },
-    { label: "Функционал", to: "functional" },
-    { label: "FAQ", to: "faq" },
+    { label: "О продукте", to: "#about" },
+    { label: "Функционал", to: "#functional" },
+    { label: "FAQ", to: "#faq" },
   ];
 
   return <MenuUI items={navItems} />;

@@ -256,7 +256,7 @@ export const Advantages: FC = () => {
   };
 
   const sectionProps: TSection = {
-    id: "advantages",
+    id: "functional",
     gap: 20,
   };
 
