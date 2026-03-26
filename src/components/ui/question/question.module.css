@@ -1,0 +1,32 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--light80);
+  border-radius: 32px;
+  padding: 36px 44px;
+  cursor: pointer;
+  max-height: 104px;
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+}
+
+.question_opened {
+  max-height: 200px;
+}
+
+.question__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question__text {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.question__text_opened {
+  opacity: 1;
+}

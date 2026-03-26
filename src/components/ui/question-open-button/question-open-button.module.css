@@ -1,0 +1,24 @@
+.question__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px var(--nephritis100) solid;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.question__button img {
+  transition: transform 0.5s linear;
+}
+
+.question__button_opened img {
+  transform: rotate(180deg);
+}
+
+.question__arrow {
+  width: 100%;
+  height: 100%;
+}

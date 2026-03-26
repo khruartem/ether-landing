@@ -129,3 +129,8 @@ export type TAdvantagesGroup = {
   id: TAdvantagesGroupId;
   items: TAdvantagesItem[];
 };
+
+export type TQuestion = {
+  title: string;
+  text: string;
+}

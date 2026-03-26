@@ -1,5 +1,7 @@
 import type { FC } from "react";
 
+import { QuestionList } from "../../question-list";
+
 import { ContentSectionUI } from "../content-section";
 
 import type { TFAQUIProps } from "./types";
@@ -12,7 +14,7 @@ export const FAQUI: FC<TFAQUIProps> = ({ contentSectionProps }) => {
       sectionProps={{ ...sectionProps }}
       titleProps={titleProps}
     >
-      {null}
+      <QuestionList />
     </ContentSectionUI>
   );
 };

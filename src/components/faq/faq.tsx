@@ -12,7 +12,7 @@ export const FAQ: FC = () => {
   const sectionProps: TSection = {
     id: "faq",
     decorated: true,
-    gap: 200,
+    gap: 60,
   };
 
   const titleProps: TSectionTitle = {
