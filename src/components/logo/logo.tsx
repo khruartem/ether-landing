@@ -2,8 +2,10 @@ import type { FC } from "react";
 
 import { LogoUI } from "../ui/logo";
 
-export const Logo: FC = () => {
+import type { TLogoProps } from "./types";
+
+export const Logo: FC<TLogoProps> = ({ type }) => {
   const home = "/";
 
-  return <LogoUI url={home} />;
+  return <LogoUI url={home} type={type} />;
 };

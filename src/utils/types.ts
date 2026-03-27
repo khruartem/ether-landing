@@ -133,4 +133,8 @@ export type TAdvantagesGroup = {
 export type TQuestion = {
   title: string;
   text: string;
-}
+};
+
+export type TEtherLogoType = "sign" | "full";
+
+export type TSocialsType = "telegram" | "vk";

@@ -1,14 +1,21 @@
 import type { FC } from "react";
 import { Link } from "react-router-dom";
+import clsx from "clsx";
 
 import type { TLogoUIProps } from "./types";
 
-import { EtherLogo } from "../../icons";
+import logoFullSvg from "../../../assets/icons/ether-full.svg";
+import logoSignSvg from "../../../assets/icons/ether-sigh.svg";
 
-export const LogoUI: FC<TLogoUIProps> = ({ url }) => {
+export const LogoUI: FC<TLogoUIProps> = ({ url, type }) => {
   return (
     <Link to={url}>
-      <EtherLogo />
+      <img
+        src={clsx(
+          type === "full" && logoFullSvg,
+          type === "sign" && logoSignSvg,
+        )}
+      />
     </Link>
   );
 };

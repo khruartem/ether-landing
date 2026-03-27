@@ -10,7 +10,7 @@ export const HeaderUI: FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles["header-left"]}>
-        <Logo />
+        <Logo type={"sign"} />
         <Menu />
       </div>
       <BackToMainUI />
