@@ -1,1 +1,1 @@
-export { Telegram } from "./telegram";
+export { VK } from "./vk";

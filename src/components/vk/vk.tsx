@@ -2,8 +2,8 @@ import type { FC } from "react";
 
 import { SocialsUI } from "../ui/socials";
 
-export const Telegram: FC = () => {
-  const url = "https://t.me/otkterr";
+export const VK: FC = () => {
+  const url = "https://vk.com/otkter";
 
-  return <SocialsUI type={"telegram"} url={url} />;
+  return <SocialsUI type={"vk"} url={url} />;
 };

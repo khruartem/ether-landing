@@ -49,7 +49,23 @@ export const Advantages: FC = () => {
             AdvantagesItems[key as keyof typeof AdvantagesItems] === clickedTab,
         )}`,
       );
-      el?.scrollIntoView({
+      // el?.scrollIntoView({
+      //   behavior:
+      //     (currentTab === "Творцы и объединения" ||
+      //       currentTab === "Графики и события") &&
+      //     (clickedTab === "Графики и события" ||
+      //       clickedTab === "Творцы и объединения")
+      //       ? "instant"
+      //       : "smooth",
+      //   block: "start",
+      // });
+      const offset = 144;
+      const rect = el?.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const elemTop = rect!.top + scrollTop;
+      window.scrollTo({
+        top: elemTop - offset,
         behavior:
           (currentTab === "Творцы и объединения" ||
             currentTab === "Графики и события") &&
@@ -57,7 +73,6 @@ export const Advantages: FC = () => {
             clickedTab === "Творцы и объединения")
             ? "instant"
             : "smooth",
-        block: "start",
       });
     }
   };

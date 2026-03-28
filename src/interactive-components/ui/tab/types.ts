@@ -1,4 +1,4 @@
-import type { TTab } from "../../../../utils/types";
+import type { TTab } from "../../types";
 
 export type TTabUIProps = {
   tab: TTab;

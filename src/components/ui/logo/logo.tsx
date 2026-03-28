@@ -7,9 +7,9 @@ import type { TLogoUIProps } from "./types";
 import logoFullSvg from "../../../assets/icons/ether-full.svg";
 import logoSignSvg from "../../../assets/icons/ether-sigh.svg";
 
-export const LogoUI: FC<TLogoUIProps> = ({ url, type }) => {
+export const LogoUI: FC<TLogoUIProps> = ({ url, type, onClick }) => {
   return (
-    <Link to={url}>
+    <Link to={url} onClick={onClick}>
       <img
         src={clsx(
           type === "full" && logoFullSvg,

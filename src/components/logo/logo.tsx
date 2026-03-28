@@ -7,5 +7,9 @@ import type { TLogoProps } from "./types";
 export const Logo: FC<TLogoProps> = ({ type }) => {
   const home = "/";
 
-  return <LogoUI url={home} type={type} />;
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return <LogoUI url={home} type={type} onClick={handleClick} />;
 };
