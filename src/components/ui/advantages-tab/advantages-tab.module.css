@@ -18,3 +18,7 @@
 .advantages__tab_current span {
   cursor: default;
 }
+
+.advantages__tab:not(.advantages__tab_current):hover > span {
+  color: var(--dark80);
+}
