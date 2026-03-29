@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import clsx from "clsx";
 
 import type { TAdvantagesGroupUIProps } from "./types";
 
@@ -9,7 +10,14 @@ export const AdvantagesGroupUI = forwardRef<
   TAdvantagesGroupUIProps
 >(({ group, children }, ref) => {
   return (
-    <ul id={group.id} className={styles.advantages__group} ref={ref}>
+    <ul
+      id={group.id}
+      className={clsx(
+        styles.advantages__group,
+        group.id === "events" && styles.advantages__group_colored,
+      )}
+      ref={ref}
+    >
       {children}
     </ul>
   );

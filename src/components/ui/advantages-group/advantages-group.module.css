@@ -3,3 +3,7 @@
   flex-direction: column;
   gap: 0;
 }
+
+.advantages__group_colored li div:has(img) {
+  background-color: var(--light100);
+}
