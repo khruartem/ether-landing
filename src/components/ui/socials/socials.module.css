@@ -6,3 +6,15 @@
   width: 60px;
   height: 60px;
 }
+
+.socials svg {
+  color: var(--nephritis100);
+}
+
+.socials:hover svg {
+  color: var(--nephritis120);
+}
+
+.socials:active svg {
+  color: var(--light100);
+}
