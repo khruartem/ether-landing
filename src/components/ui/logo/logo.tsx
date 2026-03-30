@@ -2,19 +2,20 @@ import type { FC } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 
-import type { TLogoUIProps } from "./types";
+import { Icon } from "../../icon";
 
-import logoFullSvg from "../../../assets/icons/ether-full.svg";
-import logoSignSvg from "../../../assets/icons/ether-sigh.svg";
+import type { TLogoUIProps } from "./types";
 
 export const LogoUI: FC<TLogoUIProps> = ({ url, type, onClick }) => {
   return (
-    <Link to={url} onClick={onClick}>
-      <img
-        src={clsx(
-          type === "full" && logoFullSvg,
-          type === "sign" && logoSignSvg,
+    <Link to={url} onClick={onClick} style={{ height: 36 }}>
+      <Icon
+        name={clsx(
+          type === "full" && "ether-full",
+          type === "sign" && "ether-sign",
         )}
+        width={type === "full" ? 132 : 44}
+        height={type === "full" ? 32 : 36}
       />
     </Link>
   );

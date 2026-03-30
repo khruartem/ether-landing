@@ -1,6 +1,7 @@
 export type TIconProps = {
   name: string;
-  size: number;
+  width: number;
+  height: number;
   className?: string;
   title?: string;
 };
