@@ -42,7 +42,7 @@ export type TCalendarDays = {
 
 export type TSectionSubtitle = {
   text: string;
-  icon: string;
+  icon: "flash" | "data" | "message";
   backgroundColor: Colors;
 };
 

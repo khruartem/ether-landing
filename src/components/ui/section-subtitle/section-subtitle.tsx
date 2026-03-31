@@ -1,5 +1,6 @@
 import type { FC } from "react";
 
+import { Icon } from "../../icon";
 import { TextUI } from "../text";
 
 import type { TSectionSubtitleUIProps } from "./types";
@@ -16,7 +17,8 @@ export const SectionSubtitleUI: FC<TSectionSubtitleUIProps> = ({
 }) => {
   return (
     <h3 className={styles["section-subtitle"]} style={{ backgroundColor }}>
-      <img src={icon} alt="Subtitle icon" />
+      {/* <img src={icon} alt="Иконка для подзаголовка" /> */}
+      <Icon name={icon} width={24} height={24} className={styles["section-subtitle__icon"]} />
       <TextUI
         as={"h3"}
         typography={Typography.Title_400_14}

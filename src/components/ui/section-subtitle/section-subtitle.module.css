@@ -7,3 +7,7 @@
   border-radius: 80px;
   width: fit-content;
 }
+
+.section-subtitle__icon {
+  color: var(--dark100)
+}

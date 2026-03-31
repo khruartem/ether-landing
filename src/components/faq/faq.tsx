@@ -6,8 +6,6 @@ import type { TSection, TSectionTitle } from "../../utils/types";
 import { Colors } from "../../utils/colors";
 import { Typography } from "../../utils/typography";
 
-import questionSvg from "../../assets/icons/message-question.svg";
-
 export const FAQ: FC = () => {
   const sectionProps: TSection = {
     id: "faq",
@@ -20,7 +18,7 @@ export const FAQ: FC = () => {
     emphasized: "вопросы",
     subtitle: {
       text: "Прозрачность во всем",
-      icon: questionSvg,
+      icon: "message",
       backgroundColor: Colors.Light80,
     },
     typography: Typography.Title_600_68,

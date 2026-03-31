@@ -15,7 +15,6 @@ import { Colors } from "../../utils/colors";
 import { Typography } from "../../utils/typography";
 import { AdvantagesItems } from "../../utils/advantagesItems";
 
-import dataSVG from "../../assets/icons/data.svg";
 import AdvantagesImage1 from "../../assets/advantages/advantages_1.png";
 import AdvantagesImage2 from "../../assets/advantages/advantages_2.png";
 import AdvantagesImage3 from "../../assets/advantages/advantages_3.png";
@@ -279,7 +278,7 @@ export const Advantages: FC = () => {
     text: ["Подробности и возможности"],
     subtitle: {
       text: "Все в одной экосистеме",
-      icon: dataSVG,
+      icon: "data",
       backgroundColor: Colors.Light60,
     },
     typography: Typography.Title_600_68,
