@@ -7,8 +7,6 @@
 }
 
 .back-to-main :is(span, svg) {
-  --center: var(--navy);
-
   color: var(--nephritis100);
 }
 
@@ -18,6 +16,6 @@
 
 .back-to-main:active :is(span, svg) {
   --center: var(--light80);
-  
+
   color: var(--navy);
 }
