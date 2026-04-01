@@ -5,3 +5,11 @@
   gap: 12px;
   padding-block: 20px;
 }
+
+.back-to-main :is(span,svg) {
+  color: var(--nephritis100);
+}
+
+.back-to-main:hover :is(span,svg) {
+  color: var(--nephritis120);
+}
