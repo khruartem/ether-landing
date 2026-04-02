@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { GalleryIconUI } from "../gallery-icon";
+import { Icon } from "../../icon";
 import { TextUI } from "../text";
 
 import type { TGalleryItemUIProps } from "./types";
@@ -19,7 +19,12 @@ export const GalleryItemUI: FC<TGalleryItemUIProps> = ({ item }) => {
         backgroundColor: item?.backhroundColor,
       }}
     >
-      <GalleryIconUI src={item.icon} />
+      <Icon
+        name={item.icon}
+        width={20}
+        height={20}
+        className={styles["gallery-item__icon"]}
+      />
       {item.title && (
         <TextUI
           as={"span"}

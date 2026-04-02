@@ -7,6 +7,14 @@
   background-size: cover;
 }
 
+.gallery-item__icon {
+  color: var(--nephritis100);
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}
+
 .gallery-item__text {
   position: absolute;
   width: max-content;
