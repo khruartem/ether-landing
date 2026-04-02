@@ -11,7 +11,7 @@ export const Portfolio: FC = () => {
   };
 
   return (
-    <BadgeUI title={title}>
+    <BadgeUI gap={12} title={title}>
       <Gallery />
     </BadgeUI>
   );
