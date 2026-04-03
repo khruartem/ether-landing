@@ -1,1 +1,1 @@
-export { BadgePlus, GalleryPlus, Task, Schedule } from "./icons";
+export { BadgePlus, GalleryPlus } from "./icons";

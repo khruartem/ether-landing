@@ -14,3 +14,11 @@
   background-color: var(--light100);
   border-radius: 20px;
 }
+
+.tab__icon {
+  color: var(--dark80);
+}
+
+.tab__icon_current {
+  color: var(--navy);
+}

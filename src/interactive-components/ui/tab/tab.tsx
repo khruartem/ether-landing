@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import clsx from "clsx";
 
-import { TabIconUI } from "../../../components/ui/tab-icon";
 import { TextUI } from "../../../components/ui/text";
+import { Icon } from "../../../components/icon";
 
 import type { TTabUIProps } from "./types";
 
@@ -22,7 +22,12 @@ export const TabUI: FC<TTabUIProps> = ({ tab, current, onClick }) => {
       <TextUI typography={Typography.Title_400_14} color={currentColor}>
         {tab.text}
       </TextUI>
-      <TabIconUI icon={tab.icon} color={currentColor} />
+      <Icon
+        name={tab.icon}
+        width={20}
+        height={20}
+        className={clsx(styles.tab__icon, current && styles.tab__icon_current)}
+      />
     </div>
   );
 };
