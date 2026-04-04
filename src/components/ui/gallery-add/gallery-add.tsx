@@ -1,13 +1,18 @@
 import type { FC } from "react";
 
-import { GalleryPlus } from "../../icons";
+import { Icon } from "../../icon";
 
 import styles from "./gallery-add.module.css";
 
 export const GalleryAddUI: FC = () => {
   return (
     <div className={styles["gallery-add"]}>
-      <GalleryPlus className={styles["gallery-add__plus"]} />
+      <Icon
+        name="plus"
+        width={44}
+        height={44}
+        className={styles["gallery-add__icon"]}
+      />
     </div>
   );
 };
