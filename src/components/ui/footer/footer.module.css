@@ -20,3 +20,11 @@
 .footer__link {
   color: var(--nephritis100);
 }
+
+.footer__link:hover {
+  color: var(--nephritis120);
+}
+
+.footer__link:active {
+  color: var(--light100);
+}
