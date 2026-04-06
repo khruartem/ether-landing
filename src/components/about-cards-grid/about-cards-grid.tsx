@@ -4,7 +4,6 @@ import { AboutCardsGridUI } from "../ui/about-cards-grid";
 
 import type { TAboutCard } from "../../utils/types";
 
-import gameboySVG from "../../assets/icons/gameboy.svg";
 import usersSVG from "../../assets/icons/users.svg";
 import maximizeSVG from "../../assets/icons/maximize.svg";
 import sunSVG from "../../assets/icons/sun.svg";
@@ -14,7 +13,7 @@ import designSVG from "../../assets/icons/designtools.svg";
 export const AboutCardsGrid: FC = () => {
   const cards: TAboutCard[] = [
     {
-      icon: gameboySVG,
+      icon: "gameboy",
       title: "От творцов для творцов",
       text: "Эфир — это альтернатива традиционным таскерам, которые перегружены обилием лишних функций, сложным и тяжелым для восприятия интерфейсом.",
     },
