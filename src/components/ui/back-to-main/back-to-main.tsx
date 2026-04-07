@@ -1,9 +1,11 @@
 import type { FC } from "react";
 import { Link } from "react-router-dom";
 
+import { TextUI } from "../text";
 import { Icon } from "../../icon";
 
-import { OTLabel } from "../../ot-label";
+import { Typography } from "../../../utils/typography";
+import { Colors } from "../../../utils/colors";
 
 import styles from "./back-to-main.module.css";
 
@@ -14,7 +16,13 @@ export const BackToMainUI: FC = () => {
       target="_blank"
       className={styles["back-to-main"]}
     >
-      <OTLabel />
+      <TextUI
+        as={"span"}
+        typography={Typography.Title_400_14}
+        color={Colors.Nephritis100}
+      >
+        {"Открытая Территория"}
+      </TextUI>
       <Icon
         name={"OT"}
         width={34}
