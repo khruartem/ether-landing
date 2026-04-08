@@ -4,7 +4,6 @@ import { AboutCardsGridUI } from "../ui/about-cards-grid";
 
 import type { TAboutCard } from "../../utils/types";
 
-import usersSVG from "../../assets/icons/users.svg";
 import maximizeSVG from "../../assets/icons/maximize.svg";
 import sunSVG from "../../assets/icons/sun.svg";
 import mobileSVG from "../../assets/icons/mobile.svg";
@@ -18,7 +17,7 @@ export const AboutCardsGrid: FC = () => {
       text: "Эфир — это альтернатива традиционным таскерам, которые перегружены обилием лишних функций, сложным и тяжелым для восприятия интерфейсом.",
     },
     {
-      icon: usersSVG,
+      icon: "users",
       title: "Творческие объединения",
       text: "Объединяйтесь с единомышленниками, создавайте мероприятия и оставляйте свой след. Концентрируйтесь на своих идеях, или следите за другими творцами.",
     },
