@@ -4,7 +4,6 @@ import { AboutCardsGridUI } from "../ui/about-cards-grid";
 
 import type { TAboutCard } from "../../utils/types";
 
-import maximizeSVG from "../../assets/icons/maximize.svg";
 import sunSVG from "../../assets/icons/sun.svg";
 import mobileSVG from "../../assets/icons/mobile.svg";
 import designSVG from "../../assets/icons/designtools.svg";
@@ -22,7 +21,7 @@ export const AboutCardsGrid: FC = () => {
       text: "Объединяйтесь с единомышленниками, создавайте мероприятия и оставляйте свой след. Концентрируйтесь на своих идеях, или следите за другими творцами.",
     },
     {
-      icon: maximizeSVG,
+      icon: "maximize",
       title: "Самовыражение без границ",
       text: "Делитесь своими талантами, загружайте свои работы в портфолио и рассказывайте о том, в чем вы ас. Представители других цехов оценят вас по достоинству.",
     },
