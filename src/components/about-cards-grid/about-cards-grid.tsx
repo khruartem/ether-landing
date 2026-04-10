@@ -4,7 +4,6 @@ import { AboutCardsGridUI } from "../ui/about-cards-grid";
 
 import type { TAboutCard } from "../../utils/types";
 
-import sunSVG from "../../assets/icons/sun.svg";
 import mobileSVG from "../../assets/icons/mobile.svg";
 import designSVG from "../../assets/icons/designtools.svg";
 
@@ -26,7 +25,7 @@ export const AboutCardsGrid: FC = () => {
       text: "Делитесь своими талантами, загружайте свои работы в портфолио и рассказывайте о том, в чем вы ас. Представители других цехов оценят вас по достоинству.",
     },
     {
-      icon: sunSVG,
+      icon: "sun",
       title: "Без бюрократии и бизнесов",
       text: "Творцы — люди уникальные и им нужна уникальная атмосфера. В Эфире нет места консьюмеризму, канцелярским словам и коммерческой жадности.",
     },
