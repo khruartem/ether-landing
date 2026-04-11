@@ -4,7 +4,6 @@ import { AboutCardsGridUI } from "../ui/about-cards-grid";
 
 import type { TAboutCard } from "../../utils/types";
 
-import mobileSVG from "../../assets/icons/mobile.svg";
 import designSVG from "../../assets/icons/designtools.svg";
 
 export const AboutCardsGrid: FC = () => {
@@ -30,7 +29,7 @@ export const AboutCardsGrid: FC = () => {
       text: "Творцы — люди уникальные и им нужна уникальная атмосфера. В Эфире нет места консьюмеризму, канцелярским словам и коммерческой жадности.",
     },
     {
-      icon: mobileSVG,
+      icon: "mobile",
       title: "Доступность и легкость",
       text: "Изначально Эфир спроектирован с учетом особенностей смартфонов. Такой подход помогает отсечь лишнее, чтобы самое главное всегда было под рукой.",
     },
