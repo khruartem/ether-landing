@@ -4,8 +4,6 @@ import { AboutCardsGridUI } from "../ui/about-cards-grid";
 
 import type { TAboutCard } from "../../utils/types";
 
-import designSVG from "../../assets/icons/designtools.svg";
-
 export const AboutCardsGrid: FC = () => {
   const cards: TAboutCard[] = [
     {
@@ -34,7 +32,7 @@ export const AboutCardsGrid: FC = () => {
       text: "Изначально Эфир спроектирован с учетом особенностей смартфонов. Такой подход помогает отсечь лишнее, чтобы самое главное всегда было под рукой.",
     },
     {
-      icon: designSVG,
+      icon: "design",
       title: "Концепт превыше всего",
       text: "Среди нас нет аналитиков и технарей — суть в творчестве, но без излишнего формализма. Мы делаем это для себя и людей, разделяющих наши взгляды.",
     },
