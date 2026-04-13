@@ -3,22 +3,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px var(--nephritis100) solid;
-  border-radius: 50%;
   width: 24px;
   height: 24px;
+  border: 2px var(--nephritis100) solid;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.question__button img {
+.question__button svg {
   transition: transform 0.5s linear;
 }
 
-.question__button_opened img {
+.question__button_opened svg {
   transform: rotate(180deg);
 }
 
 .question__arrow {
-  width: 100%;
-  height: 100%;
+  color: var(--nephritis100);
 }
