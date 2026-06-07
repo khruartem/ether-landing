@@ -4,11 +4,15 @@ import { Logo } from "../../logo";
 import { Menu } from "../../menu";
 import { BackToMainUI } from "../back-to-main";
 
+import { useStyle } from "./useStyle";
+
 import styles from "./header.module.css";
 
 export const HeaderUI: FC = () => {
+  const headerStyle = useStyle();
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} style={headerStyle}>
       <div className={styles["header-left"]}>
         <Logo type={"sign"} />
         <Menu />

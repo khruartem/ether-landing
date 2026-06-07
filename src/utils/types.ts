@@ -138,3 +138,11 @@ export type TQuestion = {
 export type TEtherLogoType = "sign" | "full";
 
 export type TSocialsType = "telegram" | "vk";
+
+export type TMedia = {
+  isLarge: boolean;
+  isDesktop: boolean;
+  isLaptop: boolean;
+  isTablet: boolean;
+  isMobile: boolean;
+};
