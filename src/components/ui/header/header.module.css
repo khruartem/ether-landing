@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 8.13vw;
   background-color: transparent;
   /* background: linear-gradient(180deg, var(--dark100) 0%, rgba(2, 0, 0, 0) 100%);
   position: sticky;
@@ -10,7 +9,7 @@
   z-index: 2; */
 }
 
-.header-left {
+.header__left {
   display: flex;
   flex-direction: row;
   align-items: center;

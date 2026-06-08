@@ -13,7 +13,7 @@ export const HeaderUI: FC = () => {
 
   return (
     <header className={styles.header} style={headerStyle}>
-      <div className={styles["header-left"]}>
+      <div className={styles["header__left"]}>
         <Logo type={"sign"} />
         <Menu />
       </div>
