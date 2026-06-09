@@ -1,8 +1,6 @@
 import type { FC } from "react";
 
-import { Logo } from "../../logo";
-import { Menu } from "../../menu";
-import { BackToMainUI } from "../back-to-main";
+import { Navigation } from "../../navigation";
 
 import { useStyle } from "./useStyle";
 
@@ -13,11 +11,7 @@ export const HeaderUI: FC = () => {
 
   return (
     <header className={styles.header} style={headerStyle}>
-      <div className={styles["header__left"]}>
-        <Logo type={"sign"} />
-        <Menu />
-      </div>
-      <BackToMainUI />
+      <Navigation />
     </header>
   );
 };

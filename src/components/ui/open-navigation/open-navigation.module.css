@@ -1,8 +1,10 @@
-.socials {
+.navigation__open {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 60px;
   height: 60px;
+  border-radius: 50%;
+  background-color: var(--light100);
 }

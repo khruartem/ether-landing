@@ -7,3 +7,15 @@
   position: absolute;
   white-space: nowrap;
 }
+
+.button-icon svg {
+  color: var(--nephritis100);
+}
+
+.button-icon:hover svg {
+  color: var(--nephritis120);
+}
+
+.button-icon:active svg {
+  color: var(--light100);
+}
