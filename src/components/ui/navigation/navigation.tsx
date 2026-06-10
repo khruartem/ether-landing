@@ -8,6 +8,7 @@ import { BackToMainUI } from "../back-to-main";
 import { useMedia } from "../../../hooks/useMedia";
 
 import styles from "./navigation.module.css";
+import { Burger } from "../../burger";
 
 export const NavigationUI: FC = () => {
   const { isTablet, isMobile } = useMedia();
@@ -24,6 +25,7 @@ export const NavigationUI: FC = () => {
         </div>
       )}
       {isMobile ? <OpenNavigation /> : <BackToMainUI />}
+      {isSmallResolution && <Burger />}
     </>
   );
 };

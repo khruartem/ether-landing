@@ -8,10 +8,14 @@ import styles from "./menu.module.css";
 
 export const MenuUI: FC<TMenuUIProps> = ({ items }) => {
   return (
-    <nav className={styles.menu}>
+    <nav id="menu" className={styles.menu}>
       <ul className={styles.menu__list}>
-        {items.map(({ label, to }, index) => (
-          <li key={index} className={styles["menu__list-item"]}>
+        {items.map(({ label, to, onClick }, index) => (
+          <li
+            key={index}
+            className={styles["menu__list-item"]}
+            onClick={onClick}
+          >
             <MenuItemUI label={label} to={to} />
           </li>
         ))}

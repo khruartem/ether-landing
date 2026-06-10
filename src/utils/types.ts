@@ -6,6 +6,7 @@ import type { Week } from "./week";
 export type TNavItem = {
   label: string;
   to: string;
+  onClick?: () => void;
 };
 
 export type TEmployee = {

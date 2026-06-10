@@ -14,7 +14,7 @@ export const SocialsUI: FC<TSocialsUIProps> = ({ url, name }) => {
     <Link
       to={url}
       target="_blank"
-      className={clsx(styles.socials, styles[sharedStyles["button-icon"]])}
+      className={clsx(styles.socials, sharedStyles["button-icon"])}
     >
       <Icon name={name} width={32} height={32} />
     </Link>
