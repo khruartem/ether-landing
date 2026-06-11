@@ -8,6 +8,8 @@ import type { TCalendarDayUIProps } from "./types";
 import { Colors } from "../../../utils/colors";
 import { Typography } from "../../../utils/typography";
 
+import { useTypography } from "./useTypography";
+
 import "./calendar-day.css";
 
 export const CalendarDayUI: FC<TCalendarDayUIProps> = ({
@@ -15,10 +17,12 @@ export const CalendarDayUI: FC<TCalendarDayUIProps> = ({
   current,
   emphasised,
 }) => {
+  const typographyDayLabel = useTypography();
+
   return (
     <TextUI
       as={"li"}
-      typography={Typography.Title_500_14}
+      typography={Typography[typographyDayLabel]}
       color={Colors.Nephritis100}
       className={clsx(
         day && "calendar__day",

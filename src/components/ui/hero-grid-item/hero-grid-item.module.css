@@ -1,0 +1,6 @@
+.hero__grid__item {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-content: flex-start;
+}

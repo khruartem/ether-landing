@@ -39,6 +39,30 @@ const Typography = {
     size: "14px",
     lineHeight: "20px",
   },
+  Title_500_11: {
+    font: "Unbounded",
+    weight: "500",
+    size: "10.93px",
+    lineHeight: "15.61px",
+  },
+  Title_500_10: {
+    font: "Unbounded",
+    weight: "500",
+    size: "10.03px",
+    lineHeight: "14.33px",
+  },
+  Title_500_8: {
+    font: "Unbounded",
+    weight: "500",
+    size: "8.23px",
+    lineHeight: "11.76px",
+  },
+  Title_500_7: {
+    font: "Unbounded",
+    weight: "500",
+    size: "6.96px",
+    lineHeight: "9.95px",
+  },
   Title_400_14: {
     font: "Unbounded",
     weight: "400",
@@ -50,6 +74,30 @@ const Typography = {
     weight: "500",
     size: "14px",
     lineHeight: "20px",
+  },
+  Text_500_11: {
+    font: "Roboto",
+    weight: "500",
+    size: "10.93px",
+    lineHeight: "15.61px",
+  },
+  Text_500_10: {
+    font: "Roboto",
+    weight: "500",
+    size: "10.03px",
+    lineHeight: "14.33px",
+  },
+  Text_500_8: {
+    font: "Roboto",
+    weight: "500",
+    size: "8.23px",
+    lineHeight: "11.76px",
+  },
+  Text_500_7: {
+    font: "Roboto",
+    weight: "500",
+    size: "6.96px",
+    lineHeight: "9.95px",
   },
   Text_400_20: {
     font: "Roboto",
