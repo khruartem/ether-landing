@@ -2,12 +2,24 @@ import type { FC } from "react";
 
 import type { TIconProps } from "./types";
 
-export const Icon: FC<TIconProps> = ({ name, width, height, className }) => {
+export const Icon: FC<TIconProps> = ({
+  name,
+  width,
+  height,
+  color,
+  className,
+  style,
+}) => {
   const spriteUrl = `${import.meta.env.BASE_URL}sprite.svg`;
   const href = `${spriteUrl}#${name}`;
 
   return (
-    <svg width={width} height={height} className={className}>
+    <svg
+      width={width}
+      height={height}
+      className={className}
+      style={{ ...style, color }}
+    >
       <use href={href} />
     </svg>
   );

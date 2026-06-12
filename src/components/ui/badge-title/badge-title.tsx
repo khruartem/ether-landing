@@ -8,12 +8,17 @@ import type { TBadgeTitleUIProps } from "./types";
 import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
+import { useTypography } from "./useTypography";
+
 import styles from "./badge-titile.module.css";
 
 export const BadgeTitleUI: FC<TBadgeTitleUIProps> = ({ title }) => {
+  const badgeTitleTypography = useTypography();
+
   return (
     <TextUI
-      typography={Typography.Title_500_14}
+      as={"span"}
+      typography={Typography[badgeTitleTypography]}
       color={Colors.Dark100}
       className={clsx(
         title?.decorated ? styles.text_decorated : styles.text_undecorated,

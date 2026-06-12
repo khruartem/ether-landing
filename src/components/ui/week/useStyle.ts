@@ -1,4 +1,4 @@
-import { createUseStyleHook } from "../../../utils/createUseStyleHook";
+import { createUseStyleHook } from "../../../utils/styleHookFactory";
 
 export const useStyle = createUseStyleHook({
   gap: {

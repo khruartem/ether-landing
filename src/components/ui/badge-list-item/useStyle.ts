@@ -2,17 +2,17 @@ import { createUseStyleHook } from "../../../utils/styleHookFactory";
 
 export const useStyle = createUseStyleHook({
   paddingBlock: {
-    large: 20,
-    desktop: 12,
-    laptop: 12,
-    tablet: 12,
-    mobile: 12,
+    large: 8,
+    desktop: 6,
+    laptop: 6,
+    tablet: 4.7,
+    mobile: 4,
   },
   paddingInline: {
-    large: 156,
-    desktop: 107,
-    laptop: 42,
-    tablet: 30,
-    mobile: 16,
+    large: 12,
+    desktop: 8.6,
+    laptop: 9.4,
+    tablet: 7,
+    mobile: 5.8,
   },
 });

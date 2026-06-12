@@ -7,9 +7,13 @@ import type { TBadgeClueUIProps } from "./types";
 import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
+import { useTypography } from "./useTypography";
+
 export const BadgeClueUI: FC<TBadgeClueUIProps> = ({ text }) => {
+  const badgeClueTypography = useTypography();
+
   return (
-    <TextUI typography={Typography.Text_400_14} color={Colors.Dark80}>
+    <TextUI typography={Typography[badgeClueTypography]} color={Colors.Dark80}>
       {text}
     </TextUI>
   );

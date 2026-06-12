@@ -7,6 +7,7 @@ export type TTypography = {
 };
 
 const Typography = {
+  // Заголовки
   Title_900_100: {
     font: "Unbounded",
     weight: "900",
@@ -69,6 +70,31 @@ const Typography = {
     size: "14px",
     lineHeight: "20px",
   },
+  Title_400_11: {
+    font: "Unbounded",
+    weight: "400",
+    size: "10.93px",
+    lineHeight: "15.61px",
+  },
+  Title_400_10: {
+    font: "Unbounded",
+    weight: "400",
+    size: "10.03px",
+    lineHeight: "14.33px",
+  },
+  Title_400_8: {
+    font: "Unbounded",
+    weight: "400",
+    size: "8.23px",
+    lineHeight: "11.76px",
+  },
+  Title_400_7: {
+    font: "Unbounded",
+    weight: "400",
+    size: "6.96px",
+    lineHeight: "9.95px",
+  },
+  // Тексты
   Text_500_14: {
     font: "Roboto",
     weight: "500",
@@ -128,6 +154,30 @@ const Typography = {
     weight: "400",
     size: "12px",
     lineHeight: "16px",
+  },
+  Text_400_11: {
+    font: "Roboto",
+    weight: "400",
+    size: "10.93px",
+    lineHeight: "15.61px",
+  },
+  Text_400_10: {
+    font: "Roboto",
+    weight: "400",
+    size: "10.03px",
+    lineHeight: "14.33px",
+  },
+  Text_400_8: {
+    font: "Roboto",
+    weight: "400",
+    size: "8.23px",
+    lineHeight: "11.76px",
+  },
+  Text_400_7: {
+    font: "Roboto",
+    weight: "400",
+    size: "6.96px",
+    lineHeight: "9.95px",
   },
 } as const;
 

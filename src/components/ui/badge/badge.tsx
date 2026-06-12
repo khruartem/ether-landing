@@ -5,6 +5,8 @@ import { BadgeTitleUI } from "../badge-title";
 
 import type { TBadgeUIProps } from "./types";
 
+import { useStyle } from "./useStyle";
+
 import styles from "./badge.module.css";
 
 export const BadgeUI: FC<TBadgeUIProps> = ({
@@ -13,10 +15,12 @@ export const BadgeUI: FC<TBadgeUIProps> = ({
   children,
   className,
 }) => {
+  const badgeStyle = useStyle();
+
   return (
     <div
       className={clsx(styles.hero__block, className && className)}
-      style={{ "--gap": `${gap}px` } as CSSProperties}
+      style={{ "--gap": `${gap}px`, ...badgeStyle } as CSSProperties}
     >
       {title && <BadgeTitleUI title={title} />}
       {children}

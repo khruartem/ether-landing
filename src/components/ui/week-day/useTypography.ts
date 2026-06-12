@@ -1,19 +1,4 @@
-import clsx from "clsx";
-import { useMedia } from "../../../hooks/useMedia";
-import type { Typography } from "../../../utils/typography";
+import { createUseTypography } from "../../../utils/typographyHookFactory";
 
-export const useTypography = (): keyof typeof Typography => {
-  const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
-
-  const fontSize = clsx(
-    isLarge && 14,
-    isDesktop && 10,
-    isLaptop && 11,
-    isTablet && 8,
-    isMobile && 7,
-  );
-
-  const typography = `Text_500_${fontSize}` as keyof typeof Typography;
-
-  return typography;
-};
+const fontSizes = { large: 14, desktop: 10, laptop: 11, tablet: 8, mobile: 7 };
+export const useTypography = createUseTypography("Text", 500, fontSizes);
