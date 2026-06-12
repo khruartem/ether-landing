@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# Эфир
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Лэндинг проекта "Эфир"** — проект цифрового интерфейса творческой организации
 
-Currently, two official plugins are available:
+[![TypeScript](https://img.shields.io/badge/TypeScript-85%-3178C6?style=flat-square&logo=typescript&logoColor=white)](package.json)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white)](package.json)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)](package.json)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[🌐 Посетить сайт](#развёртывание) • [📦 Исходный код](#структура-проекта) • [🚀 Начало-работы](#быстрый-старт)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## О проекте
 
-## Expanding the ESLint configuration
+Лэндинг проекта "Эфир" — проект цифрового интерфейса творческой организации, разработанный технической командой Открытой Территории. Сайт демонстрирует современный подход к созданию веб-интерфейсов с использованием лучших практик фронтенд-разработки.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ✨ Ключевые особенности
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🎨 **Современный UI/UX дизайн** — отзывчивый интерфейс с плавными анимациями
+- ⚡ **Высокая производительность** — построен на Vite с оптимизацией для быстрой загрузки
+- 📱 **Полностью адаптивный** — отлично работает на всех устройствах
+- 🎭 **Анимации и интерактивность** — плавные переходы и интерактивные элементы
+- ♿ **Доступность** — заботимся о юзабилити для всех пользователей
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Стек технологий
+
+| Слой              | Технология |
+| ----------------- | ---------- |
+| **Фреймворк**     | React 19   |
+| **Язык**          | TypeScript |
+| **Сборка**        | Vite       |
+| **Стили**         | CSS        |
+| **Развёртывание** | Vercel     |
+
+### Композиция кода
+
+- TypeScript: 85%
+- CSS: 13.5%
+- HTML: 1.1%
+- JavaScript: 0.4%
+
+---
+
+## 🚀 Быстрый старт
+
+### Требования
+
+- Node.js 18+
+- npm или yarn
+
+### Установка
+
+1. Клонируйте репозиторий: `git clone https://github.com/khruartem/ether-landing.git && cd ether-landing`
+2. Установите зависимости: `npm install`
+3. Запустите локальный сервер: `npm run dev` (приложение откроется на http://localhost:5173)
+
+### Команды разработки
+
+- `npm run dev` — разработка с горячей перезагрузкой
+- `npm run lint` — проверка кода на ошибки
+- `npm run build` — сборка для продакшена
+- `npm run preview` — предпросмотр собранного приложения
+
+---
+
+## 📁 Структура проекта
+
+```
+ether-landing/
+├── src/
+│   ├── components/ — переиспользуемые компоненты
+│   ├── pages/ — страницы приложения
+│   ├── styles/ — глобальные стили
+│   ├── App.tsx — главный компонент
+│   └── main.tsx — точка входа
+├── public/ — статические файлы
+├── package.json — зависимости проекта
+├── tsconfig.json — конфигурация TypeScript
+├── vite.config.ts — конфигурация Vite
+└── README.md — этот файл
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌐 Развёртывание
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Проект развёртывается на **Vercel** при каждом обновлении.
+
+---
+
+## 👨‍💻 Разработчик
+
+Проект разработан и поддерживается [@khruartem](https://github.com/khruartem)
+
+---
+
+## 📞 Связь
+
+Для вопросов и предложений обратитесь к организатору проекта через GitHub Issues.
+
+---
+
+**Создано с ❤️ для [Открытой территории](https://otkter.ru/)**
