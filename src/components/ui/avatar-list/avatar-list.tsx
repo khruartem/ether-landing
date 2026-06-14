@@ -4,17 +4,22 @@ import { AvatarUI } from "../avatar";
 
 import type { TAvatarListUIProps } from "./types";
 
+import { useAvatarListItemStyle } from "./useAvatarListItemStyle";
+import { useAvatarListStyle } from "./useAvatarListStyle";
+
 import styles from "./avatar-list.module.css";
 
 export const AvatarListUI: FC<TAvatarListUIProps> = ({ avatars }) => {
+  const avatarListStyle = useAvatarListStyle();
+  const avatarListItemStyle = useAvatarListItemStyle();
+
   return (
-    <ul className={styles["avatar-list"]}>
+    <ul className={styles["avatar-list"]} style={avatarListStyle}>
       {avatars.map((avatar, index) => {
         return (
           <li
-            className={styles["avatar-list__item"]}
             key={index}
-            style={{ zIndex: avatars.length - index }}
+            style={{ ...avatarListItemStyle, zIndex: avatars.length - index }}
           >
             <AvatarUI avatar={avatar} />
           </li>

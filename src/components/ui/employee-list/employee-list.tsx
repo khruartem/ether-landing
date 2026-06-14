@@ -6,14 +6,17 @@ import { Colors } from "../../../utils/colors";
 import { AvatarListUI } from "../avatar-list";
 
 import styles from "./employee-list.module.css";
+import { useStyle } from "./useStyle";
 
 export const EmployeeListUI: FC<TEmployeeListUIProps> = ({
   avatars,
   mainText,
   subText,
 }) => {
+  const employeeListStyle = useStyle();
+
   return (
-    <div className={styles["employee-list"]}>
+    <div className={styles["employee-list"]} style={employeeListStyle}>
       <AvatarListUI avatars={avatars} />
       <div className={styles["employee-list__text"]}>
         <TextUI
