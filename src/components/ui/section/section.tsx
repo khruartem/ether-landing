@@ -3,24 +3,27 @@ import clsx from "clsx";
 
 import type { TSectionUIProps } from "./types";
 
+import { useStyle } from "./useStyle";
+
 import styles from "./section.module.css";
 
 export const SectionUI: FC<TSectionUIProps> = ({
   id,
   decorated,
-  paddinged = true,
   gap,
   className,
+  style,
   children,
 }) => {
+  const sectionStyle = useStyle();
+
   return (
     <section
       id={id}
-      style={{ gap: gap }}
+      style={{ ...sectionStyle, ...style, gap }}
       className={clsx(
         styles.section,
         decorated && styles.section_decorated,
-        paddinged && styles.section_paddinged,
         className && className,
       )}
     >

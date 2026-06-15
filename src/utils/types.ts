@@ -85,7 +85,6 @@ export type TSection = {
   id?: string;
   gap?: number;
   decorated?: boolean;
-  paddinged?: boolean;
   className?: string;
 };
 

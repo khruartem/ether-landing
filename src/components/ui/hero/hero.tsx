@@ -2,31 +2,26 @@ import type { FC } from "react";
 
 import { SectionUI } from "../section";
 import { SectionTitleUI } from "../section-title";
-import { HeroGridUI } from "../hero-grid";
-import { HeroGridItemUI } from "../hero-grid-item";
-import { Activity } from "../../activity";
-import { SmallTask } from "../../small-task";
-import { Schedule } from "../../schedule";
-import { Portfolio } from "../../portfolio";
-import { TabBar } from "../../tab-bar";
-import { Event } from "../../event";
+import { HeroImgUI } from "../hero-img";
+import { useStyle } from "./useStyle";
 
 import { Typography } from "../../../utils/typography";
-import { useMedia } from "../../../hooks/useMedia";
+
+import sharedStyles from "../../../shared/styles.module.css";
 
 export const HeroUI: FC = () => {
-  const { isLarge, isDesktop } = useMedia();
-  const isLargeResolution = isLarge || isDesktop;
+  const sectionStyle = useStyle();
 
   return (
-    <SectionUI>
+    <SectionUI style={sectionStyle}>
       <SectionTitleUI
         text={["Будьте", "в Эфире"]}
         emphasized="Эфире"
         typography={Typography.Title_900_100}
         as={"h1"}
+        className={sharedStyles["visually-hidden"]}
       />
-      <HeroGridUI>
+      {/* <HeroGridUI>
         <HeroGridItemUI>
           <Activity />
           <SmallTask />
@@ -39,7 +34,8 @@ export const HeroUI: FC = () => {
           <TabBar />
           <Event />
         </HeroGridItemUI>
-      </HeroGridUI>
+      </HeroGridUI> */}
+      <HeroImgUI />
     </SectionUI>
   );
 };

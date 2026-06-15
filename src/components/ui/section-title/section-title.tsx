@@ -8,6 +8,7 @@ import type { TSectionTitleUIProps } from "./types";
 import { Colors } from "../../../utils/colors";
 
 import styles from "./section-title.module.css";
+import clsx from "clsx";
 
 export const SectionTitleUI: FC<TSectionTitleUIProps> = ({
   text,
@@ -15,9 +16,14 @@ export const SectionTitleUI: FC<TSectionTitleUIProps> = ({
   emphasized,
   typography,
   as: Tag,
+  style,
+  className,
 }) => {
   return (
-    <div className={styles["section-title"]}>
+    <div
+      className={clsx(styles["section-title"], className && className)}
+      style={style}
+    >
       {subtitle && <SectionSubtitleUI {...subtitle} />}
       {text.length > 1 ? (
         <Tag className={styles["main-title"]}>
