@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { AdvantagesItems } from "./advantagesItems";
 import type { Colors } from "./colors";
 import type { Typography } from "./typography";
@@ -83,9 +84,9 @@ export type TAboutCard = {
 
 export type TSection = {
   id?: string;
-  gap?: number;
   decorated?: boolean;
   className?: string;
+  style?: CSSProperties;
 };
 
 export type TSectionTitle = {

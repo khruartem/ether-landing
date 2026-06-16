@@ -1,10 +1,6 @@
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
+import type { TSection } from "../../../utils/types";
 
-export type TSectionUIProps = {
-  id?: string;
-  decorated?: boolean;
-  gap?: number;
-  className?: string;
+export type TSectionUIProps = TSection & {
   children: ReactNode;
-  style?: CSSProperties;
 };

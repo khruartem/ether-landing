@@ -10,7 +10,6 @@ import styles from "./section.module.css";
 export const SectionUI: FC<TSectionUIProps> = ({
   id,
   decorated,
-  gap,
   className,
   style,
   children,
@@ -20,7 +19,7 @@ export const SectionUI: FC<TSectionUIProps> = ({
   return (
     <section
       id={id}
-      style={{ ...sectionStyle, ...style, gap }}
+      style={{ ...sectionStyle, ...style}}
       className={clsx(
         styles.section,
         decorated && styles.section_decorated,

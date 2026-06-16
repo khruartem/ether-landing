@@ -10,7 +10,6 @@ export const About: FC = () => {
   const sectionProps: TSection = {
     id: "about",
     decorated: true,
-    gap: 200,
   };
 
   const titleProps: TSectionTitle = {

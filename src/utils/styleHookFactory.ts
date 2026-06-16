@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 import { usePxToVw, type TBreakpointValues } from "../hooks/usePxToVw";
 
-type StyleConfig = Record<string, TBreakpointValues>;
+type StyleConfig = Partial<Record<keyof CSSProperties, TBreakpointValues>>;
 
 export const createUseStyleHook = (
   config: StyleConfig,
