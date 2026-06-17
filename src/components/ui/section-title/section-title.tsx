@@ -1,4 +1,5 @@
 import type { FC } from "react";
+import clsx from "clsx";
 
 import { TitleUI } from "../title/title";
 import { SectionSubtitleUI } from "../section-subtitle";
@@ -6,19 +7,22 @@ import { SectionSubtitleUI } from "../section-subtitle";
 import type { TSectionTitleUIProps } from "./types";
 
 import { Colors } from "../../../utils/colors";
+import { Typography } from "../../../utils/typography";
+
+import { useTypography } from "./useTypography";
 
 import styles from "./section-title.module.css";
-import clsx from "clsx";
 
 export const SectionTitleUI: FC<TSectionTitleUIProps> = ({
   text,
   subtitle,
   emphasized,
-  typography,
   as: Tag,
   style,
   className,
 }) => {
+  const titleTypography = useTypography();
+
   return (
     <div
       className={clsx(styles["section-title"], className && className)}
@@ -30,14 +34,14 @@ export const SectionTitleUI: FC<TSectionTitleUIProps> = ({
           <TitleUI
             as={"span"}
             text={text[0]}
-            typography={typography}
+            typography={Typography[titleTypography]}
             color={Colors.Navy}
             emphasized={emphasized}
           />
           <TitleUI
             as={"span"}
             text={text[1]}
-            typography={typography}
+            typography={Typography[titleTypography]}
             color={Colors.Navy}
             emphasized={emphasized}
           />
@@ -46,7 +50,7 @@ export const SectionTitleUI: FC<TSectionTitleUIProps> = ({
         <TitleUI
           as={Tag}
           text={text[0]}
-          typography={typography}
+          typography={Typography[titleTypography]}
           color={Colors.Navy}
           emphasized={emphasized}
         />

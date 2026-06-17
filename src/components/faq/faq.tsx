@@ -4,7 +4,6 @@ import { FAQUI } from "../ui/faq";
 
 import type { TSection, TSectionTitle } from "../../utils/types";
 import { Colors } from "../../utils/colors";
-import { Typography } from "../../utils/typography";
 
 export const FAQ: FC = () => {
   const sectionProps: TSection = {
@@ -20,7 +19,6 @@ export const FAQ: FC = () => {
       icon: "message",
       backgroundColor: Colors.Light80,
     },
-    typography: Typography.Title_600_68,
     as: "h2",
   };
 

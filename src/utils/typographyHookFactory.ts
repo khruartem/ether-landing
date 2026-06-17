@@ -4,7 +4,7 @@ import type { Typography } from "./typography";
 import type { TBreakpointValues } from "../hooks/usePxToVw";
 
 type TTypographyType = "Title" | "Text";
-type TFontWeight = 400 | 500;
+type TFontWeight = 400 | 500 | 600;
 type TFontSize = Required<TBreakpointValues>;
 
 export const createUseTypography = (

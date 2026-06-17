@@ -12,7 +12,6 @@ import type {
 } from "../../utils/types";
 
 import { Colors } from "../../utils/colors";
-import { Typography } from "../../utils/typography";
 import { AdvantagesItems } from "../../utils/advantagesItems";
 
 import AdvantagesImage1 from "../../assets/advantages/advantages_1.png";
@@ -280,7 +279,6 @@ export const Advantages: FC = () => {
       icon: "data",
       backgroundColor: Colors.Light60,
     },
-    typography: Typography.Title_600_68,
     as: "h2",
   };
 

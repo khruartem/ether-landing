@@ -5,8 +5,6 @@ import { SectionTitleUI } from "../section-title";
 import { HeroImgUI } from "../hero-img";
 import { useStyle } from "./useStyle";
 
-import { Typography } from "../../../utils/typography";
-
 import sharedStyles from "../../../shared/styles.module.css";
 
 export const HeroUI: FC = () => {
@@ -17,7 +15,6 @@ export const HeroUI: FC = () => {
       <SectionTitleUI
         text={["Будьте", "в Эфире"]}
         emphasized="Эфире"
-        typography={Typography.Title_900_100}
         as={"h1"}
         className={sharedStyles["visually-hidden"]}
       />

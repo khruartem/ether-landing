@@ -1,7 +1,6 @@
 import type { CSSProperties } from "react";
 import type { AdvantagesItems } from "./advantagesItems";
 import type { Colors } from "./colors";
-import type { Typography } from "./typography";
 import type { Week } from "./week";
 
 export type TNavItem = {
@@ -93,7 +92,6 @@ export type TSectionTitle = {
   text: string[];
   subtitle?: TSectionSubtitle;
   emphasized?: string;
-  typography: Typography;
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span";
 };
 
