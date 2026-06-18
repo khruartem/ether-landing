@@ -8,13 +8,13 @@ import { useStyle } from "./useStyle";
 import styles from "./about-img.module.css";
 
 export const AboutImgUI: FC = () => {
-  const { isLaptop, isTablet, isMobile } = useMedia();
+  const { isLaptop, isTablet } = useMedia();
   const imgStyle = useStyle();
 
-  const smallResolution = isLaptop || isTablet || isMobile;
+  const isSmallResolution = isLaptop || isTablet;
 
   return (
-    smallResolution && (
+    isSmallResolution && (
       <img
         src={iphoneMockupSmall}
         alt="Мокап интерфейса Эфир на мобильном устройстве"

@@ -3,7 +3,8 @@ import { useMedia } from "../../../hooks/useMedia";
 import { createUseStyleHook } from "../../../utils/styleHookFactory";
 
 import iphoneMockupLarge from "../../../assets/iphone_mockup_large.png";
-import iphoneMockupDesktop from "../../../assets/iphone_mockup_middle.png";
+import iphoneMockupMiddle from "../../../assets/iphone_mockup_middle.png";
+import iphoneMockupSmall from "../../../assets/iphone_mockup_small.png";
 
 export const useStyle = createUseStyleHook(
   {
@@ -16,7 +17,7 @@ export const useStyle = createUseStyleHook(
     },
     paddingBlockEnd: {
       large: 492,
-      desktop: 96,
+      desktop: 244,
       laptop: 160,
       tablet: 80,
       mobile: 60,
@@ -24,23 +25,40 @@ export const useStyle = createUseStyleHook(
     gap: {
       large: 200,
       desktop: 80,
-      laptop: 80,
-      tablet: 80,
-      mobile: 40,
+      laptop: 880,
+      tablet: 880,
+      mobile: 668,
     },
   },
   () => {
-    const { isLarge, isDesktop } = useMedia();
+    const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
     const iphoneMockup = clsx(
       isLarge && iphoneMockupLarge,
-      isDesktop && iphoneMockupDesktop,
+      isDesktop && iphoneMockupMiddle,
+      isLaptop && iphoneMockupMiddle,
+      isTablet && iphoneMockupMiddle,
+      isMobile && iphoneMockupSmall,
     );
     const backgroundPosition = clsx(
       isLarge && "50% 101%",
-      isDesktop && "50% 101%",
+      isDesktop && "50% 127%",
+      isLaptop && "50% 30%",
+      isTablet && "50% 28%",
+      isMobile && "50% 15%",
+    );
+    const backgroundSize = clsx(
+      isLarge && "contain",
+      isDesktop && "145.8%",
+      isLaptop && "165%",
+      isTablet && "220%",
+      isMobile && "184%",
     );
 
-    return { backgroundPosition, backgroundImage: `url(${iphoneMockup})` };
+    return {
+      backgroundPosition,
+      backgroundImage: `url(${iphoneMockup})`,
+      backgroundSize,
+    };
   },
 );

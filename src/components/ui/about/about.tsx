@@ -23,7 +23,7 @@ export const AboutUI: FC<TAboutUIProps> = ({ contentSectionProps }) => {
       }}
       titleProps={titleProps}
     >
-      <AboutImgUI />
+      {/* <AboutImgUI /> */}
       <AboutCardsGrid />
     </ContentSectionUI>
   );

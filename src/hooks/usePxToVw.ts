@@ -2,32 +2,32 @@ import clsx from "clsx";
 import { useMedia } from "./useMedia";
 
 export type TBreakpointValues = {
-  large?: number;
-  desktop?: number;
-  laptop?: number;
-  tablet?: number;
-  mobile?: number;
+  large?: number | string;
+  desktop?: number | string;
+  laptop?: number | string;
+  tablet?: number | string;
+  mobile?: number | string;
 };
 
-const useConvert = (px?: number) => {
+const useConvert = (px?: number | string) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
-  if (px) {
-    const pxNum = px - 0.1;
-
+  if (px && typeof px === "number") {
     const pxToVw = (px: number, viewport: number) => {
-      return ((px / viewport) * 100).toFixed(2);
+      return ((px / viewport) * 100);
     };
 
     return (
       clsx(
-        isLarge && pxToVw(pxNum, 1920),
-        isDesktop && pxToVw(pxNum, 1366),
-        isLaptop && pxToVw(pxNum, 1024),
-        isTablet && pxToVw(pxNum, 768),
-        isMobile && pxToVw(pxNum, 420),
+        isLarge && pxToVw(px, 1920),
+        isDesktop && pxToVw(px, 1366),
+        isLaptop && pxToVw(px, 1024),
+        isTablet && pxToVw(px, 768),
+        isMobile && pxToVw(px, 420),
       ) + "vw"
     );
+  } else if (px && typeof px === "string") {
+    return px;
   } else return undefined;
 };
 
@@ -47,8 +47,4 @@ export const usePxToVw = (px: TBreakpointValues) => {
     isTablet && pxTablet,
     isMobile && pxMobile,
   );
-};
-
-export const usePxToVwConverter = (px: number) => {
-  return useConvert(px);
 };

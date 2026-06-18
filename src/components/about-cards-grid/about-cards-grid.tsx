@@ -38,7 +38,5 @@ export const AboutCardsGrid: FC = () => {
     },
   ];
 
-  const rows = Math.round(cards.length / 2);
-
-  return <AboutCardsGridUI cards={cards} columns={2} rows={rows} />;
+  return <AboutCardsGridUI cards={cards} />;
 };

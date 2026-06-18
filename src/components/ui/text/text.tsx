@@ -24,6 +24,7 @@ export const TextUI: FC<TTextUIProps> = ({
           "--weight": typography.weight,
           "--size": typography.size,
           "--line-height": typography.lineHeight,
+          "--letter-spacing": typography.letterSpacing,
           "--text-align": typography.textAlign ?? "left",
           "--color": color,
         } as CSSProperties
