@@ -1,7 +1,6 @@
 import type { FC } from "react";
 
 import { ContentSectionUI } from "../content-section";
-import { AboutImgUI } from "../about-img";
 import { AboutCardsGrid } from "../../about-cards-grid";
 
 import type { TAboutUIProps } from "./types";
