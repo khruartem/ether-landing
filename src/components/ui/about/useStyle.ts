@@ -40,12 +40,13 @@ export const useStyle = createUseStyleHook(
       isTablet && iphoneMockupMiddle,
       isMobile && iphoneMockupSmall,
     );
-    const backgroundPosition = clsx(
-      isLarge && "50% 101%",
-      isDesktop && "50% 127%",
-      isLaptop && "50% 30%",
-      isTablet && "50% 28%",
-      isMobile && "50% 15%",
+    const backgroundPositionX = "50%";
+    const backgroundPositionY = clsx(
+      isLarge && "101%",
+      isDesktop && "85%",
+      isLaptop && "30%",
+      isTablet && "28%",
+      isMobile && "15%",
     );
     const backgroundSize = clsx(
       isLarge && "contain",
@@ -56,7 +57,8 @@ export const useStyle = createUseStyleHook(
     );
 
     return {
-      backgroundPosition,
+      backgroundPositionX,
+      backgroundPositionY,
       backgroundImage: `url(${iphoneMockup})`,
       backgroundSize,
     };

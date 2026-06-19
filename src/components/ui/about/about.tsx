@@ -17,7 +17,7 @@ export const AboutUI: FC<TAboutUIProps> = ({ contentSectionProps }) => {
     <ContentSectionUI
       sectionProps={{
         ...sectionProps,
-        className: styles.section_about,
+        className: styles.about,
         style: aboutStyle,
       }}
       titleProps={titleProps}
