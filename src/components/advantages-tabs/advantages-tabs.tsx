@@ -2,7 +2,7 @@ import type { FC } from "react";
 
 import { AdvantagesTabsUI } from "../ui/advantages-tabs";
 
-import { useAdvantagesContext } from "../../hooks/useAdvantagesContext";
+import { useAdvantagesContext } from "../advantages/advantages-context";
 
 export const AdvantagesTabs: FC = () => {
   const { tabs, currentTab, handleTabChange } = useAdvantagesContext();

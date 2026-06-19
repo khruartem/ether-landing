@@ -2,7 +2,7 @@ import { type FC } from "react";
 
 import { AdvantagesItemsListUI } from "../ui/advantages-items-list";
 
-import { useAdvantagesContext } from "../../hooks/useAdvantagesContext";
+import { useAdvantagesContext } from "../advantages/advantages-context";
 
 export const AdvantagesItemsList: FC = () => {
   const { advantagesGroups } = useAdvantagesContext();

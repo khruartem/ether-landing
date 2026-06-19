@@ -7,7 +7,7 @@ import type { TAdvantagesGroupProps } from "./types";
 
 import { AdvantagesItems } from "../../utils/advantagesItems";
 
-import { useAdvantagesContext } from "../../hooks/useAdvantagesContext";
+import { useAdvantagesContext } from "../advantages/advantages-context";
 
 export const AdvantagesGroup: FC<TAdvantagesGroupProps> = ({
   group,

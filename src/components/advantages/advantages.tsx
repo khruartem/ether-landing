@@ -1,6 +1,6 @@
 import { useState, type FC, type SyntheticEvent } from "react";
 
-import { AdvantagesProvider } from "./advantages-provider";
+import { AdvantagesProvider } from "./advantages-context";
 import { AdvantagesUI } from "../ui/advantages";
 
 import type { TAdvantagesContextValue } from "./types";
@@ -10,7 +10,6 @@ import type {
   TSection,
   TSectionTitle,
 } from "../../utils/types";
-
 import { Colors } from "../../utils/colors";
 import { AdvantagesItems } from "../../utils/advantagesItems";
 
@@ -47,16 +46,7 @@ export const Advantages: FC = () => {
             AdvantagesItems[key as keyof typeof AdvantagesItems] === clickedTab,
         )}`,
       );
-      // el?.scrollIntoView({
-      //   behavior:
-      //     (currentTab === "Творцы и объединения" ||
-      //       currentTab === "Графики и события") &&
-      //     (clickedTab === "Графики и события" ||
-      //       clickedTab === "Творцы и объединения")
-      //       ? "instant"
-      //       : "smooth",
-      //   block: "start",
-      // });
+
       const offset = 144;
       const rect = el?.getBoundingClientRect();
       const scrollTop =

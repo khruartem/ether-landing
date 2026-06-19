@@ -1,6 +1,6 @@
-import { createContext } from "react";
 import type { TAdvantagesContextValue } from "./types";
 import { AdvantagesItems } from "../../utils/advantagesItems";
+import { createComponentContext } from "../../utils/createComponentContext";
 
 const initialValue: TAdvantagesContextValue = {
   tabs: [],
@@ -11,5 +11,5 @@ const initialValue: TAdvantagesContextValue = {
   },
 };
 
-export const AdvantagesContext =
-  createContext<TAdvantagesContextValue>(initialValue);
+export const [AdvantagesProvider, useAdvantagesContext] =
+  createComponentContext<TAdvantagesContextValue>(initialValue);
