@@ -15,6 +15,10 @@ export const useStyle = createUseStyleHook({
     tablet: 20,
     mobile: 20,
   },
+  paddingInline: {
+    tablet: 0,
+    mobile: 0,
+  },
   gap: {
     large: 120,
     desktop: 80,

@@ -1,8 +1,8 @@
 .advantages__tab {
-  padding: 32px 60px;
   text-align: center;
   background-color: transparent;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .advantages__tab span {
@@ -10,8 +10,8 @@
 }
 
 .advantages__tab_current {
-  background-color: var(--nephritis100);
   border-radius: 100px;
+  background-color: var(--nephritis100);
   cursor: unset;
 }
 
@@ -19,6 +19,6 @@
   cursor: default;
 }
 
-.advantages__tab:not(.advantages__tab_current):hover > span {
+.advantages__tab:not(.advantages__tab_current):hover>span {
   color: var(--dark80);
 }

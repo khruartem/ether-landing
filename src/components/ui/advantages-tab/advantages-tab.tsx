@@ -8,6 +8,9 @@ import type { TAdvantagesTabUIProps } from "./types";
 import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
+import { useTypography } from "./useTypography";
+import { useStyle } from "./useStyle";
+
 import styles from "./advantages-tab.module.css";
 
 export const AdvantagesTabUI: FC<TAdvantagesTabUIProps> = ({
@@ -15,6 +18,9 @@ export const AdvantagesTabUI: FC<TAdvantagesTabUIProps> = ({
   current,
   onChange,
 }) => {
+  const tabTypography = useTypography();
+  const tabStyle = useStyle();
+
   return (
     <li
       className={clsx(
@@ -22,10 +28,11 @@ export const AdvantagesTabUI: FC<TAdvantagesTabUIProps> = ({
         current && styles.advantages__tab_current,
       )}
       onClick={onChange}
+      style={tabStyle}
     >
       <TextUI
         as={"span"}
-        typography={Typography.Title_500_28}
+        typography={Typography[tabTypography]}
         color={current ? Colors.Light100 : Colors.Light20}
       >
         {tab}

@@ -7,18 +7,26 @@ import { AdvantagesItemsList } from "../../advantages-items-list";
 
 import type { TAdvantagesUIProps } from "./types";
 
-import styles from "./advantages.module.css";
 import { useStyle } from "./useStyle";
+import { useTitleStyle } from "./useTitleStyle";
+
+import styles from "./advantages.module.css";
 
 export const AdvantagesUI: FC<TAdvantagesUIProps> = ({
   contentSectionProps,
 }) => {
   const sectionStyle = useStyle();
+  const titleStyle = useTitleStyle();
+
   const { sectionProps, titleProps } = contentSectionProps;
 
   return (
-    <SectionUI {...sectionProps} className={styles.advantages} style={sectionStyle}>
-      <SectionTitleUI {...titleProps} />
+    <SectionUI
+      {...sectionProps}
+      className={styles.advantages}
+      style={sectionStyle}
+    >
+      <SectionTitleUI {...titleProps} style={titleStyle} />
       <AdvantagesTabs />
       <AdvantagesItemsList />
     </SectionUI>

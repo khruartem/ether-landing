@@ -1,17 +1,21 @@
 import type { FC } from "react";
 
+import { AdvantagesGroup } from "../../advantages-group";
 import { AdvantagesItem } from "../../advantages-item";
 
 import type { TAdvantagesItemsListUIProps } from "./types";
 
+import { useStyle } from "./useStyle";
+
 import styles from "./advantages-items-list.module.css";
-import { AdvantagesGroup } from "../../advantages-group";
 
 export const AdvantagesItemsListUI: FC<TAdvantagesItemsListUIProps> = ({
   groups,
 }) => {
+  const groupsStyle = useStyle();
+
   return (
-    <div className={styles.advantages__groups}>
+    <div className={styles.advantages__groups} style={groupsStyle}>
       {groups.map((group, groupIndex) => (
         <AdvantagesGroup key={groupIndex} group={group}>
           {group.items.map((item, index) => (

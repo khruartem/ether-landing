@@ -4,6 +4,8 @@ import { AdvantagesTabUI } from "../advantages-tab";
 
 import type { TAdvantagesTabsUIProps } from "./types";
 
+import { useStyle } from "./useStyle";
+
 import styles from "./advantages-tabs.module.css";
 
 export const AdvantagesTabsUI: FC<TAdvantagesTabsUIProps> = ({
@@ -11,8 +13,10 @@ export const AdvantagesTabsUI: FC<TAdvantagesTabsUIProps> = ({
   currentTab,
   onTabChange,
 }) => {
+  const tabsStyle = useStyle();
+
   return (
-    <ul className={styles.advantages__tabs}>
+    <ul className={styles.advantages__tabs} style={tabsStyle}>
       {tabs.map((tab, index) => (
         <AdvantagesTabUI
           key={index}
