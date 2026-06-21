@@ -39,12 +39,13 @@ export const Advantages: FC = () => {
 
   const scrollToGroup = (e?: SyntheticEvent) => {
     if (e) {
-      const clickedTab = e.currentTarget.textContent as AdvantagesItems;
+      const clickedTabText = e.currentTarget.textContent as AdvantagesItems;
       const section = e.currentTarget?.closest("section");
       const el = section?.querySelector(
         `#${Object.keys(AdvantagesItems).find(
           (key) =>
-            AdvantagesItems[key as keyof typeof AdvantagesItems] === clickedTab,
+            AdvantagesItems[key as keyof typeof AdvantagesItems] ===
+            clickedTabText,
         )}`,
       );
 
@@ -56,7 +57,7 @@ export const Advantages: FC = () => {
 
       // Определяем плавность скролла в зависимости от расстояния между табами
       const currentTabIndex = tabs.indexOf(currentTab);
-      const nextTabIndex = tabs.indexOf(clickedTab);
+      const nextTabIndex = tabs.indexOf(clickedTabText);
       const distance = Math.abs(nextTabIndex - currentTabIndex);
       const behavior = distance <= 1 ? "smooth" : "instant";
 
@@ -73,8 +74,24 @@ export const Advantages: FC = () => {
     }
   };
 
+  const scrollToTab = (e?: SyntheticEvent) => {
+    if (e) {
+      const tabWidth = 320;
+      const clickedTabText = e.currentTarget.textContent as AdvantagesItems;
+      const clickedTab = e.currentTarget;
+      const tabsEl = clickedTab.closest("ul");
+
+      const currentTabIndex = tabs.indexOf(currentTab);
+      const nextTabIndex = tabs.indexOf(clickedTabText);
+      const distance = nextTabIndex - currentTabIndex;
+
+      if (tabsEl) tabsEl.scrollLeft += distance * tabWidth;
+    }
+  };
+
   const handleTabChange = (tab: AdvantagesItems, e?: SyntheticEvent) => {
     scrollToGroup(e);
+    scrollToTab(e);
     setCurrentTab(tab);
   };
 

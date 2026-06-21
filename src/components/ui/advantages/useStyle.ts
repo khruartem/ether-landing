@@ -16,6 +16,9 @@ export const useStyle = createUseStyleHook({
     mobile: 20,
   },
   paddingInline: {
+    large: 156,
+    desktop: 107,
+    laptop: 42,
     tablet: 0,
     mobile: 0,
   },

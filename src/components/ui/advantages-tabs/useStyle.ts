@@ -13,11 +13,18 @@ export const useStyle = createUseStyleHook({
     mobile: 30,
   },
   overflowX: {
-    tablet: "hidden",
-    mobile: "hidden",
+    tablet: "scroll",
+    mobile: "scroll",
   },
   gap: {
     tablet: 10.5,
     mobile: 10.5,
+  },
+  top: {
+    large: 100,
+    desktop: 75,
+    laptop: 75,
+    tablet: 75,
+    mobile: 75,
   },
 });
