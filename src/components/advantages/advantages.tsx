@@ -1,4 +1,4 @@
-import { useState, type FC, type SyntheticEvent } from "react";
+import { useRef, useState, type FC, type SyntheticEvent } from "react";
 
 import { AdvantagesProvider } from "./advantages-context";
 import { AdvantagesUI } from "../ui/advantages";
@@ -29,6 +29,7 @@ export const Advantages: FC = () => {
   const [currentTab, setCurrentTab] = useState<AdvantagesItems>(
     AdvantagesItems.artists,
   );
+  const scrollTimeoutRef = useRef<number | null>(null);
 
   const tabs: AdvantagesItems[] = [
     AdvantagesItems.artists,
@@ -36,9 +37,9 @@ export const Advantages: FC = () => {
     AdvantagesItems.schedule,
   ];
 
-  const scrollIntoGroupView = (e?: SyntheticEvent) => {
+  const scrollToGroup = (e?: SyntheticEvent) => {
     if (e) {
-      const clickedTab = e.currentTarget.textContent;
+      const clickedTab = e.currentTarget.textContent as AdvantagesItems;
       const section = e.currentTarget?.closest("section");
       const el = section?.querySelector(
         `#${Object.keys(AdvantagesItems).find(
@@ -52,22 +53,29 @@ export const Advantages: FC = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
       const elemTop = rect!.top + scrollTop;
+
+      // Определяем плавность скролла в зависимости от расстояния между табами
+      const currentTabIndex = tabs.indexOf(currentTab);
+      const nextTabIndex = tabs.indexOf(clickedTab);
+      const distance = Math.abs(nextTabIndex - currentTabIndex);
+      const behavior = distance <= 1 ? "smooth" : "instant";
+
       window.scrollTo({
         top: elemTop - offset,
-        behavior:
-          (currentTab === "Творцы и объединения" ||
-            currentTab === "Графики и события") &&
-          (clickedTab === "Графики и события" ||
-            clickedTab === "Творцы и объединения")
-            ? "instant"
-            : "smooth",
+        behavior: behavior as ScrollBehavior,
       });
+
+      // Блокируем обновление таба по скроллу на время анимации
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = setTimeout(() => {
+        // После скролла можно снять блокировку если нужно
+      }, 1000);
     }
   };
 
   const handleTabChange = (tab: AdvantagesItems, e?: SyntheticEvent) => {
+    scrollToGroup(e);
     setCurrentTab(tab);
-    scrollIntoGroupView(e);
   };
 
   const advantagesGroups: TAdvantagesGroup[] = [

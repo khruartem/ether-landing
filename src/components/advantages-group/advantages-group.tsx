@@ -23,8 +23,7 @@ export const AdvantagesGroup: FC<TAdvantagesGroupProps> = ({
       handleTabChange(AdvantagesItems[id]);
     }
     
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inView]);
+  }, [currentTab, handleTabChange, id, inView]);
 
   return <AdvantagesGroupUI group={group} children={children} ref={ref} />;
 };
