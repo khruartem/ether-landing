@@ -1,4 +1,4 @@
-import { useEffect, type FC } from "react";
+import { type FC } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { AdvantagesGroupUI } from "../ui/advantages-group";
@@ -13,17 +13,19 @@ export const AdvantagesGroup: FC<TAdvantagesGroupProps> = ({
   group,
   children,
 }) => {
-  const [ref, inView] = useInView({ threshold: 0.3 });
+  const [ref] = useInView({
+    threshold: 0.3,
+    onChange: (inView) => {
+      const targetTab = AdvantagesItems[id];
+
+      if (inView && currentTab !== targetTab) {
+        handleTabChange(targetTab);
+      }
+    },
+  });
   const { currentTab, handleTabChange } = useAdvantagesContext();
 
   const { id } = group;
-
-  useEffect(() => {
-    if (inView && currentTab !== AdvantagesItems[id]) {
-      handleTabChange(AdvantagesItems[id]);
-    }
-    
-  }, [currentTab, handleTabChange, id, inView]);
 
   return <AdvantagesGroupUI group={group} children={children} ref={ref} />;
 };

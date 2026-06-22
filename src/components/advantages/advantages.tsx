@@ -1,4 +1,4 @@
-import { useRef, useState, type FC, type SyntheticEvent } from "react";
+import { useState, type FC, type SyntheticEvent } from "react";
 
 import { AdvantagesProvider } from "./advantages-context";
 import { AdvantagesUI } from "../ui/advantages";
@@ -29,7 +29,6 @@ export const Advantages: FC = () => {
   const [currentTab, setCurrentTab] = useState<AdvantagesItems>(
     AdvantagesItems.artists,
   );
-  const scrollTimeoutRef = useRef<number | null>(null);
 
   const tabs: AdvantagesItems[] = [
     AdvantagesItems.artists,
@@ -49,7 +48,7 @@ export const Advantages: FC = () => {
         )}`,
       );
 
-      const offset = 144;
+      const offset = 240;
       const rect = el?.getBoundingClientRect();
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
@@ -65,12 +64,6 @@ export const Advantages: FC = () => {
         top: elemTop - offset,
         behavior: behavior as ScrollBehavior,
       });
-
-      // Блокируем обновление таба по скроллу на время анимации
-      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
-      scrollTimeoutRef.current = setTimeout(() => {
-        // После скролла можно снять блокировку если нужно
-      }, 1000);
     }
   };
 
@@ -91,8 +84,8 @@ export const Advantages: FC = () => {
 
   const handleTabChange = (tab: AdvantagesItems, e?: SyntheticEvent) => {
     scrollToGroup(e);
-    scrollToTab(e);
     setCurrentTab(tab);
+    scrollToTab(e);
   };
 
   const advantagesGroups: TAdvantagesGroup[] = [
