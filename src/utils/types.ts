@@ -129,6 +129,8 @@ export type TAdvantagesGroup = {
   items: TAdvantagesItem[];
 };
 
+export type TDescriptionPosition = "left" | "right";
+
 export type TQuestion = {
   title: string;
   text: string;

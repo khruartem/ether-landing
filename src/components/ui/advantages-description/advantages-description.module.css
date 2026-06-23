@@ -1,6 +1,7 @@
 .advantages__description {
   display: flex;
   flex-direction: column;
+  flex-basis: 50.74%;
   gap: 32px;
   padding-block: 98px;
 }

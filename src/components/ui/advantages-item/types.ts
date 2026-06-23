@@ -1,7 +1,7 @@
-import type { TAdvantagesItem } from "../../../utils/types";
+import type { TAdvantagesItem, TDescriptionPosition } from "../../../utils/types";
 
 export type TAdvantagesItemUIProps = {
   item: TAdvantagesItem;
-  descriptionPosition: "left" | "right";
+  descriptionPosition: TDescriptionPosition;
   inView: boolean;
 };
