@@ -202,7 +202,7 @@ const Typography = {
     font: "Roboto",
     weight: "400",
     size: "16px",
-    lineHeight: "24px",
+    lineHeight: "28px",
     letterSpacing: "0.02em",
   },
   Text_400_14: {

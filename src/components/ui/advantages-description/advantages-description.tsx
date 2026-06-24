@@ -9,6 +9,8 @@ import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
 import styles from "./advantages-description.module.css";
+import { useTitleTypography } from "./useTitleTypography";
+import { useTextTypography } from "./useTextTypography";
 
 export const AdvantagesDescriptionUI: FC<TAdvantagesDescriptionUIProps> = ({
   type,
@@ -16,6 +18,9 @@ export const AdvantagesDescriptionUI: FC<TAdvantagesDescriptionUIProps> = ({
   text,
   position,
 }) => {
+  const titleTypography = useTitleTypography();
+  const textTypography = useTextTypography();
+
   return (
     <div
       className={clsx(
@@ -28,10 +33,10 @@ export const AdvantagesDescriptionUI: FC<TAdvantagesDescriptionUIProps> = ({
         {type}
       </TextUI>
       <div className={styles.container}>
-        <TextUI typography={Typography.Title_500_28} color={Colors.Navy}>
+        <TextUI typography={Typography[titleTypography]} color={Colors.Navy}>
           {title}
         </TextUI>
-        <TextUI typography={Typography.Text_400_20} color={Colors.Dark100}>
+        <TextUI typography={Typography[textTypography]} color={Colors.Dark100}>
           {text}
         </TextUI>
       </div>
