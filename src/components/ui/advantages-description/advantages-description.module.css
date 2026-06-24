@@ -6,13 +6,13 @@
   /* padding-block: 98px; */
 }
 
-.advantages__description_left {
-  /* padding-inline: 136px 100px; */
+/* .advantages__description_left {
+  padding-inline: 136px 100px;
 }
 
 .advantages__description_right {
-  /* padding-inline: 100px 136px; */
-}
+  padding-inline: 100px 136px;
+} */
 
 .container {
   display: flex;
