@@ -7,7 +7,7 @@ import styles from "./advantages-image.module.css";
 export const AdvantagesImageUI = forwardRef<
   HTMLImageElement,
   TAdvantagesImageUIProps
->(({ src, transform, position, maxHeight = "480px" }, ref) => {
+>(({ src, transform, position, maxHeight }, ref) => {
   return (
     <img
       src={src}

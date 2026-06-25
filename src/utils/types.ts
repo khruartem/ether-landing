@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import type { AdvantagesItems } from "./advantagesItems";
 import type { Colors } from "./colors";
 import type { Week } from "./week";
+import type { TBreakpointValues } from "../hooks/usePxToVw";
 
 export type TNavItem = {
   label: string;
@@ -101,17 +102,17 @@ export type TContentSection = {
 };
 
 export type TAdvantagesTransform = {
-  transform?: string;
-  inset?: string;
-  transformOrigin?: string;
-  maxHeight?: string;
+  transform?: TBreakpointValues;
+  // inset?: string;
+  transformOrigin?: TBreakpointValues;
+  // maxHeight?: string;
 };
 
 export type TAdvantagesImage = {
-  transformDefault?: TAdvantagesTransform;
-  transformOnMount: TAdvantagesTransform;
-  position: string;
-  maxHeight?: string;
+  defaultTransform?: TAdvantagesTransform;
+  inViewTransform: TAdvantagesTransform;
+  position: TBreakpointValues;
+  maxHeight?: TBreakpointValues;
   src: string;
 };
 

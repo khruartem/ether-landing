@@ -11,25 +11,27 @@ export const AdvantagesImage: FC<TAdvantagesImageProps> = ({
   inView,
 }) => {
   const [transform, setTransform] = useState<TAdvantagesTransform | undefined>(
-    image.transformDefault,
+    image?.defaultTransform,
   );
 
+  const {src, inViewTransform, position, maxHeight} = image;
+
   useEffect(() => {
-    const changeStyle = (transformOnMount: TAdvantagesTransform) => {
-      setTransform(transformOnMount);
+    const changeStyle = (inViewTransform: TAdvantagesTransform) => {
+      setTransform(inViewTransform);
     };
 
     if (inView) {
-      changeStyle(image.transformOnMount);
+      changeStyle(inViewTransform);
     }
-  }, [image.transformOnMount, inView]);
+  }, [inViewTransform, inView]);
 
   return (
     <AdvantagesImageUI
-      src={image.src}
+      src={src}
       transform={transform}
-      position={image.position}
-      maxHeight={image?.maxHeight}
+      position={position}
+      maxHeight={maxHeight}
     />
   );
 };
