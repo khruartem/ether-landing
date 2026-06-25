@@ -1,6 +1,6 @@
 import { createUseStyleHook } from "../../../utils/styleHookFactory";
 
-export const useDescriptionStyle = createUseStyleHook({
+export const useContainerStyle = createUseStyleHook({
   gap: {
     large: 12,
     desktop: 8,
@@ -9,7 +9,8 @@ export const useDescriptionStyle = createUseStyleHook({
     mobile: 4,
   },
   paddingBlockEnd: {
-    large: 40,
-    desktop: 32,
+    large: 52,
+    desktop: 40,
+    laptop: 32,
   },
 });

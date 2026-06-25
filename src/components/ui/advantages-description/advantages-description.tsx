@@ -10,7 +10,7 @@ import { Colors } from "../../../utils/colors";
 import { useTitleTypography } from "./useTitleTypography";
 import { useTextTypography } from "./useTextTypography";
 import { useDescriptionStyle } from "./useDescriptionStyle";
-import { useContainerStyle } from "../badge-list/useContainerStyle";
+import { useContainerStyle } from "./useContainerStyle";
 
 import styles from "./advantages-description.module.css";
 
@@ -27,11 +27,6 @@ export const AdvantagesDescriptionUI: FC<TAdvantagesDescriptionUIProps> = ({
 
   return (
     <div
-      // className={clsx(
-      //   styles.advantages__description,
-      //   position === "left" && styles.advantages__description_left,
-      //   position === "right" && styles.advantages__description_right,
-      // )}
       className={styles.advantages__description}
       style={descriptionStyle}
     >
