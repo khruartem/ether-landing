@@ -38,7 +38,7 @@ type TAdvantagesImageProps = {
 
 export const useStyle = (
   advantagesImagePorps: TAdvantagesImageProps,
-): (() => CSSProperties) => {
+): CSSProperties => {
   const { position, maxHeight, transform } = advantagesImagePorps;
 
   return createUseStyleHook({
@@ -46,5 +46,5 @@ export const useStyle = (
     transform: transform?.transform,
     transformOrigin: transform?.transformOrigin,
     maxHeight,
-  });
+  })();
 };

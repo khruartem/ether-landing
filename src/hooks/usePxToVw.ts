@@ -34,11 +34,11 @@ const useConvert = (px?: number | string) => {
 export const usePxToVw = (px: TBreakpointValues) => {
   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
 
-  const pxLarge = useConvert(px.large);
-  const pxDesktop = useConvert(px.desktop);
-  const pxLaptop = useConvert(px.laptop);
-  const pxTablet = useConvert(px.tablet);
-  const pxMobile = useConvert(px.mobile);
+  const pxLarge = useConvert(px?.large);
+  const pxDesktop = useConvert(px?.desktop);
+  const pxLaptop = useConvert(px?.laptop);
+  const pxTablet = useConvert(px?.tablet);
+  const pxMobile = useConvert(px?.mobile);
 
   return clsx(
     isLarge && pxLarge,

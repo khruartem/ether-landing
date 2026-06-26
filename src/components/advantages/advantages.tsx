@@ -100,14 +100,14 @@ export const Advantages: FC = () => {
             {
               position: {
                 large: "-100% 16%",
-                desktop: "-100% 16%",
+                desktop: "-100% 20%",
                 laptop: "-100% 16%",
                 tablet: "-100% 16%",
                 mobile: "-100% 16%",
               },
               maxHeight: {
                 large: "443.27px",
-                desktop: "443.27px",
+                desktop: "374.77px",
                 laptop: "443.27px",
                 tablet: "443.27px",
                 mobile: "443.27px",
@@ -126,14 +126,14 @@ export const Advantages: FC = () => {
             {
               position: {
                 large: "100% 50%",
-                desktop: "100% 50%",
+                desktop: "100% 55%",
                 laptop: "100% 50%",
                 tablet: "100% 50%",
                 mobile: "100% 50%",
               },
               maxHeight: {
                 large: "422.27px",
-                desktop: "422.27px",
+                desktop: "374.77px",
                 laptop: "422.27px",
                 tablet: "422.27px",
                 mobile: "422.27px",
