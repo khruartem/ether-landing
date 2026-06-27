@@ -101,6 +101,7 @@ export type TContentSection = {
   titleProps: TSectionTitle;
 };
 
+
 export type TAdvantagesTransform = {
   transform?: TBreakpointValues;
   // inset?: string;
@@ -108,11 +109,15 @@ export type TAdvantagesTransform = {
   // maxHeight?: string;
 };
 
+export type TStyleConfig = Partial<Record<keyof CSSProperties, TBreakpointValues>>;
+
 export type TAdvantagesImage = {
-  defaultTransform?: TAdvantagesTransform;
-  inViewTransform: TAdvantagesTransform;
-  position: TBreakpointValues;
-  maxHeight?: TBreakpointValues;
+  // defaultTransform?: TAdvantagesTransform;
+  // inViewTransform: TAdvantagesTransform;
+  // position: TBreakpointValues;
+  // maxHeight?: TBreakpointValues;
+  defaultStyleConfig?: TStyleConfig;
+  inViewStyleConfig: TStyleConfig;
   src: string;
 };
 

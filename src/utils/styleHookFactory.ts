@@ -1,10 +1,9 @@
 import type { CSSProperties } from "react";
-import { usePxToVw, type TBreakpointValues } from "../hooks/usePxToVw";
-
-type StyleConfig = Partial<Record<keyof CSSProperties, TBreakpointValues>>;
+import { usePxToVw } from "../hooks/usePxToVw";
+import type { TStyleConfig } from "./types";
 
 export const createUseStyleHook = (
-  config: StyleConfig,
+  config: TStyleConfig,
   callback?: () => CSSProperties,
 ) => {
   return (): CSSProperties => {

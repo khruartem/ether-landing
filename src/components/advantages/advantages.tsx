@@ -98,21 +98,7 @@ export const Advantages: FC = () => {
           text: "Заполняйте краткие автобиографии, указывайте компетенции и расскажите миру о своих талантах в роли творца. Объединения в свою очередь предоставят вам сторонников и общие интересы.",
           images: [
             {
-              position: {
-                large: "-100% 16%",
-                desktop: "-100% 20%",
-                laptop: "-100% 16%",
-                tablet: "-100% 16%",
-                mobile: "-100% 16%",
-              },
-              maxHeight: {
-                large: "443.27px",
-                desktop: "312.77px",
-                laptop: "443.27px",
-                tablet: "443.27px",
-                mobile: "443.27px",
-              },
-              inViewTransform: {
+              inViewStyleConfig: {
                 transform: {
                   large: "translateY(108%)",
                   desktop: "translateY(108%)",
@@ -120,31 +106,45 @@ export const Advantages: FC = () => {
                   tablet: "translateY(108%)",
                   mobile: "translateY(108%)",
                 },
+                maxHeight: {
+                  large: "443.27px",
+                  desktop: "312.77px",
+                  laptop: "443.27px",
+                  tablet: "443.27px",
+                  mobile: "443.27px",
+                },
+                inset: {
+                  large: "-100% 16%",
+                  desktop: "-100% 20%",
+                  laptop: "-100% 16%",
+                  tablet: "-100% 16%",
+                  mobile: "-100% 16%",
+                },
               },
               src: AdvantagesImage1,
             },
             {
-              position: {
-                large: "100% 50%",
-                desktop: "100% 55%",
-                laptop: "100% 50%",
-                tablet: "100% 50%",
-                mobile: "100% 50%",
-              },
-              maxHeight: {
-                large: "422.27px",
-                desktop: "312.77px",
-                laptop: "422.27px",
-                tablet: "422.27px",
-                mobile: "422.27px",
-              },
-              inViewTransform: {
+              inViewStyleConfig: {
                 transform: {
                   large: "translateY(-100%)",
                   desktop: "translateY(-100%)",
                   laptop: "translateY(-100%)",
                   tablet: "translateY(-100%)",
                   mobile: "translateY(-100%)",
+                },
+                inset: {
+                  large: "100% 50%",
+                  desktop: "100% 55%",
+                  laptop: "100% 50%",
+                  tablet: "100% 50%",
+                  mobile: "100% 50%",
+                },
+                maxHeight: {
+                  large: "422.27px",
+                  desktop: "312.77px",
+                  laptop: "422.27px",
+                  tablet: "422.27px",
+                  mobile: "422.27px",
                 },
               },
               src: AdvantagesImage2,
