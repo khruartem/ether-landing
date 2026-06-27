@@ -107,7 +107,7 @@ export const Advantages: FC = () => {
               },
               maxHeight: {
                 large: "443.27px",
-                desktop: "374.77px",
+                desktop: "312.77px",
                 laptop: "443.27px",
                 tablet: "443.27px",
                 mobile: "443.27px",
@@ -133,7 +133,7 @@ export const Advantages: FC = () => {
               },
               maxHeight: {
                 large: "422.27px",
-                desktop: "374.77px",
+                desktop: "312.77px",
                 laptop: "422.27px",
                 tablet: "422.27px",
                 mobile: "422.27px",
