@@ -98,14 +98,7 @@ export const Advantages: FC = () => {
           text: "Заполняйте краткие автобиографии, указывайте компетенции и расскажите миру о своих талантах в роли творца. Объединения в свою очередь предоставят вам сторонников и общие интересы.",
           images: [
             {
-              inViewStyleConfig: {
-                transform: {
-                  large: "translateY(108%)",
-                  desktop: "translateY(108%)",
-                  laptop: "translateY(108%)",
-                  tablet: "translateY(108%)",
-                  mobile: "translateY(108%)",
-                },
+              defaultStyleConfig: {
                 maxHeight: {
                   large: "443.27px",
                   desktop: "312.77px",
@@ -121,17 +114,19 @@ export const Advantages: FC = () => {
                   mobile: "-100% 16%",
                 },
               },
+              inViewStyleConfig: {
+                transform: {
+                  large: "translateY(108%)",
+                  desktop: "translateY(108%)",
+                  laptop: "translateY(108%)",
+                  tablet: "translateY(108%)",
+                  mobile: "translateY(108%)",
+                },
+              },
               src: AdvantagesImage1,
             },
             {
-              inViewStyleConfig: {
-                transform: {
-                  large: "translateY(-100%)",
-                  desktop: "translateY(-100%)",
-                  laptop: "translateY(-100%)",
-                  tablet: "translateY(-100%)",
-                  mobile: "translateY(-100%)",
-                },
+              defaultStyleConfig: {
                 inset: {
                   large: "100% 50%",
                   desktop: "100% 55%",
@@ -145,6 +140,15 @@ export const Advantages: FC = () => {
                   laptop: "422.27px",
                   tablet: "422.27px",
                   mobile: "422.27px",
+                },
+              },
+              inViewStyleConfig: {
+                transform: {
+                  large: "translateY(-100%)",
+                  desktop: "translateY(-100%)",
+                  laptop: "translateY(-100%)",
+                  tablet: "translateY(-100%)",
+                  mobile: "translateY(-100%)",
                 },
               },
               src: AdvantagesImage2,

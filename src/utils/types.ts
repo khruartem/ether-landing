@@ -116,7 +116,7 @@ export type TAdvantagesImage = {
   // inViewTransform: TAdvantagesTransform;
   // position: TBreakpointValues;
   // maxHeight?: TBreakpointValues;
-  defaultStyleConfig?: TStyleConfig;
+  defaultStyleConfig: TStyleConfig;
   inViewStyleConfig: TStyleConfig;
   src: string;
 };

@@ -1,85 +1,31 @@
-// // import clsx from "clsx";
-// // import { useMedia } from "../../../hooks/useMedia";
-// // import type { TAdvantagesTransform } from "../../../utils/types";
-// // import type { CSSProperties } from "react";
-// // import type { TBreakpointValues } from "../../../hooks/usePxToVw";
-// // type TAdvantagesImageProps = {
-// //   transform?: TAdvantagesTransform;
-// //   position: TBreakpointValues;
-// //   maxHeight?: TBreakpointValues;
-// // };
-// // export const useStyle = (
-// //   advantagesImagePorps: TAdvantagesImageProps,
-// // ): CSSProperties => {
-// //   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
-// //   const { position } = advantagesImagePorps;
-// //   const inset = clsx(
-// //     isLarge && position.large,
-// //     isDesktop && position.desktop,
-// //     isLaptop && position.laptop,
-// //     isTablet && position.tablet,
-// //     isMobile && position.mobile,
-// //   );
-// //   return {
-// //     inset,
-// //   };
-// // };
-
-// import type { TAdvantagesTransform } from "../../../utils/types";
-// import type { CSSProperties } from "react";
-// import type { TBreakpointValues } from "../../../hooks/usePxToVw";
-// import { createUseStyleHook } from "../../../utils/styleHookFactory";
-
-// type TAdvantagesImageProps = {
-//   transform?: TAdvantagesTransform;
-//   position: TBreakpointValues;
-//   maxHeight?: TBreakpointValues;
-// };
-
-// export const useStyle = (
-//   advantagesImagePorps: TAdvantagesImageProps,
-// ): CSSProperties => {
-//   const { position, maxHeight, transform } = advantagesImagePorps;
-
-//   return createUseStyleHook({
-//     inset: position,
-//     transform: transform?.transform,
-//     transformOrigin: transform?.transformOrigin,
-//     maxHeight,
-//   })();
-// };
-
-// import clsx from "clsx";
-// import { useMedia } from "../../../hooks/useMedia";
-// import type { TAdvantagesTransform } from "../../../utils/types";
-// import type { CSSProperties } from "react";
-// import type { TBreakpointValues } from "../../../hooks/usePxToVw";
-// type TAdvantagesImageProps = {
-//   transform?: TAdvantagesTransform;
-//   position: TBreakpointValues;
-//   maxHeight?: TBreakpointValues;
-// };
-// export const useStyle = (
-//   advantagesImagePorps: TAdvantagesImageProps,
-// ): CSSProperties => {
-//   const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
-//   const { position } = advantagesImagePorps;
-//   const inset = clsx(
-//     isLarge && position.large,
-//     isDesktop && position.desktop,
-//     isLaptop && position.laptop,
-//     isTablet && position.tablet,
-//     isMobile && position.mobile,
-//   );
-//   return {
-//     inset,
-//   };
-// };
+import clsx from "clsx";
+import type { CSSProperties } from "react";
 
 import type { TStyleConfig } from "../../../utils/types";
-import type { CSSProperties } from "react";
-import { createUseStyleHook } from "../../../utils/styleHookFactory";
+
+import { useMedia } from "../../../hooks/useMedia";
 
 export const useStyle = (config: TStyleConfig): CSSProperties => {
-  return createUseStyleHook(config)();
+  const { isLarge, isDesktop, isLaptop, isTablet, isMobile } = useMedia();
+
+  const result: Record<string, unknown> = {};
+
+  Object.entries(config).forEach(([property, breakpoints]) => {
+    result[property] = clsx(
+      isLarge && breakpoints.large,
+      isDesktop && breakpoints.desktop,
+      isLaptop && breakpoints.laptop,
+      isTablet && breakpoints.tablet,
+      isMobile && breakpoints.mobile,
+    );
+  });
+
+  return { ...result } as CSSProperties;
 };
+
+// import type { TStyleConfig } from "../../../utils/types";
+// import { createUseStyleHook } from "../../../utils/styleHookFactory";
+
+// export const useStyle = (config: TStyleConfig) => {
+//   return createUseStyleHook(config)();
+// };

@@ -37,38 +37,39 @@
 // };
 
 
-import { useEffect, useState, type FC } from "react";
+import { useMemo, type FC } from "react";
 
 import { AdvantagesImageUI } from "../ui/advantages-image";
 
 import type { TAdvantagesImageProps } from "./types";
 
-import type { TStyleConfig } from "../../utils/types";
-
 export const AdvantagesImage: FC<TAdvantagesImageProps> = ({
   image,
   inView,
 }) => {
-  const [styleConfig, setStyleConfig] = useState<TStyleConfig>(
-    image?.defaultStyleConfig || {},
-  );
+  const {src, inViewStyleConfig, defaultStyleConfig} = image;
 
-  const {src, inViewStyleConfig} = image;
+  // useEffect(() => {
+  //   const changeStyle = (styleConfig: TStyleConfig) => {
+  //     setStyleConfig(styleConfig);
+  //   };
 
-  useEffect(() => {
-    const changeStyle = (styleConfig: TStyleConfig) => {
-      setStyleConfig(styleConfig);
-    };
+  //   if (inView) {
+  //     changeStyle(inViewStyleConfig);
+  //   }
+  // }, [inViewStyleConfig, inView]);
 
+  const currentStyleConfig = useMemo(() => {
     if (inView) {
-      changeStyle(inViewStyleConfig);
+      return { ...defaultStyleConfig, ...inViewStyleConfig };
     }
-  }, [inViewStyleConfig, inView]);
+    return defaultStyleConfig;
+  }, [inView, defaultStyleConfig, inViewStyleConfig]);
 
   return (
     <AdvantagesImageUI
       src={src}
-      styleConfig={styleConfig}
+      styleConfig={currentStyleConfig}
     />
   );
 };

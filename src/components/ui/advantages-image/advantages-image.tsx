@@ -29,18 +29,18 @@
 //   );
 // });
 
-
-import { forwardRef } from "react";
+import { type FC } from "react";
 
 import type { TAdvantagesImageUIProps } from "./types";
 
-import styles from "./advantages-image.module.css";
 import { useStyle } from "./useStyle";
 
-export const AdvantagesImageUI = forwardRef<
-  HTMLImageElement,
-  TAdvantagesImageUIProps
->(({ src, styleConfig }, ref) => {
+import styles from "./advantages-image.module.css";
+
+export const AdvantagesImageUI: FC<TAdvantagesImageUIProps> = ({
+  src,
+  styleConfig,
+}) => {
   const imgStyle = useStyle(styleConfig);
 
   return (
@@ -49,8 +49,6 @@ export const AdvantagesImageUI = forwardRef<
       alt="Изображение секции Подробности и возможности"
       className={styles.advantages__image}
       style={imgStyle}
-      ref={ref}
     />
   );
-});
-
+};
