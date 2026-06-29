@@ -30,7 +30,7 @@ export const AdvantagesDescriptionUI: FC<TAdvantagesDescriptionUIProps> = ({
       className={styles.advantages__description}
       style={descriptionStyle}
     >
-      <TextUI typography={Typography.Text_400_14} color={Colors.Nephritis100}>
+      <TextUI typography={Typography.Title_400_14} color={Colors.Nephritis100}>
         {type}
       </TextUI>
       <div className={styles.container} style={containerStyle}>
