@@ -1,0 +1,4 @@
+.advantages__top {
+  display: flex;
+  flex-direction: column;
+}

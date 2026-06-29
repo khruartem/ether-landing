@@ -1,0 +1,10 @@
+.advantages__images {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 49.26%;
+  justify-content: space-evenly;
+  border-radius: 80px;
+  overflow: hidden;
+  background-color: var(--light30);
+}

@@ -101,23 +101,12 @@ export type TContentSection = {
   titleProps: TSectionTitle;
 };
 
-
-export type TAdvantagesTransform = {
-  transform?: TBreakpointValues;
-  // inset?: string;
-  transformOrigin?: TBreakpointValues;
-  // maxHeight?: string;
-};
-
 export type TStyleConfig = Partial<Record<keyof CSSProperties, TBreakpointValues>>;
+export type TAdvantagesStyleConfig = Partial<Record<keyof CSSProperties, TBreakpointValues | string | number>>;
 
 export type TAdvantagesImage = {
-  // defaultTransform?: TAdvantagesTransform;
-  // inViewTransform: TAdvantagesTransform;
-  // position: TBreakpointValues;
-  // maxHeight?: TBreakpointValues;
-  defaultStyleConfig: TStyleConfig;
-  inViewStyleConfig: TStyleConfig;
+  defaultStyleConfig: TAdvantagesStyleConfig;
+  inViewStyleConfig: TAdvantagesStyleConfig;
   src: string;
 };
 

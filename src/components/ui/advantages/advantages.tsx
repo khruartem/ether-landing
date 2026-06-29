@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 import { SectionUI } from "../section";
+import { AdvantagesTopUI } from "../advantages-top";
 import { SectionTitleUI } from "../section-title";
 import { AdvantagesTabs } from "../../advantages-tabs";
 import { AdvantagesItemsList } from "../../advantages-items-list";
@@ -26,8 +27,10 @@ export const AdvantagesUI: FC<TAdvantagesUIProps> = ({
       className={styles.advantages}
       style={sectionStyle}
     >
-      <SectionTitleUI {...titleProps} style={titleStyle} />
-      <AdvantagesTabs />
+      <AdvantagesTopUI>
+        <SectionTitleUI {...titleProps} style={titleStyle} />
+        <AdvantagesTabs />
+      </AdvantagesTopUI>
       <AdvantagesItemsList />
     </SectionUI>
   );

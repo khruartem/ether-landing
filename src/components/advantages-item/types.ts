@@ -2,5 +2,10 @@ import type { TAdvantagesItem } from "../../utils/types";
 
 export type TAdvantagesItemProps = {
   item: TAdvantagesItem;
-  descriptionPosition: "left" | "right";
+  groupIndex: number;
+  itemIndex: number;
 };
+
+export type TAdvantagesItemContextValue = {
+  inView: boolean;
+}

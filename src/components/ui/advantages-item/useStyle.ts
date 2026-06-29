@@ -8,7 +8,7 @@ export const useStyle = (descriptionPosition: TDescriptionPosition) => {
   const isSmallResolution = isTablet || isMobile;
 
   const flexDirection = isSmallResolution
-    ? "column"
+    ? "column-reverse"
     : descriptionPosition === "left"
       ? "row"
       : "row-reverse";
