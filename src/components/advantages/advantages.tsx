@@ -16,9 +16,9 @@ import { AdvantagesItems } from "../../utils/advantagesItems";
 import AdvantagesImage1 from "../../assets/advantages/advantages_1.png";
 import AdvantagesImage2 from "../../assets/advantages/advantages_2.png";
 import AdvantagesImage3 from "../../assets/advantages/advantages_3.png";
-// import AdvantagesImage4 from "../../assets/advantages/advantages_4.png";
-// import AdvantagesImage5 from "../../assets/advantages/advantages_5.png";
-// import AdvantagesImage6 from "../../assets/advantages/advantages_6.png";
+import AdvantagesImage4 from "../../assets/advantages/advantages_4.png";
+import AdvantagesImage5 from "../../assets/advantages/advantages_5.png";
+import AdvantagesImage6 from "../../assets/advantages/advantages_6.png";
 // import AdvantagesImage7 from "../../assets/advantages/advantages_7.png";
 // import AdvantagesImage8 from "../../assets/advantages/advantages_8.png";
 // import AdvantagesImage9 from "../../assets/advantages/advantages_9.png";
@@ -152,11 +152,11 @@ export const Advantages: FC = () => {
               defaultStyleConfig: {
                 transform: "scale(0.3)",
                 inset: {
-                  large: "60% 4%",
-                  desktop: "60% 4%",
-                  laptop: "60% 4%",
-                  tablet: "60% 4%",
-                  mobile: "60% 4%",
+                  large: "60% 0",
+                  desktop: "60% 0.28%",
+                  laptop: "60% 0.28%",
+                  tablet: "60% 0",
+                  mobile: "59% -0.28%",
                 },
               },
               inViewStyleConfig: {
@@ -166,51 +166,86 @@ export const Advantages: FC = () => {
             },
           ],
         },
-        // {
-        //   type: AdvantagesItems.artists,
-        //   title: "Возможности безграничны",
-        //   text: "Творцы могут создавать собственные объединения и вступать в уже существующие. Помимо ваших талантов мир увидит, кто является главой и какую роль он играет в организации мероприятий.",
-        //   images: [
-        //     {
-        //       defaultTransform: {
-        //         transform: "scale(0.3)",
-        //       },
-        //       position: "62% 65%",
-        //       inViewTransform: {
-        //         transform: "scale(1) translate(-65%, -62%)",
-        //       },
-        //       src: AdvantagesImage4,
-        //     },
-        //   ],
-        // },
+        {
+          type: AdvantagesItems.artists,
+          title: "Возможности безграничны",
+          text: "Творцы могут создавать собственные объединения и вступать в уже существующие. Помимо ваших талантов мир увидит, кто является главой и какую роль он играет в организации мероприятий.",
+          images: [
+            {
+              defaultStyleConfig: {
+                transform: "scale(0.3)",
+                inset: {
+                  large: "62% 65%",
+                  desktop: "62.5% 65.4%",
+                  laptop: "62% 65%",
+                  tablet: "62% 65%",
+                  mobile: "62% 65%",
+                },
+              },
+
+              inViewStyleConfig: {
+                transform: "scale(1) translate(-65%, -62%)",
+              },
+              src: AdvantagesImage4,
+            },
+          ],
+        },
       ],
     },
     {
       id: "events",
       items: [
-        // {
-        //   type: AdvantagesItems.events,
-        //   title: "Реализуйте мечту",
-        //   text: "Эфир позволит вам поставить спектакль, провести мастер-класс или конкурс и организовать съемки фильма. Собирайте творцов в объединения, или помогите единомышленникам воплотить идею.",
-        //   images: [
-        //     {
-        //       position: "-94% 16%",
-        //       maxHeight: "452px",
-        //       inViewTransform: {
-        //         transform: "translateY(100%)",
-        //       },
-        //       src: AdvantagesImage5,
-        //     },
-        //     {
-        //       position: "100% 40%",
-        //       maxHeight: "275px",
-        //       inViewTransform: {
-        //         transform: "translateY(-100%)",
-        //       },
-        //       src: AdvantagesImage6,
-        //     },
-        //   ],
-        // },
+        {
+          type: AdvantagesItems.events,
+          title: "Реализуйте мечту",
+          text: "Эфир позволит вам поставить спектакль, провести мастер-класс или конкурс и организовать съемки фильма. Собирайте творцов в объединения, или помогите единомышленникам воплотить идею.",
+          images: [
+            {
+              defaultStyleConfig: {
+                inset: {
+                  large: "-94% 15%",
+                  desktop: "-94.2% 15.66%",
+                  laptop: "-94.4% 15.5%",
+                  tablet: "-94% 15%",
+                  mobile: "-97% 14.6%",
+                },
+                maxHeight: {
+                  large: "452px",
+                  desktop: "322.06px",
+                  laptop: "263.68px",
+                  tablet: "404.93px",
+                  mobile: "203.41px",
+                },
+              },
+              inViewStyleConfig: {
+                transform: "translateY(100%)",
+              },
+              src: AdvantagesImage5,
+            },
+            {
+              defaultStyleConfig: {
+                inset: {
+                  large: "100% 38.8%",
+                  desktop: "99.9% 39.3%",
+                  laptop: "100.19% 39.1%",
+                  tablet: "100% 39%",
+                  mobile: "99.5% 38%",
+                },
+                maxHeight: {
+                  large: "275px",
+                  desktop: "194.8px",
+                  laptop: "159.49px",
+                  tablet: "244.92px",
+                  mobile: "123.03px",
+                },
+              },
+              inViewStyleConfig: {
+                transform: "translateY(-100%)",
+              },
+              src: AdvantagesImage6,
+            },
+          ],
+        },
         // {
         //   type: AdvantagesItems.events,
         //   title: "Творческие задачи",
