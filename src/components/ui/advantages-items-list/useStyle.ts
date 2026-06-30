@@ -5,4 +5,11 @@ export const useStyle = createUseStyleHook({
     tablet: 30,
     mobile: 30,
   },
+  paddingBlockStart: {
+    large: 120,
+    desktop: 80,
+    laptop: 80,
+    tablet: 80,
+    mobile: 80,
+  },
 });

@@ -15,7 +15,7 @@ import { AdvantagesItems } from "../../utils/advantagesItems";
 
 import AdvantagesImage1 from "../../assets/advantages/advantages_1.png";
 import AdvantagesImage2 from "../../assets/advantages/advantages_2.png";
-// import AdvantagesImage3 from "../../assets/advantages/advantages_3.png";
+import AdvantagesImage3 from "../../assets/advantages/advantages_3.png";
 // import AdvantagesImage4 from "../../assets/advantages/advantages_4.png";
 // import AdvantagesImage5 from "../../assets/advantages/advantages_5.png";
 // import AdvantagesImage6 from "../../assets/advantages/advantages_6.png";
@@ -143,23 +143,29 @@ export const Advantages: FC = () => {
             },
           ],
         },
-        // {
-        //   type: AdvantagesItems.artists,
-        //   title: "Портфолио и галереи",
-        //   text: "Делитесь своими работами: загружайте графику, если вы художник, видеозаписи своих спектаклей и фильмов, или музыку собственного сочинения. Это доступно как творцам, так и объединениям.",
-        //   images: [
-        //     {
-        //       defaultTransform: {
-        //         transform: "scale(0.3)",
-        //       },
-        //       position: "60% 4%",
-        //       inViewTransform: {
-        //         transform: "scale(1) translateY(-60%)",
-        //       },
-        //       src: AdvantagesImage3,
-        //     },
-        //   ],
-        // },
+        {
+          type: AdvantagesItems.artists,
+          title: "Портфолио и галереи",
+          text: "Делитесь своими работами: загружайте графику, если вы художник, видеозаписи своих спектаклей и фильмов, или музыку собственного сочинения. Это доступно как творцам, так и объединениям.",
+          images: [
+            {
+              defaultStyleConfig: {
+                transform: "scale(0.3)",
+                inset: {
+                  large: "60% 4%",
+                  desktop: "60% 4%",
+                  laptop: "60% 4%",
+                  tablet: "60% 4%",
+                  mobile: "60% 4%",
+                },
+              },
+              inViewStyleConfig: {
+                transform: "scale(1) translateY(-60%)",
+              },
+              src: AdvantagesImage3,
+            },
+          ],
+        },
         // {
         //   type: AdvantagesItems.artists,
         //   title: "Возможности безграничны",

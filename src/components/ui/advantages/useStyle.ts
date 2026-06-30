@@ -23,10 +23,10 @@ export const useStyle = createUseStyleHook({
     mobile: 0,
   },
   gap: {
-    large: 120,
-    desktop: 80,
-    laptop: 80,
-    tablet: 80,
-    mobile: 80,
+    large: 20,
+    desktop: 20,
+    laptop: 20,
+    tablet: 16,
+    mobile: 16,
   },
 });
