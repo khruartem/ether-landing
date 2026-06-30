@@ -11,7 +11,7 @@ export const AdvantagesItem: FC<TAdvantagesItemProps> = ({
   groupIndex,
   itemIndex,
 }) => {
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.5, triggerOnce: true });
 
   const contextValue = { inView };
   const descriptionPosition =
