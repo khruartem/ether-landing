@@ -19,9 +19,9 @@ import AdvantagesImage3 from "../../assets/advantages/advantages_3.png";
 import AdvantagesImage4 from "../../assets/advantages/advantages_4.png";
 import AdvantagesImage5 from "../../assets/advantages/advantages_5.png";
 import AdvantagesImage6 from "../../assets/advantages/advantages_6.png";
-// import AdvantagesImage7 from "../../assets/advantages/advantages_7.png";
-// import AdvantagesImage8 from "../../assets/advantages/advantages_8.png";
-// import AdvantagesImage9 from "../../assets/advantages/advantages_9.png";
+import AdvantagesImage7 from "../../assets/advantages/advantages_7.png";
+import AdvantagesImage8 from "../../assets/advantages/advantages_8.png";
+import AdvantagesImage9 from "../../assets/advantages/advantages_9.png";
 // import AdvantagesImage10 from "../../assets/advantages/advantages_10.png";
 // import AdvantagesImage11 from "../../assets/advantages/advantages_11.png";
 
@@ -156,7 +156,7 @@ export const Advantages: FC = () => {
                   desktop: "60% 0.28%",
                   laptop: "60% 0.28%",
                   tablet: "60% 0",
-                  mobile: "59% -0.28%",
+                  mobile: "62% -0.28%",
                 },
               },
               inViewStyleConfig: {
@@ -246,60 +246,74 @@ export const Advantages: FC = () => {
             },
           ],
         },
-        // {
-        //   type: AdvantagesItems.events,
-        //   title: "Творческие задачи",
-        //   text: "Глава объединения назначает ответственных творцов, не забывая вносить свой вклад. Артисты выйдут на сцену, музыканты напишут саундтрек, а дизайнер разработает уникальный стиль.",
-        //   images: [
-        //     {
-        //       defaultTransform: {
-        //         transform: "scale(0.3)",
-        //       },
-        //       position: "60% 0",
-        //       inViewTransform: {
-        //         transform: "scale(1) translateY(-60%)",
-        //       },
-        //       src: AdvantagesImage7,
-        //     },
-        //   ],
-        // },
-        // {
-        //   type: AdvantagesItems.events,
-        //   title: "Файлы и комментарии",
-        //   text: "Прикрепляйте к задачам договора на аренду площадки и пожелания к дизайну плакатов вашего мероприятия. Обсуждать детали можно тут же без лишнего шума в миллионах сторонних чатов.",
-        //   images: [
-        //     {
-        //       defaultTransform: {
-        //         transform: "scale(0.3)",
-        //       },
-        //       position: "63% -15%",
-        //       inViewTransform: {
-        //         transform: "scale(1) translate(15%, -63%)",
-        //         transformOrigin: "left",
-        //       },
-        //       src: AdvantagesImage8,
-        //     },
-        //   ],
-        // },
+        {
+          type: AdvantagesItems.events,
+          title: "Творческие задачи",
+          text: "Глава объединения назначает ответственных творцов, не забывая вносить свой вклад. Артисты выйдут на сцену, музыканты напишут саундтрек, а дизайнер разработает уникальный стиль.",
+          images: [
+            {
+              defaultStyleConfig: {
+                transform: "scale(0.3)",
+                inset: {
+                  large: "60% 0",
+                  desktop: "60% -3%",
+                  laptop: "60% -6%",
+                  tablet: "60% -1%",
+                  mobile: "59% -11%",
+                },
+              },
+              inViewStyleConfig: {
+                transform: "scale(1) translateY(-60%)",
+              },
+              src: AdvantagesImage7,
+            },
+          ],
+        },
+        {
+          type: AdvantagesItems.events,
+          title: "Файлы и комментарии",
+          text: "Прикрепляйте к задачам договора на аренду площадки и пожелания к дизайну плакатов вашего мероприятия. Обсуждать детали можно тут же без лишнего шума в миллионах сторонних чатов.",
+          images: [
+            {
+              defaultStyleConfig: {
+                transform: "scale(0.3)",
+                inset: "63% -15%",
+              },
+              inViewStyleConfig: {
+                transform: "scale(1) translate(15%, -63%)",
+                transformOrigin: "left",
+              },
+              src: AdvantagesImage8,
+            },
+          ],
+        },
       ],
     },
     {
       id: "schedule",
       items: [
-        // {
-        //   type: AdvantagesItems.schedule,
-        //   title: "С уважением к личному",
-        //   text: "При назначении репетиций и встреч необходимо учитывать занятость каждого творца, поэтому Эфир предлагает возможность указать свободное время в графике на каждый месяц.",
-        //   images: [
-        //     {
-        //       position: "0px 90%",
-        //       inViewTransform: {
-        //         transform: "translateX(-90%)",
-        //       },
-        //       src: AdvantagesImage9,
-        //     },
-        //   ],
-        // },
+        {
+          type: AdvantagesItems.schedule,
+          title: "С уважением к личному",
+          text: "При назначении репетиций и встреч необходимо учитывать занятость каждого творца, поэтому Эфир предлагает возможность указать свободное время в графике на каждый месяц.",
+          images: [
+            {
+              defaultStyleConfig: {
+                inset: {
+                  large: "0 90%",
+                  desktop: "0 90.7%",
+                  laptop: "0 90.4%",
+                  tablet: "0 90%",
+                  mobile: "-2% 90.2%",
+                },
+              },
+              inViewStyleConfig: {
+                transform: "translateX(-90%)",
+              },
+              src: AdvantagesImage9,
+            },
+          ],
+        },
         // {
         //   type: AdvantagesItems.schedule,
         //   title: "Не отвлекайтесь от дел",
