@@ -4,29 +4,41 @@ import { QuestionListUI } from "../ui/question-list";
 
 import type { TQuestion } from "../../utils/types";
 
-export const QuestionList: FC = () => {
-  const questions: TQuestion[] = [
-    {
-      title: "Question",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tempor sapien. Morbi dictum tincidunt magna at eleifend. Maecenas egestas nulla id urna feugiat, nec cursus dui feugiat. Etiam laoreet purus et hendrerit pellentesque. Quisque aliquam congue erat semper ullamcorper. Proin eget semper nibh. Aenean volutpat elit in neque rutrum condimentum. Nam nec fringilla turpis.",
-    },
-    {
-      title: "Question",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tempor sapien. Morbi dictum tincidunt magna at eleifend. Maecenas egestas nulla id urna feugiat, nec cursus dui feugiat. Etiam laoreet purus et hendrerit pellentesque. Quisque aliquam congue erat semper ullamcorper. Proin eget semper nibh. Aenean volutpat elit in neque rutrum condimentum. Nam nec fringilla turpis.",
-    },
-    {
-      title: "Question",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tempor sapien. Morbi dictum tincidunt magna at eleifend. Maecenas egestas nulla id urna feugiat, nec cursus dui feugiat. Etiam laoreet purus et hendrerit pellentesque. Quisque aliquam congue erat semper ullamcorper. Proin eget semper nibh. Aenean volutpat elit in neque rutrum condimentum. Nam nec fringilla turpis.",
-    },
-    {
-      title: "Question",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tempor sapien. Morbi dictum tincidunt magna at eleifend. Maecenas egestas nulla id urna feugiat, nec cursus dui feugiat. Etiam laoreet purus et hendrerit pellentesque. Quisque aliquam congue erat semper ullamcorper. Proin eget semper nibh. Aenean volutpat elit in neque rutrum condimentum. Nam nec fringilla turpis.",
-    },
-    {
-      title: "Question",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tempor sapien. Morbi dictum tincidunt magna at eleifend. Maecenas egestas nulla id urna feugiat, nec cursus dui feugiat. Etiam laoreet purus et hendrerit pellentesque. Quisque aliquam congue erat semper ullamcorper. Proin eget semper nibh. Aenean volutpat elit in neque rutrum condimentum. Nam nec fringilla turpis.",
-    },
-  ];
+const questions: TQuestion[] = [
+  {
+    title: "Как «Эфир» помогает организаторам мероприятий?",
+    text: "«Эфир» объединяет программу, участников и коммуникацию в едином сервисе. Организаторы управляют мероприятием через административную панель, а участники получают удобный личный кабинет со всеми необходимыми инструментами.",
+  },
+  {
+    title: "Для кого предназначен «Эфир»?",
+    text: "Платформа подходит для конференций, форумов, корпоративных мероприятий, образовательных программ, выставок, фестивалей и других событий, где важно эффективно организовать взаимодействие между участниками и командой.",
+  },
+  {
+    title: "Какие возможности доступны участникам?",
+    text: "Участники получают доступ к программе мероприятия, личному расписанию, заданиям, новостям, списку участников, нетворкингу, уведомлениям и другим материалам события в одном месте.",
+  },
+  {
+    title: "Что получает организатор?",
+    text: "Организатор управляет мероприятием через единую административную панель: настраивает программу, публикует новости, работает с участниками, отслеживает выполнение заданий и контролирует ключевые процессы мероприятия.",
+  },
+  {
+    title: "Как участники получают доступ к мероприятию?",
+    text: "После регистрации или получения приглашения участник входит в личный кабинет и получает доступ ко всем материалам и возможностям мероприятия.",
+  },
+  {
+    title: "Нужно ли устанавливать приложение?",
+    text: "Нет. «Эфир» работает в браузере и адаптирован для мобильных устройств, поэтому участники могут пользоваться платформой без установки дополнительных приложений.",
+  },
+  {
+    title: "Можно ли оформить платформу в фирменном стиле мероприятия?",
+    text: "Да. Платформа поддерживает брендирование: можно использовать логотип, фирменные цвета и оформление мероприятия, чтобы сохранить единый стиль для всех участников.",
+  },
+  {
+    title: "Будут ли появляться новые возможности?",
+    text: "Да. Сейчас «Эфир» развивается как современная платформа для мероприятий. Мы регулярно расширяем функциональность, учитывая потребности организаторов и обратную связь пользователей.",
+  },
+];
 
+export const QuestionList: FC = () => {
   return <QuestionListUI questions={questions} />;
 };
