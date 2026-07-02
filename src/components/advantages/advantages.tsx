@@ -22,8 +22,8 @@ import AdvantagesImage6 from "../../assets/advantages/advantages_6.png";
 import AdvantagesImage7 from "../../assets/advantages/advantages_7.png";
 import AdvantagesImage8 from "../../assets/advantages/advantages_8.png";
 import AdvantagesImage9 from "../../assets/advantages/advantages_9.png";
-// import AdvantagesImage10 from "../../assets/advantages/advantages_10.png";
-// import AdvantagesImage11 from "../../assets/advantages/advantages_11.png";
+import AdvantagesImage10 from "../../assets/advantages/advantages_10.png";
+import AdvantagesImage11 from "../../assets/advantages/advantages_11.png";
 
 export const Advantages: FC = () => {
   const [currentTab, setCurrentTab] = useState<AdvantagesItems>(
@@ -259,7 +259,7 @@ export const Advantages: FC = () => {
                   desktop: "60% -3%",
                   laptop: "60% -6%",
                   tablet: "60% -1%",
-                  mobile: "59% -11%",
+                  mobile: "62% -11%",
                 },
               },
               inViewStyleConfig: {
@@ -314,40 +314,53 @@ export const Advantages: FC = () => {
             },
           ],
         },
-        // {
-        //   type: AdvantagesItems.schedule,
-        //   title: "Не отвлекайтесь от дел",
-        //   text: "Десятки ссылок имеют свойство раздражать людей с творческим складом ума и характера. Глава один раз утверждает график и распределяет даты и время событий, чтобы никто не упустил важное.",
-        //   images: [
-        //     {
-        //       defaultTransform: {
-        //         transform: "scale(0.3)",
-        //       },
-        //       position: "60% 4%",
-        //       inViewTransform: {
-        //         transform: "scale(1) translateY(-60%)",
-        //       },
-        //       src: AdvantagesImage10,
-        //     },
-        //   ],
-        // },
-        // {
-        //   type: AdvantagesItems.schedule,
-        //   title: "Ничего не потеряется",
-        //   text: "Задачи и события расположены прямо в шапке мероприятия, чтобы без проблем на ходу соотносить важные даты. Никаких лишних кликов и поисков по массивам визуального шума.",
-        //   images: [
-        //     {
-        //       defaultTransform: {
-        //         transform: "scale(0.3)",
-        //       },
-        //       position: "62% 65%",
-        //       inViewTransform: {
-        //         transform: "scale(1) translate(-65%, -62%)",
-        //       },
-        //       src: AdvantagesImage11,
-        //     },
-        //   ],
-        // },
+        {
+          type: AdvantagesItems.schedule,
+          title: "Не отвлекайтесь от дел",
+          text: "Десятки ссылок имеют свойство раздражать людей с творческим складом ума и характера. Глава один раз утверждает график и распределяет даты и время событий, чтобы никто не упустил важное.",
+          images: [
+            {
+              defaultStyleConfig: {
+                transform: "scale(0.3)",
+                inset: {
+                  large: "60% 0",
+                  desktop: "60% 0.6%",
+                  laptop: "60% 0.5%",
+                  tablet: "60% 0",
+                  mobile: "59% 0%",
+                },
+              },
+              inViewStyleConfig: {
+                transform: "scale(1) translateY(-60%)",
+              },
+              src: AdvantagesImage10,
+            },
+          ],
+        },
+        {
+          type: AdvantagesItems.schedule,
+          title: "Ничего не потеряется",
+          text: "Задачи и события расположены прямо в шапке мероприятия, чтобы без проблем на ходу соотносить важные даты. Никаких лишних кликов и поисков по массивам визуального шума.",
+          images: [
+            {
+              defaultStyleConfig: {
+                transform: "scale(0.3)",
+                inset: "62% 64%",
+                maxHeight: {
+                  large: "480px",
+                  desktop: "340.2px",
+                  laptop: "279px",
+                  tablet: "429px",
+                  mobile: "216px",
+                },
+              },
+              inViewStyleConfig: {
+                transform: "scale(1) translate(-65%, -62%)",
+              },
+              src: AdvantagesImage11,
+            },
+          ],
+        },
       ],
     },
   ];

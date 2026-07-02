@@ -3,6 +3,6 @@ import { createUseStyleHook } from "../../../utils/styleHookFactory";
 export const useStyle = createUseStyleHook({
   minHeight: {
     tablet: 430,
-    mobile: 216,
+    mobile: 218,
   },
 });
