@@ -25,10 +25,13 @@ import AdvantagesImage9 from "../../assets/advantages/advantages_9.png";
 import AdvantagesImage10 from "../../assets/advantages/advantages_10.png";
 import AdvantagesImage11 from "../../assets/advantages/advantages_11.png";
 
+import { useOffset } from "./useOffset";
+
 export const Advantages: FC = () => {
   const [currentTab, setCurrentTab] = useState<AdvantagesItems>(
     AdvantagesItems.artists,
   );
+  const offset = useOffset();
 
   const tabs: AdvantagesItems[] = [
     AdvantagesItems.artists,
@@ -48,7 +51,6 @@ export const Advantages: FC = () => {
         )}`,
       );
 
-      const offset = 240;
       const rect = el?.getBoundingClientRect();
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
@@ -67,25 +69,38 @@ export const Advantages: FC = () => {
     }
   };
 
-  const scrollToTab = (e?: SyntheticEvent) => {
-    if (e) {
+  // const scrollToTab = (e?: SyntheticEvent) => {
+  //   if (e) {
+  //     const tabWidth = 320;
+  //     const clickedTabText = e.currentTarget.textContent as AdvantagesItems;
+  //     const clickedTab = e.currentTarget;
+  //     const tabsEl = clickedTab.closest("ul");
+
+  //     const currentTabIndex = tabs.indexOf(currentTab);
+  //     const nextTabIndex = tabs.indexOf(clickedTabText);
+  //     const distance = nextTabIndex - currentTabIndex;
+
+  //     console.log(distance)
+
+  //     if (tabsEl) tabsEl.scrollLeft += distance * tabWidth;
+  //   }
+  // };
+
+  const scrollToTab = (clickedTab: AdvantagesItems) => {
       const tabWidth = 320;
-      const clickedTabText = e.currentTarget.textContent as AdvantagesItems;
-      const clickedTab = e.currentTarget;
-      const tabsEl = clickedTab.closest("ul");
+      const tabsEl = document.querySelector("#advantages-tabs");
 
       const currentTabIndex = tabs.indexOf(currentTab);
-      const nextTabIndex = tabs.indexOf(clickedTabText);
+      const nextTabIndex = tabs.indexOf(clickedTab);
       const distance = nextTabIndex - currentTabIndex;
 
       if (tabsEl) tabsEl.scrollLeft += distance * tabWidth;
-    }
   };
 
   const handleTabChange = (tab: AdvantagesItems, e?: SyntheticEvent) => {
     scrollToGroup(e);
     setCurrentTab(tab);
-    scrollToTab(e);
+    scrollToTab(tab);
   };
 
   const advantagesGroups: TAdvantagesGroup[] = [
@@ -370,6 +385,7 @@ export const Advantages: FC = () => {
     currentTab,
     handleTabChange,
     advantagesGroups,
+    scrollToTab,
   };
 
   const sectionProps: TSection = {

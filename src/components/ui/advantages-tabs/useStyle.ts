@@ -22,7 +22,7 @@ export const useStyle = createUseStyleHook({
   },
   top: {
     large: 100,
-    desktop: 75,
+    desktop: 70,
     laptop: 75,
     tablet: 75,
     mobile: 75,

@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { forwardRef } from "react";
 import clsx from "clsx";
 
 import { TextUI } from "../text";
@@ -13,11 +13,11 @@ import { useStyle } from "./useStyle";
 
 import styles from "./advantages-tab.module.css";
 
-export const AdvantagesTabUI: FC<TAdvantagesTabUIProps> = ({
+export const AdvantagesTabUI = forwardRef<HTMLLIElement, TAdvantagesTabUIProps>(({
   tab,
   current,
   onChange,
-}) => {
+}, ref) => {
   const tabTypography = useTypography();
   const tabStyle = useStyle();
 
@@ -29,6 +29,7 @@ export const AdvantagesTabUI: FC<TAdvantagesTabUIProps> = ({
       )}
       onClick={onChange}
       style={tabStyle}
+      ref={ref}
     >
       <TextUI
         as={"span"}
@@ -39,4 +40,4 @@ export const AdvantagesTabUI: FC<TAdvantagesTabUIProps> = ({
       </TextUI>
     </li>
   );
-};
+});

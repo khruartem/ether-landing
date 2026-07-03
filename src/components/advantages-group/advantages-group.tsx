@@ -17,6 +17,7 @@ export const AdvantagesGroup: FC<TAdvantagesGroupProps> = ({
     threshold: 0.3,
     onChange: (inView) => {
       const targetTab = AdvantagesItems[id];
+      console.log(targetTab)
 
       if (inView && currentTab !== targetTab) {
         handleTabChange(targetTab);

@@ -5,13 +5,7 @@ import { AdvantagesTabsUI } from "../ui/advantages-tabs";
 import { useAdvantagesContext } from "../advantages/advantages-context";
 
 export const AdvantagesTabs: FC = () => {
-  const { tabs, currentTab, handleTabChange } = useAdvantagesContext();
+  const { tabs } = useAdvantagesContext();
 
-  return (
-    <AdvantagesTabsUI
-      tabs={tabs}
-      currentTab={currentTab}
-      onTabChange={handleTabChange}
-    />
-  );
+  return <AdvantagesTabsUI tabs={tabs} />;
 };

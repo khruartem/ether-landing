@@ -9,6 +9,9 @@ const initialValue: TAdvantagesContextValue = {
   handleTabChange: (tab) => {
     console.log(tab);
   },
+  scrollToTab: (tab) => {
+    console.log(tab);
+  },
 };
 
 export const [AdvantagesProvider, useAdvantagesContext] =
