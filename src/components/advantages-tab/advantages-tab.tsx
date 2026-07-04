@@ -8,9 +8,9 @@ import { useAdvantagesContext } from "../advantages/advantages-context";
 
 export const AdvantagesTab: FC<TAdvantagesTabProps> = ({ tab }) => {
   const [ref] = useInView({
-    // threshold: 1,
+    // threshold: 0,
     onChange: (inView) => {
-      if (inView && currentTab !== tab) {
+      if (!inView && currentTab === tab) {
         scrollToTab(tab);
       }
     },
