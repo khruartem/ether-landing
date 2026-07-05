@@ -1,9 +1,10 @@
 .question__button {
   display: flex;
   flex-direction: column;
+  flex-basis: 24px;
   justify-content: center;
   align-items: center;
-  width: 24px;
+  min-width: 24px;
   height: 24px;
   border: 2px var(--nephritis100) solid;
   border-radius: 50%;

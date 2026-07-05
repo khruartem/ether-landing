@@ -6,7 +6,7 @@
   border-radius: 32px;
   padding: 36px 44px;
   cursor: pointer;
-  max-height: 104px;
+  max-height: 136px;
   overflow: hidden;
   transition: max-height 0.5s linear;
 }

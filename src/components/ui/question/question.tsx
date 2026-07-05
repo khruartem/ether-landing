@@ -2,20 +2,23 @@ import type { FC } from "react";
 import clsx from "clsx";
 
 import { TextUI } from "../text";
+import { QuestionOpenButtonUI } from "../question-open-button";
 
 import type { TQuestionUIProps } from "./types";
 
 import { Typography } from "../../../utils/typography";
 import { Colors } from "../../../utils/colors";
 
+import { useTitleTypography } from "./useTitleTypography";
+
 import styles from "./question.module.css";
-import { QuestionOpenButtonUI } from "../question-open-button";
 
 export const QuestionUI: FC<TQuestionUIProps> = ({
   question,
   isOpened,
   onOpen,
 }) => {
+  const titleTypography = useTitleTypography();
   const { title, text } = question;
 
   return (
@@ -24,7 +27,7 @@ export const QuestionUI: FC<TQuestionUIProps> = ({
       onClick={onOpen}
     >
       <div className={styles.question__top}>
-        <TextUI typography={Typography.Title_500_20} color={Colors.Navy}>
+        <TextUI typography={Typography[titleTypography]} color={Colors.Navy}>
           {title}
         </TextUI>
         <QuestionOpenButtonUI isOpened={isOpened} />
