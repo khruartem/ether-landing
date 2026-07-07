@@ -1,12 +1,16 @@
 import type { FC } from "react";
+import { Link } from "react-router-dom";
+
 import { TextUI } from "../text";
-import { Typography } from "../../../utils/typography";
-import { Colors } from "../../../utils/colors";
+
 import type { TCopyrightUIProps } from "./types";
 
-import styles from "./copyright.module.css";
-import { Link } from "react-router-dom";
+import { Typography } from "../../../utils/typography";
+import { Colors } from "../../../utils/colors";
+
 import { useStyle } from "./useStyle";
+
+import styles from "./copyright.module.css";
 
 export const CopyrightUI: FC<TCopyrightUIProps> = ({ year }) => {
   const copyrightStyle = useStyle();
