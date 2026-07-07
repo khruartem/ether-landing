@@ -1,8 +1,8 @@
 .footer {
   margin: 20px;
-  border-radius: 80px;
-  padding: 80px 136px;
   background-color: var(--navy);
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__top {
@@ -11,20 +11,4 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.footer__text::before {
-  content: "©";
-}
-
-.footer__link {
-  color: var(--nephritis100);
-}
-
-.footer__link:hover {
-  color: var(--nephritis120);
-}
-
-.footer__link:active {
-  color: var(--light100);
 }

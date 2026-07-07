@@ -1,0 +1,20 @@
+.copyright {
+  display: flex;
+  gap: 4px;
+}
+
+.copyright__year::before {
+  content: "©";
+}
+
+.copyright__link {
+  color: var(--nephritis100);
+}
+
+.copyright__link:hover {
+  color: var(--nephritis120);
+}
+
+.copyright__link:active {
+  color: var(--light100);
+}

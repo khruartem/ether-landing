@@ -11,6 +11,7 @@ export const TextUI: FC<TTextUIProps> = ({
   typography,
   color,
   className,
+  style,
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -20,13 +21,24 @@ export const TextUI: FC<TTextUIProps> = ({
       className={clsx(styles.text, className && className)}
       style={
         {
-          "--font": typography.font,
-          "--weight": typography.weight,
-          "--size": typography.size,
-          "--line-height": typography.lineHeight,
-          "--letter-spacing": typography.letterSpacing,
-          "--text-align": typography.textAlign ?? "left",
+          "--font":
+            typeof typography === "string" ? typography : typography.font,
+          "--weight":
+            typeof typography === "string" ? typography : typography.weight,
+          "--size":
+            typeof typography === "string" ? typography : typography.size,
+          "--line-height":
+            typeof typography === "string" ? typography : typography.lineHeight,
+          "--letter-spacing":
+            typeof typography === "string"
+              ? typography
+              : typography.letterSpacing,
+          "--text-align":
+            typeof typography === "string"
+              ? typography
+              : (typography.textAlign ?? "left"),
           "--color": color,
+          ...style,
         } as CSSProperties
       }
       onClick={onClick}
