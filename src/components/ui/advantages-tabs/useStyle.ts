@@ -21,7 +21,7 @@ export const useStyle = createUseStyleHook({
     mobile: 10.5,
   },
   top: {
-    large: 100,
+    large: "100px",
     desktop: 70,
     laptop: 75,
     tablet: 75,

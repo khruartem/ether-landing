@@ -2,7 +2,7 @@ import { createUseStyleHook } from "../../../utils/styleHookFactory";
 
 export const useStyle = createUseStyleHook({
   paddingBlock: {
-    large: 20,
+    large: "20px",
     desktop: 10.5,
     laptop: 10.5,
     tablet: 10.5,

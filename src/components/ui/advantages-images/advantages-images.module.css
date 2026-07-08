@@ -4,6 +4,7 @@
   flex-direction: row;
   flex-basis: 49.26%;
   justify-content: space-evenly;
+  max-width: 792px;
   border-radius: 80px;
   overflow: hidden;
   background-color: var(--light30);
