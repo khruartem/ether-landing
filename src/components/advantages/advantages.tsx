@@ -301,13 +301,6 @@ const advantagesGroups: TAdvantagesGroup[] = [
               },
             },
             inViewStyleConfig: {
-              // transform: {
-              //   large: "scale(1) translate(-65%, -62%)",
-              //   desktop: "scale(1) translate(-65%, -62%)",
-              //   laptop: "scale(1) translate(-65%, -62%)",
-              //   tablet: "scale(1) translate(-65%, -62%)",
-              //   mobile: "scale(1) translate(-65%, -60%)",
-              // },
               transform: "scale(1) translate(-65%, -62%)",
             },
             src: AdvantagesImage11,
