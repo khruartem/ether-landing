@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-height: 480px;
 }
 
 .advantages__item>* {

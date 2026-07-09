@@ -13,9 +13,11 @@ export const useStyle = (descriptionPosition: TDescriptionPosition) => {
       ? "row"
       : "row-reverse";
   const flexShrink = isLargeResolution ? 0 : "unset";
+  const maxHeight = isSmallResolution ? "auto" : "480px";
 
   return {
     flexDirection,
     "--flex-shrink": flexShrink,
+    maxHeight,
   } as CSSProperties;
 };

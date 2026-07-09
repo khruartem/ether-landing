@@ -217,6 +217,7 @@ const advantagesGroups: TAdvantagesGroup[] = [
             defaultStyleConfig: {
               transform: "scale(0.3)",
               inset: "63% -15%",
+              minHeight: 223,
             },
             inViewStyleConfig: {
               transform: "scale(1) translate(15%, -63%)",
@@ -266,7 +267,7 @@ const advantagesGroups: TAdvantagesGroup[] = [
                 desktop: "60% 0.6%",
                 laptop: "60% 0.5%",
                 tablet: "60% 0",
-                mobile: "63% 0%",
+                mobile: "65% 0%",
               },
             },
             inViewStyleConfig: {
@@ -284,7 +285,13 @@ const advantagesGroups: TAdvantagesGroup[] = [
           {
             defaultStyleConfig: {
               transform: "scale(0.3)",
-              inset: "62% 64%",
+              inset: {
+                large: "62% 64%",
+                desktop: "62% 64%",
+                laptop: "62% 64%",
+                tablet: "62% 64%",
+                mobile: "64% 64%",
+              },
               maxHeight: {
                 large: "480px",
                 desktop: "340.2px",
@@ -294,6 +301,13 @@ const advantagesGroups: TAdvantagesGroup[] = [
               },
             },
             inViewStyleConfig: {
+              // transform: {
+              //   large: "scale(1) translate(-65%, -62%)",
+              //   desktop: "scale(1) translate(-65%, -62%)",
+              //   laptop: "scale(1) translate(-65%, -62%)",
+              //   tablet: "scale(1) translate(-65%, -62%)",
+              //   mobile: "scale(1) translate(-65%, -60%)",
+              // },
               transform: "scale(1) translate(-65%, -62%)",
             },
             src: AdvantagesImage11,
