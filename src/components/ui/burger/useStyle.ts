@@ -5,4 +5,11 @@ export const useStyle = createUseStyleHook({
     tablet: 30,
     mobile: 16,
   },
+  top: {
+    large: "100px",
+    desktop: "84px",
+    laptop: "84px",
+    tablet: "84px",
+    mobile: "84px",
+  },
 });

@@ -1,10 +1,9 @@
 .burger__content {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  justify-content: space-between;
+  flex: 0.6614;
   align-items: center;
-  padding-block-start: 100px;
+  padding-block-start: 16px;
 }
 
 .burger__content>:global(#menu) {
