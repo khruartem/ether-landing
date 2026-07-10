@@ -52,7 +52,7 @@ const Typography = {
   Title_600_20: {
     font: "Unbounded",
     weight: "600",
-    size: "20px",
+    size: "clamp(1rem, 0.1489rem + 4.2553vw, 1.25rem)",
     lineHeight: "28px",
     textAlign: "center",
     letterSpacing: 0,
